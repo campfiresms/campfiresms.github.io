@@ -1,0 +1,44 @@
+.opt-in-card {
+  margin: 0 0 42px;
+  padding: 36px;
+  text-align: center;
+  border: 1px solid #cad8cf;
+  border-radius: 12px;
+  background: #e9efe9;
+}
+
+.opt-in-card p {
+  max-width: 580px;
+  margin: 10px auto;
+}
+
+.opt-in-command {
+  font-size: 20px;
+}
+
+.sms-number {
+  display: inline-block;
+  color: var(--green) !important;
+  font-size: clamp(30px, 7vw, 48px);
+  font-weight: 700;
+  letter-spacing: -.04em;
+  text-decoration: none;
+}
+
+.sms-number:hover {
+  color: #c64d22 !important;
+}
+
+.legal blockquote {
+  margin: 18px 0;
+  padding: 22px 24px;
+  border-left: 4px solid var(--orange);
+  background: var(--cream);
+  color: #4c4841;
+}
+
+@media (max-width: 700px) {
+  .opt-in-card {
+    padding: 28px 18px;
+  }
+}
