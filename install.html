@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Subscribe to Campfire, activate SMS, and connect Codex on Windows.">
+  <title>Install Campfire — Connect Codex to SMS</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="icon.css">
+</head>
+<body>
+<header><a class="brand" href="index.html"><img class="brand-icon" src="assets/favicon-32.png" alt=""> Campfire</a><nav aria-label="Primary navigation"><a href="index.html">Home</a><a class="active" href="install.html">Install</a><a class="nav-cta" href="https://api.campfiresms.com/join">Get Campfire</a></nav></header>
+<main class="legal setup-guide">
+  <section class="legalhead">
+    <span class="kicker">WINDOWS + CODEX</span>
+    <h1>From checkout to first text.</h1>
+    <p>One paid account, one verified SMS number, and a revocable credential for each computer.</p>
+    <div class="guide-actions"><a class="button" href="https://api.campfiresms.com/join">Get Campfire — $8/month</a><a class="button secondary" href="https://api.campfiresms.com/login">Already subscribed?</a></div>
+  </section>
+  <article>
+    <p>Campfire connects an existing Codex environment to SMS. Your agent, model access, tools, files, and approvals remain on your computer or server.</p>
+    <ol class="setup-steps">
+      <li><h2>Subscribe through Stripe</h2><p>The plan is $8 per month and includes 400 SMS segments, up to 40 per day. Messages stop at the limit; there are no overage charges. Stripe handles payment details.</p></li>
+      <li><h2>Verify control of your phone</h2><p>Checkout returns you to Campfire setup. Enter your phone in E.164 format and confirm the SMS verification code. This verifies control during enrollment; it is not permanent proof of human identity.</p></li>
+      <li><h2>Activate the SMS channel</h2><p>SMS consent is separate from payment and verification. Review the <a href="sms-opt-in.html">SMS disclosure</a>, then text <strong>START</strong> from the verified phone. After Campfire confirms activation, return to setup and refresh.</p></li>
+      <li><h2>Create an installation</h2><p>Give the computer a label such as “Windows laptop.” Campfire shows its credential once. Treat it like a password; the service stores only its hash.</p></li>
+      <li><h2>Install and configure the connector</h2><p>Open PowerShell on the computer running Codex. Python 3.12 or newer is required.</p><pre>py -m pip install "campfire-mcp @ https://github.com/campfiresms/campfire-mcp/archive/refs/tags/v0.1.1.zip"
+py -m campfire_mcp.cli configure</pre><p>Accept the default service URL <span class="inline-code">https://api.campfiresms.com</span>, then paste the one-time installation credential. The setup command validates it and registers Campfire with Codex.</p></li>
+      <li><h2>Restart Codex and check the connection</h2><pre>py -m campfire_mcp.cli status
+codex mcp get campfire</pre><p>Then tell Codex: <strong>“Open the Campfire bridge.”</strong> Keep that Codex session running while you exchange SMS messages with the agent.</p></li>
+    </ol>
+    <div class="guide-note"><strong>SMS is a lower-trust steering channel.</strong><p>A message from the enrolled number carries its source and session context, but it cannot grant tools, permissions, credentials, secret disclosure, destructive authority, or bypass Codex approvals. SMS is not end-to-end encrypted.</p></div>
+    <h2>Manage or remove an installation</h2><p>Use <a href="https://api.campfiresms.com/login">Campfire setup</a> to revoke an installation or open the Stripe billing portal. To remove the local connector after revocation:</p><pre>codex mcp remove campfire
+py -m pip uninstall campfire-mcp</pre>
+    <p>The connector source and release history are public at <a href="https://github.com/campfiresms/campfire-mcp">github.com/campfiresms/campfire-mcp</a>.</p>
+  </article>
+</main>
+<footer><a class="brand" href="index.html"><img class="brand-icon" src="assets/favicon-32.png" alt=""> Campfire</a><p>SMS communication for running agents.</p><div><a href="install.html">Install</a><a href="sms-opt-in.html">SMS Opt-in</a><a href="privacy.html">Privacy</a><a href="terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div><small>© 2026 Campfire</small></footer>
+</body>
+</html>
