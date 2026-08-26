@@ -3,40 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Subscribe to Campfire, activate SMS, and connect Codex on Windows.">
-  <title>Install Campfire — Connect Codex to SMS</title>
+  <meta name="description" content="Connect CampfireSMS to Codex with one local command.">
+  <title>Install CampfireSMS — One command</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="icon.css">
+  <link rel="stylesheet" href="pages.css">
 </head>
-<body>
-<header><a class="brand" href="index.html"><img class="brand-icon" src="assets/favicon-32.png" alt=""> Campfire</a><nav aria-label="Primary navigation"><a href="index.html">Home</a><a class="active" href="install.html">Install</a><a class="nav-cta" href="https://api.campfiresms.com/join">Get Campfire</a></nav></header>
+<body class="manual-site">
+<header><a class="brand" href="index.html"><img class="brand-icon" src="assets/favicon-32.png" alt=""> CampfireSMS</a><nav aria-label="Primary navigation"><a href="index.html">Home</a><a class="active" href="install.html">Install</a><a href="sms-opt-in.html">SMS Opt-in</a><a href="privacy.html">Privacy</a><a href="terms.html">SMS Terms</a><a href="https://api.campfiresms.com/login">Log in</a></nav></header>
 <main class="legal setup-guide">
   <section class="legalhead">
-    <span class="kicker">WINDOWS + CODEX</span>
-    <h1>From checkout to first text.</h1>
-    <p>One paid account, one verified SMS number, and a revocable credential for each computer.</p>
-    <div class="guide-actions"><a class="button" href="https://api.campfiresms.com/join">Get Campfire — $8/month</a><a class="button secondary" href="https://api.campfiresms.com/login">Already subscribed?</a></div>
+    <span class="kicker">ONE COMMAND</span>
+    <h1>Connect CampfireSMS to Codex.</h1>
+    <p>Phone number → verify → one local command → connected.</p>
+    <div class="guide-actions"><a class="button" href="https://api.campfiresms.com/join">Start free demo</a><a class="button secondary" href="https://api.campfiresms.com/login">Log in <span>↗</span></a></div>
   </section>
   <article>
-    <p>Campfire connects an existing Codex environment to SMS. Your agent, model access, tools, files, and approvals remain on your computer or server.</p>
     <ol class="setup-steps">
-      <li><h2>Subscribe through Stripe</h2><p>The plan is $8 per month and includes 400 SMS segments, up to 40 per day. Messages stop at the limit; there are no overage charges. Stripe handles payment details.</p></li>
-      <li><h2>Verify control of your phone</h2><p>Checkout returns you to Campfire setup. Enter your phone in E.164 format and confirm the SMS verification code. This verifies control during enrollment; it is not permanent proof of human identity.</p></li>
-      <li><h2>Activate the SMS channel</h2><p>SMS consent is separate from payment and verification. Review the <a href="sms-opt-in.html">SMS disclosure</a>, then text <strong>START</strong> from the verified phone. After Campfire confirms activation, return to setup and refresh.</p></li>
-      <li><h2>Create an installation</h2><p>Give the computer a label such as “Windows laptop.” Campfire shows its credential once. Treat it like a password; the service stores only its hash.</p></li>
-      <li><h2>Install and configure the connector</h2><p>Open PowerShell on the computer running Codex. Python 3.12 or newer is required.</p><pre>py -m pip install "campfire-mcp @ https://github.com/campfiresms/campfire-mcp/archive/refs/tags/v0.1.1.zip"
-py -m campfire_mcp.cli configure</pre><p>Accept the default service URL <span class="inline-code">https://api.campfiresms.com</span>, then paste the one-time installation credential. The setup command validates it and registers Campfire with Codex.</p></li>
-      <li><h2>Restart Codex and check the connection</h2><pre>py -m campfire_mcp.cli status
-codex mcp get campfire</pre><p>Then tell Codex: <strong>“Open the Campfire bridge.”</strong> Keep that Codex session running while you exchange SMS messages with the agent.</p></li>
+      <li><h2>Verify your phone</h2><p>CampfireSMS sends a verification code and creates your free 40-message demo. No credit card is required.</p></li>
+      <li><h2>Run the command CampfireSMS gives you</h2><pre>npx -y @campfiresms/setup XXXX-XXXX</pre><p>The command is temporary, single use, and expires after 10 minutes.</p></li>
+      <li><h2>You're connected</h2><p>The installer registers CampfireSMS with Codex and stores the permanent installation credential locally. You never need to copy or edit credentials, environment variables, or Codex configuration.</p></li>
+      <li><h2>Test both directions</h2><p>Send the test message, then reply <strong>TEST</strong>. CampfireSMS confirms when setup is complete.</p></li>
     </ol>
-    <div class="guide-note"><strong>SMS is a lower-trust steering channel.</strong><p>A message from the enrolled number carries its source and session context, but it cannot grant tools, permissions, credentials, secret disclosure, destructive authority, or bypass Codex approvals. SMS is not end-to-end encrypted.</p></div>
-    <h2>Manage or remove an installation</h2><p>Use <a href="https://api.campfiresms.com/login">Campfire setup</a> to revoke an installation or open the Stripe billing portal. To remove the local connector after revocation:</p><pre>codex mcp remove campfire
-py -m pip uninstall campfire-mcp</pre>
-    <p>The connector source and release history are public at <a href="https://github.com/campfiresms/campfire-mcp">github.com/campfiresms/campfire-mcp</a>.</p>
+    <div class="guide-note"><strong>Each installation is separate.</strong><p>You can rename or revoke a computer from your CampfireSMS account. Revoking one installation does not expose or alter another.</p></div>
+    <h2>What the installer does</h2><p>It installs the client-only CampfireSMS MCP connector, registers it with Codex, validates the connection, and reports a clear result. It does not clone a repository or run another AI model.</p>
+    <h2>Remove CampfireSMS</h2><p>Revoke the installation from your account, then remove the local Codex entry:</p><pre>codex mcp remove campfire</pre>
   </article>
 </main>
-<footer><a class="brand" href="index.html"><img class="brand-icon" src="assets/favicon-32.png" alt=""> Campfire</a><p>SMS communication for running agents.</p><div><a href="install.html">Install</a><a href="sms-opt-in.html">SMS Opt-in</a><a href="privacy.html">Privacy</a><a href="terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div><small>© 2026 Campfire</small></footer>
+<footer><a class="brand" href="index.html"><img class="brand-icon" src="assets/favicon-32.png" alt=""> CampfireSMS</a><p>SMS bridge for Codex agents.</p><div><a href="https://api.campfiresms.com/login">Log in</a><a href="install.html">Install</a><a href="sms-opt-in.html">SMS Opt-in</a><a href="privacy.html">Privacy</a><a href="terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div><small>© 2026 CampfireSMS</small></footer>
 </body>
 </html>
