@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>How to get SMS notifications from your coding agent | CampfireSMS</title>
+  <meta name="description" content="Connect CampfireSMS to Codex or Grok Build, test two-way texting, and ask for useful task updates.">
+  <link rel="canonical" href="https://campfiresms.com/guides/coding-agent-sms-notifications.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to get SMS notifications from your coding agent">
+  <meta property="og:description" content="Connect CampfireSMS to Codex or Grok Build, test two-way texting, and ask for useful task updates.">
+  <meta property="og:url" content="https://campfiresms.com/guides/coding-agent-sms-notifications.html">
+  <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v2.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../assets/favicon-32.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../icon.css">
+  <link rel="stylesheet" href="../pages.css">
+  <link rel="stylesheet" href="../guides.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to get SMS notifications from your coding agent", "description": "Connect CampfireSMS to Codex or Grok Build, test two-way texting, and ask for useful task updates.", "mainEntityOfPage": "https://campfiresms.com/guides/coding-agent-sms-notifications.html", "author": {"@type": "Organization", "name": "CampfireSMS", "url": "https://campfiresms.com/"}, "publisher": {"@type": "Organization", "name": "CampfireSMS", "url": "https://campfiresms.com/"}}</script>
+</head>
+<body class="manual-site guides-site">
+<a class="skip-link" href="#content">Skip to content</a>
+<header><a class="brand" href="../index.html"><img class="brand-icon" src="../assets/favicon-32.png" alt=""> CampfireSMS</a><nav aria-label="Primary navigation"><a href="./" class="active">Guides</a><a href="../install.html">Install</a><a class="nav-cta" href="https://api.campfiresms.com/join">Start setup</a></nav></header>
+<main class="legal" id="content">
+<section class="legalhead"><span class="kicker"><a href="./">GUIDES</a> / WORKFLOW</span><h1>How to get SMS notifications from your coding agent</h1><p>Connect CampfireSMS to Codex or Grok Build, test two-way texting, and ask for useful task updates.</p><p class="byline">By CampfireSMS</p></section>
+<article>
+<p>When a coding task takes longer than a few minutes, you may want a text when it finishes or needs your input. CampfireSMS connects your verified phone to an already-running Codex or Grok Build agent. You use your usual SMS app to receive short updates and send instructions back.</p>
+<h2>What you need before you start</h2>
+<p>Have Codex or Grok Build installed on the computer that will do the work, a phone that can receive SMS, Node.js 18+ with <code>npx</code>, and Python 3.12+ for the local connector. Your computer needs internet access and must remain awake with the agent active. Your phone needs cellular SMS service; mobile data is not required for the text exchange.</p>
+<p>CampfireSMS carries messages. It does not run a separate coding model or automatically watch every task on your computer.</p>
+<h2>1. Connect your phone and computer</h2>
+<p><a href="https://api.campfiresms.com/join">Start setup</a> and verify your phone number. Copy the temporary installation command shown by CampfireSMS and run it on the computer where you use your agent. It has this form:</p>
+<pre><code>npx -y @campfiresms/setup XXXX-XXXX</code></pre>
+<p><code>XXXX-XXXX</code> is a placeholder, not a working code. Use the command from your account; it is single use and expires after ten minutes. The installer registers the connector with the supported local agents it finds and stores the installation credential locally. Open or restart your agent afterward.</p>
+<p>The <a href="../install.html">install guide</a> covers the complete setup flow and removal instructions.</p>
+<h2>2. Test both directions</h2>
+<p>Follow the setup test: send the test message, then reply <strong>TEST</strong> from your verified phone. Wait for the setup confirmation before relying on task updates. Receiving a text proves only one direction works; the reply checks the return path too.</p>
+<h2>3. Tell your agent when to text you</h2>
+<p>Give the agent a concrete task and describe which events deserve a message. For example, adapt this prompt to your repository:</p>
+<blockquote><p>Investigate the failing tests and fix the issue within the scope we've discussed. Use CampfireSMS to send a short update when you have a result, hit a blocker, or need clarification. Check for my replies while you work. Keep updates brief and close the bridge when we're finished.</p></blockquote>
+<p>This asks the agent to use the connection for that task. The local connector does not wake an arbitrarily idle agent, so sending a text to a stopped session is not a reliable way to restart work.</p>
+<h2>What an update can look like</h2>
+<p>The following is an illustrative exchange, not a recorded test result:</p>
+<blockquote><p><strong>Agent:</strong> The test failure comes from date parsing. I have a fix and am running the suite.<br><strong>You:</strong> Include a regression case for an empty date.<br><strong>Agent:</strong> Added the case. The suite passes. Changes are ready for your review.</p></blockquote>
+<p>Text is useful for progress and short clarifications. Review detailed diffs in your coding environment. SMS replies do not replace native runtime approvals or grant the agent additional permissions.</p>
+<h2>If no update arrives</h2>
+<ul><li>Check that setup completed and that you restarted the agent after installation.</li><li>Ask the agent to confirm it opened a CampfireSMS bridge and send a short test update.</li><li>Confirm the computer is awake, online, and the agent is still running.</li><li>Check your account's message allowance and installation status. Messaging pauses at the plan limit.</li><li>If a reply says you are not connected, return to the agent and ask it to reopen the bridge.</li></ul>
+<p>SMS delivery can be delayed. Keep passwords and sensitive material out of texts: SMS is not end-to-end encrypted. For account or delivery help, <a href="mailto:campfire.sms.support@gmail.com">contact support</a>.</p>
+<h2>Try it on one bounded task</h2>
+<p>Start with a small fix or test run, confirm the round trip, then try a longer session. Read <a href="monitor-coding-agent-away-from-desk.html">how to monitor an agent away from your desk</a> for a task handoff you can adapt.</p>
+</article>
+</main>
+<footer><a class="brand" href="../index.html"><img class="brand-icon" src="../assets/favicon-32.png" alt=""> CampfireSMS</a><p>SMS bridge for coding agents.</p><div><a href="./">Guides</a><a href="../install.html">Install</a><a href="../privacy.html">Privacy</a><a href="../terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div><small>© 2026 CampfireSMS</small></footer>
+</body>
+</html>

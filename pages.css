@@ -675,3 +675,11 @@ body.manual-site {
   border-color: var(--manual-rule);
   background: #fffdf8;
 }
+
+/* Allow navigation to wrap as guides are added. */
+@media (max-width: 1050px) {
+  .manual-site header { height: auto; min-height: 74px; flex-wrap: wrap; gap: 16px; padding-top: 16px; padding-bottom: 16px; }
+  .manual-site header nav { flex-wrap: wrap; }
+}
+
+.setup-screens figure{margin:28px 0}.setup-screens img{display:block;width:100%;height:auto;border:1px solid var(--manual-rule)}.setup-screens figcaption{margin-top:12px;color:#514d45;font-size:14px;line-height:1.6}
