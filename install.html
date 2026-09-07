@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Connect CampfireSMS to Codex or Grok Build with one local command.">
+  <link rel="canonical" href="https://campfiresms.com/install.html">
   <title>Install CampfireSMS — One command</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
@@ -12,27 +13,32 @@
   <link rel="stylesheet" href="pages.css">
 </head>
 <body class="manual-site">
-<header><a class="brand" href="index.html"><img class="brand-icon" src="assets/favicon-32.png" alt=""> CampfireSMS</a><nav aria-label="Primary navigation"><a href="index.html">Home</a><a class="active" href="install.html">Install</a><a href="sms-opt-in.html">SMS Opt-in</a><a href="privacy.html">Privacy</a><a href="terms.html">SMS Terms</a><a href="https://api.campfiresms.com/login">Log in</a></nav></header>
+<header><a class="brand" href="index.html"><img class="brand-icon" src="assets/favicon-32.png" alt=""> CampfireSMS</a><nav aria-label="Primary navigation"><a href="index.html">Home</a><a class="active" href="install.html">Install</a><a href="guides/">Guides</a><a href="sms-opt-in.html">SMS Opt-in</a><a href="privacy.html">Privacy</a><a href="terms.html">SMS Terms</a><a href="https://api.campfiresms.com/login">Log in</a></nav></header>
 <main class="legal setup-guide">
   <section class="legalhead">
     <span class="kicker">ONE COMMAND</span>
     <h1>Connect CampfireSMS to Codex or Grok Build.</h1>
     <p>Phone number → verify → one local command → test by SMS → connected.</p>
-    <div class="guide-actions"><a class="button" href="https://api.campfiresms.com/join">Start free demo</a><a class="button secondary" href="https://api.campfiresms.com/login">Log in <span>↗</span></a></div>
+    <div class="guide-actions"><a class="button" href="https://api.campfiresms.com/join">Start free trial</a><a class="button secondary" href="https://api.campfiresms.com/login">Log in <span>↗</span></a></div>
   </section>
   <article>
+    <h2>Before running the command</h2><p>For the local Codex or Grok Build connection, use Windows, macOS, or Linux with Node.js 18+ (including npx), Python 3.12+, and a working supported agent CLI. Keep the computer awake and online while the agent works. The local connector does not wake stopped sessions.</p><p>Setup time depends on downloads, installed runtimes, and SMS delivery. Complete the two-way test before leaving your desk.</p>
     <ol class="setup-steps">
-      <li><h2>Verify your phone</h2><p>CampfireSMS sends a verification code and creates your free 40-message demo. No credit card is required.</p></li>
+      <li><h2>Verify your phone</h2><p>CampfireSMS sends a verification code and creates your free 40-message trial. No credit card is required. Choose and confirm a six-digit PIN for your account; later visits use your phone number and PIN.</p></li>
       <li><h2>Run the command CampfireSMS gives you</h2><pre>npx -y @campfiresms/setup XXXX-XXXX</pre><p>The command is temporary, single use, and expires after 10 minutes.</p></li>
       <li><h2>You're connected</h2><p>The installer registers CampfireSMS with Codex, Grok Build, or both when installed and stores the permanent installation credential locally. Open or restart your agent, then ask: “Use CampfireSMS to keep me updated on this task.” You never need to copy or edit credentials, environment variables, or MCP configuration.</p></li>
       <li><h2>Test both directions</h2><p>Send the test message, then reply <strong>TEST</strong>. CampfireSMS confirms when setup is complete.</p></li>
     </ol>
     <div class="guide-note"><strong>Each installation is separate.</strong><p>You can rename or revoke a computer from your CampfireSMS account. Revoking one installation does not expose or alter another.</p></div>
+    <section class="setup-screens" aria-labelledby="setup-screens-title"><h2 id="setup-screens-title">What you will see</h2><p>These screenshots show the actual account interface with fictional sample data. Your message balance and computer label will differ.</p><figure><img src="assets/setup-pin-example.png" width="642" height="410" loading="lazy" alt="After phone verification, the account asks you to create and confirm a six-digit PIN."><figcaption>Verification confirms control of the phone number. The PIN is used for later account sign-ins.</figcaption></figure><figure><img src="assets/setup-revoke-example.png" width="602" height="266" loading="lazy" alt="A sample Work laptop installation with a Rename field, Save name button, and Revoke button."><figcaption>Each computer has a separate installation. Rename it for recognition, or revoke just that computer.</figcaption></figure></section>
     <h2>What the installer does</h2><p>It installs the client-only CampfireSMS MCP connector, registers it with each supported local agent it finds, validates the connection, and reports a clear result. It does not clone a repository or run another AI model.</p>
-    <h2>Remove CampfireSMS</h2><p>Revoke the installation from your account, then remove each local MCP entry you use:</p><pre>codex mcp remove campfire
+    <h2>Use your first connected session</h2><p>Follow the <a href="guides/coding-agent-sms-notifications.html">SMS notifications walkthrough</a>, or prepare a task with the <a href="guides/monitor-coding-agent-away-from-desk.html">away-from-desk guide</a>.</p>
+    <h2 id="recovery">Update or recover a connection</h2><p>If an installation command has expired or was already used, sign in and create a new command for that computer. If your existing credential is valid, refresh the connector with:</p><pre>npx -y @campfiresms/setup update</pre><p>If your credential was revoked, expired, or is missing, create a new installation command instead. Restart your agent after updating, ask it to open a bridge, and test both directions. Check the account allowance if messages still do not arrive.</p>
+    <h2 id="revoke">Revoke one computer</h2><ol><li><a href="https://api.campfiresms.com/login">Sign in</a> using your verified phone and PIN.</li><li>Under <strong>Add computers</strong>, find the installation by its label. Use <strong>Rename</strong> and <strong>Save name</strong> to make computers easy to recognize.</li><li>Select <strong>Revoke</strong> for that installation. Its credential can no longer access the bridge; your other installations keep their own credentials.</li></ol><p>The permanent credential is stored locally by the installer, not shown for copying in the account page. Phone verification proves control of a number, not permanent personal identity.</p>
+    <h2>Remove the local connector</h2><p>After revoking the installation, remove each local MCP entry you use:</p><pre>codex mcp remove campfire
 grok mcp remove campfire</pre>
   </article>
 </main>
-<footer><a class="brand" href="index.html"><img class="brand-icon" src="assets/favicon-32.png" alt=""> CampfireSMS</a><p>SMS bridge for coding agents.</p><div><a href="https://api.campfiresms.com/login">Log in</a><a href="install.html">Install</a><a href="sms-opt-in.html">SMS Opt-in</a><a href="privacy.html">Privacy</a><a href="terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div><small>© 2026 CampfireSMS</small></footer>
+<footer><a class="brand" href="index.html"><img class="brand-icon" src="assets/favicon-32.png" alt=""> CampfireSMS</a><p>SMS bridge for coding agents.</p><div><a href="https://api.campfiresms.com/login">Log in</a><a href="install.html">Install</a><a href="guides/">Guides</a><a href="sms-opt-in.html">SMS Opt-in</a><a href="privacy.html">Privacy</a><a href="terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div><small>© 2026 CampfireSMS</small></footer>
 </body>
 </html>

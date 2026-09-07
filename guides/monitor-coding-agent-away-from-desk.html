@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>How to monitor a coding agent away from your desk | CampfireSMS</title>
+  <meta name="description" content="Plan a task handoff, receive concise SMS updates, and steer an active coding session from your phone.">
+  <link rel="canonical" href="https://campfiresms.com/guides/monitor-coding-agent-away-from-desk.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to monitor a coding agent away from your desk">
+  <meta property="og:description" content="Plan a task handoff, receive concise SMS updates, and steer an active coding session from your phone.">
+  <meta property="og:url" content="https://campfiresms.com/guides/monitor-coding-agent-away-from-desk.html">
+  <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v2.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../assets/favicon-32.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../icon.css">
+  <link rel="stylesheet" href="../pages.css">
+  <link rel="stylesheet" href="../guides.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to monitor a coding agent away from your desk", "description": "Plan a task handoff, receive concise SMS updates, and steer an active coding session from your phone.", "mainEntityOfPage": "https://campfiresms.com/guides/monitor-coding-agent-away-from-desk.html", "author": {"@type": "Organization", "name": "CampfireSMS", "url": "https://campfiresms.com/"}, "publisher": {"@type": "Organization", "name": "CampfireSMS", "url": "https://campfiresms.com/"}}</script>
+</head>
+<body class="manual-site guides-site">
+<a class="skip-link" href="#content">Skip to content</a>
+<header><a class="brand" href="../index.html"><img class="brand-icon" src="../assets/favicon-32.png" alt=""> CampfireSMS</a><nav aria-label="Primary navigation"><a href="./" class="active">Guides</a><a href="../install.html">Install</a><a class="nav-cta" href="https://api.campfiresms.com/join">Start setup</a></nav></header>
+<main class="legal" id="content">
+<section class="legalhead"><span class="kicker"><a href="./">GUIDES</a> / WORKFLOW</span><h1>How to monitor a coding agent away from your desk</h1><p>Plan a task handoff, receive concise SMS updates, and steer an active coding session from your phone.</p><p class="byline">By CampfireSMS</p></section>
+<article>
+<p>A useful away-from-desk workflow starts before you leave: give your coding agent a bounded task, agree on when it should contact you, and check that you can reply. CampfireSMS lets an active Codex or Grok Build session exchange short messages with your phone while the work stays on your computer.</p>
+<h2>Choose work with a clear finish line</h2>
+<p>A test run, an investigation, or a focused fix makes a good first session. Define what success looks like and what the agent should leave for your review. For example: reproduce a bug, implement a fix, run the relevant tests, and report the result.</p>
+<p>If the task depends on examining a large diff or making a deployment decision, plan to do that part in your coding environment. A short text rarely carries enough context for a detailed code review.</p>
+<h2>Set up the connection before leaving</h2>
+<p>Follow the <a href="../install.html">install guide</a>, then test an outgoing message and a reply from your verified phone. The <a href="coding-agent-sms-notifications.html">SMS notifications walkthrough</a> explains setup and common connection checks.</p>
+<p>Keep the computer awake and connected to the internet, with your agent session running. CampfireSMS's local connector does not provide arbitrary idle wake-up: a text alone cannot reliably resume a stopped agent. Your phone can use cellular SMS without mobile data, but the computer and service still need connectivity.</p>
+<h2>Use a specific handoff prompt</h2>
+<p>Adapt this example to the work you have already discussed:</p>
+<blockquote><p>I'm stepping away. Reproduce the failing date-parser test, fix the cause, and run the relevant tests. Leave the changes ready for review. Use CampfireSMS to tell me when you're blocked, need clarification, or finish. Check for replies while working. If a native permission prompt needs my attention, tell me and wait. Close the bridge when this session is finished.</p></blockquote>
+<p>Agree on the scope in the agent session first. SMS is a steering channel; it cannot expand the agent's authority or substitute for native permissions.</p>
+<h2>Ask for changes in state, not a running transcript</h2>
+<p>Three kinds of messages usually carry the most useful information:</p>
+<ul><li><strong>A result:</strong> what finished, which checks ran, and what remains.</li><li><strong>A blocker:</strong> what stopped progress and what information is needed.</li><li><strong>A clarification:</strong> one short question with enough context to answer.</li></ul>
+<p>Avoid requesting every tool call or a text every minute. Concise updates are easier to act on and use less of your message allowance. Silence is not proof that the task is healthy; if an expected update is missing, check the session when you can.</p>
+<h2>Reply with enough context</h2>
+<p>Here is an illustrative exchange:</p>
+<blockquote><p><strong>Agent:</strong> The fix passes the focused tests. Should I run the full suite next?<br><strong>You:</strong> Run the full suite, then summarize any failures.<br><strong>Agent:</strong> Full suite passed. Changes are ready for review.</p></blockquote>
+<p>Use short, specific replies rather than ambiguous acknowledgments. Some standalone words are reserved for the messaging service: <strong>STOP</strong> opts you out, <strong>HELP</strong> requests support information, and <strong>YES</strong> is an opt-in command. Avoid those as task answers. See the <a href="../terms.html">SMS terms</a> for service details.</p>
+<h2>Know when to return to the desk</h2>
+<p>If the agent needs native approval, the computer sleeps, or the session ends, the text channel cannot resolve every interruption. SMS can also arrive late. Use it for convenient progress updates, not time-critical monitoring. Do not put passwords or sensitive repository details into messages; SMS is not end-to-end encrypted.</p>
+<p>For a local session, only one active bridge can be bound to your phone at a time. Finish or close the current bridge before switching to another agent session.</p>
+<h2>Finish the session deliberately</h2>
+<p>Ask for a final summary of the changes and checks, then review the work in your coding environment. Ask the agent to close the CampfireSMS bridge when finished. You can also text <code>!bridge off</code> to close the bridge; closing the connection does not itself stop the coding task.</p>
+<p>Ready to try a short session? <a href="https://api.campfiresms.com/join">Connect your phone</a> and start with a task whose result you can easily verify.</p>
+</article>
+</main>
+<footer><a class="brand" href="../index.html"><img class="brand-icon" src="../assets/favicon-32.png" alt=""> CampfireSMS</a><p>SMS bridge for coding agents.</p><div><a href="./">Guides</a><a href="../install.html">Install</a><a href="../privacy.html">Privacy</a><a href="../terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div><small>© 2026 CampfireSMS</small></footer>
+</body>
+</html>
