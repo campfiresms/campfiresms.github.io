@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Step away from your laptop and supervise an active coding task by SMS. Get updates and answer agent questions with CampfireSMS.">
+  <meta name="description" content="CampfireSMS is the SMS bridge for Codex and Grok Build agents. Monitor and control long-running coding tasks over text.">
   <link rel="canonical" href="https://campfiresms.com/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="CampfireSMS — Step away. Stay with the task.">
-  <meta property="og:description" content="Leave your desk, follow your coding task by text. Free trial: 40 messages, no card.">
+  <meta property="og:title" content="CampfireSMS — SMS bridge for coding agents">
+  <meta property="og:description" content="Start free with 40 messages. Monitor and control long-running Codex and Grok Build tasks over SMS.">
   <meta property="og:url" content="https://campfiresms.com/">
   <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v2.png">
   <meta property="og:image:secure_url" content="https://campfiresms.com/assets/campfiresms-social-card-v2.png">
@@ -16,11 +16,11 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="CampfireSMS - SMS bridge for Codex and Grok Build">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CampfireSMS — Step away. Stay with the task.">
-  <meta name="twitter:description" content="Leave your desk, follow your coding task by text. Free trial: 40 messages, no card.">
+  <meta name="twitter:title" content="CampfireSMS — SMS bridge for coding agents">
+  <meta name="twitter:description" content="Start free with 40 messages. Monitor and control long-running Codex and Grok Build tasks over SMS.">
   <meta name="twitter:image" content="https://campfiresms.com/assets/campfiresms-social-card-v2.png">
   <meta name="twitter:image:alt" content="CampfireSMS - SMS bridge for Codex and Grok Build">
-  <title>CampfireSMS — Step away. Stay with the task.</title>
+  <title>CampfireSMS — SMS bridge for coding agents</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
@@ -42,15 +42,13 @@
 <main id="content">
   <section class="v1-hero">
     <div class="hero-copy">
-      <p class="section-mark">For solo developers &amp; contractors</p>
-      <h1>Step away.<br>Stay with the task.</h1>
-      <p class="lede">Leave a long-running coding task on your computer. Get progress by text, answer your agent’s questions, and steer work already in scope from your phone.</p>
-      <p class="hero-context">Codex and Grok Build are coding agents that work with your code and tools. CampfireSMS connects an active session to your usual SMS app.</p>
+      <h1>SMS bridge for<br>coding agents.</h1>
+      <p class="lede">Monitor and control long-running Codex and Grok Build tasks over text.</p>
       <div class="actions">
         <a class="button" href="https://api.campfiresms.com/join">Start free setup <span>→</span></a>
         <a class="quiet-link" href="install.html">Read the install guide <span>→</span></a>
       </div>
-      <p class="signal-line"><span></span>No mobile data needed on your phone. Keep your agent computer awake and online.</p>
+      <p class="signal-line"><span></span>No mobile data required on your phone. Keep your agent online.</p>
     </div>
     <div class="relay-window" aria-label="Example CampfireSMS exchange">
       <div class="relay-window-head"><span>CAMPFIRESMS / SMS</span><strong><i></i> EXAMPLE</strong></div>
@@ -59,27 +57,21 @@
         <p class="from-you"><b>You · 2:16 PM</b>Run the full suite, then summarize any failures.</p>
         <p><b>CampfireSMS · 2:16 PM</b>Full suite passed. Changes are ready for review on your computer.</p>
       </div>
-      <button class="demo-replay" type="button" hidden>Replay example</button>
-      <div class="relay-window-foot">Illustrative exchange · SMS does not replace native approvals</div>
+      <div class="relay-window-foot">Illustrative SMS exchange</div>
     </div>
   </section>
 
   <section class="manual-section" id="how">
     <div class="section-copy">
       <p class="section-mark">How it works</p>
-      <h2>One phone. One command. A two-way test.</h2>
-      <div class="procedure visual-flow">
-        <article><b>1</b><div><h3>Verify your phone</h3><p>Enter your number, confirm the SMS code, and choose a six-digit account PIN. No card for the trial.</p></div></article>
-        <article><b>2</b><div><h3>Connect your computer</h3><p>Run your temporary install command, then restart Codex or Grok Build.</p></div></article>
-        <article><b>3</b><div><h3>Test, then step away</h3><p>Reply TEST to the setup message. Give your agent a task and ask it to use CampfireSMS for updates.</p></div></article>
+      <h2>Using CampfireSMS with your coding agent.</h2>
+      <div class="procedure">
+        <article><b>1</b><div><h3>Install CampfireSMS</h3><p>Run the installer on the computer where you use Codex or Grok Build.</p></div></article>
+        <article><b>2</b><div><h3>Give your agent a task</h3><p>Tell the agent what to do and ask it to send updates through CampfireSMS.</p></div></article>
+        <article><b>3</b><div><h3>Leave and continue by text</h3><p>Receive updates, answer questions, or change the instructions from your phone.</p></div></article>
       </div>
     </div>
   </section>
-
-  <section class="manual-section" id="requirements"><div class="section-copy">
-    <p class="section-mark">Before you start</p><h2>Your agent stays on your computer.</h2>
-    <div class="detail-grid"><div><h3>Local setup</h3><p>Windows, macOS, or Linux with a working Codex or Grok Build CLI. The installer requires Node.js 18+ with npx; the local connector requires Python 3.12+.</p><p>Keep the computer awake, online, and the agent session active. The local connector cannot wake an arbitrarily idle or stopped session.</p></div><div><h3>What signup asks for</h3><p>A phone number, its SMS verification code, and a six-digit PIN with confirmation. Verification creates your account; later you sign in with phone + PIN.</p><p>Setup includes a package download and a two-way SMS test. Time varies with your connection and existing runtimes; we have not published a measured setup-time claim.</p><a href="install.html">See prerequisites and setup screens →</a></div></div>
-  </div></section>
 
   <section class="manual-section field-notes">
     <div class="section-copy">
@@ -88,7 +80,7 @@
       <div class="notes-grid">
         <ul>
           <li>Status updates</li>
-          <li>Clarifications within the agreed task</li>
+          <li>Questions and replies</li>
           <li>Agent instructions</li>
           <li>Long-running task monitoring</li>
         </ul>
@@ -97,44 +89,23 @@
     </div>
   </section>
 
-  <section class="manual-section" id="boundaries"><div class="section-copy"><p class="section-mark">What a reply can do</p><h2>Updates, task replies, and approvals.</h2><div class="detail-grid three"><div><h3>Informational updates</h3><p>“Tests passed” or “The build failed.” Learn what changed without checking a dashboard.</p></div><div><h3>Two-way steering</h3><p>Answer a clarification or ask for the next check within the work you already authorized.</p></div><div><h3>Native approvals</h3><p>New permissions and consequential actions stay in your agent’s approval flow. A text cannot authorize destructive work or bypass those controls.</p></div></div></div></section>
-
   <section class="manual-section pricing-ledger" id="pricing">
     <div class="section-copy">
       <p class="section-mark">Pricing</p>
-      <h2>Free trial: 40 messages, no card.</h2>
+      <h2>Demo: $0. Monthly: $8.</h2>
       <div class="ledger" role="table" aria-label="CampfireSMS pricing">
         <div class="ledger-row ledger-head" role="row"><span role="columnheader">Plan</span><span role="columnheader">Price</span><span role="columnheader">Messages</span><span role="columnheader">Terms</span></div>
-        <div class="ledger-row" role="row"><strong role="cell">Free trial</strong><span role="cell">$0</span><span role="cell">40 total</span><span role="cell">No card required</span></div>
+        <div class="ledger-row" role="row"><strong role="cell">Demo</strong><span role="cell">$0</span><span role="cell">40 total</span><span role="cell">No card required</span></div>
         <div class="ledger-row" role="row"><strong role="cell">Monthly</strong><span role="cell">$8 / month</span><span role="cell">500 / month</span><span role="cell">No daily cap or overages</span></div>
       </div>
-      <div class="pricing-action"><a class="button" href="https://api.campfiresms.com/join">Start free setup <span>→</span></a><p>No automatic charge after the trial. Upgrade from your existing account when you need more messages.</p></div>
-      <div class="pricing-action"><a class="button" href="https://api.campfiresms.com/login">Choose Monthly — $8/month →</a><p>Sign in, then select Upgrade to open checkout. New here? Complete free setup first.</p></div>
-      <div class="pricing-facts"><h3>How the allowance works</h3><ul><li>Each inbound or outbound Campfire message counts once. A text and its reply use two messages; carrier SMS segments are not separate allowance units.</li><li>Your account shows the remaining allowance. Setup test messages use messages too.</li><li>At 40 trial messages or 500 monthly messages, messaging pauses without overage charges. Replies sent while exhausted are not queued for later delivery.</li><li>The paid allowance currently resets at the start of each UTC calendar month. Unused messages do not roll over. Subscription billing renews monthly.</li><li>Upgrading keeps your verified phone and existing installations.</li></ul></div>
+      <div class="pricing-action"><a class="button" href="https://api.campfiresms.com/join">Start free setup <span>→</span></a><p>The demo includes 40 messages and does not require a card. At the limit, messaging pauses.</p></div>
     </div>
   </section>
-
-  <section class="manual-section" id="comparison"><div class="section-copy"><p class="section-mark">Choose your workflow</p><h2>When a short text is enough.</h2><p>These are typical uses; individual tools vary. Every option still depends on the permissions and availability of the agent doing the work.</p>
-    <div class="comparison-wrap" tabindex="0" role="region" aria-label="Workflow comparison, scroll horizontally on small screens"><table><caption>CampfireSMS and common ways to follow a coding task</caption><thead><tr><th scope="col">Approach</th><th scope="col">Phone connection</th><th scope="col">Reply and review</th><th scope="col">Setup and control</th></tr></thead><tbody>
-    <tr><th scope="row">CampfireSMS</th><td>Cellular SMS; no phone data required</td><td>Short two-way instructions; native approvals remain in the agent</td><td>Local agent execution; revoke each installation separately</td></tr>
-    <tr><th scope="row">Push notifications</th><td>Usually internet and a compatible app</td><td>Quick alerts; reply actions depend on the app</td><td>Notification integration and app permissions</td></tr>
-    <tr><th scope="row">Web dashboard</th><td>Internet and a browser</td><td>Richer history and review; controls vary</td><td>Dashboard account and agent connection</td></tr>
-    <tr><th scope="row">Terminal multiplexer + SSH</th><td>Internet and an SSH client</td><td>Full terminal access from your phone</td><td>Configure remote access and manage credentials</td></tr>
-    <tr><th scope="row">Generic SMS automation</th><td>Cellular SMS</td><td>Alerts and replies if you build the routing</td><td>You implement agent integration and access controls</td></tr>
-    </tbody></table></div><p>CampfireSMS transports messages, runs no extra model, and does not transfer your repository. Message text travels through the SMS service; SMS is not end-to-end encrypted.</p>
-  </div></section>
-
-  <section class="manual-section" id="recovery"><div class="section-copy"><p class="section-mark">Expectations &amp; recovery</p><h2>If the conversation goes quiet.</h2>
-  <details><summary>How quickly do updates arrive?</summary><p>Timing includes the agent reaching a work boundary, service processing, and carrier delivery. SMS can be delayed; there is no published delivery-time guarantee or measured reliability percentage. Use it for convenient updates rather than time-critical monitoring.</p></details>
-  <details><summary>What if I stop receiving updates?</summary><p>Check your remaining messages, confirm the computer is awake and online, and return to the agent to confirm its bridge is active. Ask it to send a short test. A stopped local session cannot be restarted just by texting.</p></details>
-  <details><summary>What if installation fails or the command expires?</summary><p>Check Node.js, Python, and your agent CLI first. Create a fresh install command in your account if the old one expired or was used. For an existing valid installation, see the <a href="install.html#recovery">update and recovery steps</a>.</p></details>
-  <details><summary>Which countries and carriers work?</summary><p>Availability depends on the number and carrier. We have not published a verified country-by-country coverage list. <a href="mailto:campfire.sms.support@gmail.com">Check with support</a> for your country before relying on the service, and complete the two-way setup test.</p></details>
-  </div></section>
 
   <section class="manual-section" id="guides">
     <div class="section-copy">
       <p class="section-mark">Guides</p>
-      <h2>Take your next task away from the desk.</h2>
+      <h2>Guides for using CampfireSMS.</h2>
       <div class="procedure">
         <article><b>01</b><div><h3><a href="guides/coding-agent-sms-notifications.html">Get SMS notifications from your coding agent</a></h3><p>Connect your phone, test replies, and ask for useful updates.</p></div></article>
         <article><b>02</b><div><h3><a href="guides/monitor-coding-agent-away-from-desk.html">Monitor a coding agent away from your desk</a></h3><p>Plan a handoff, respond to questions, and finish the session.</p></div></article>
@@ -146,7 +117,7 @@
   <section class="security-line">
     <span>Security</span>
     <strong>Access is tied to a verified phone and a separate credential for each installation.</strong>
-    <p>Your SMS code verifies control of your phone number. Each computer receives its own credential, stored locally and checked by the service. Signed provider webhooks and server-side bridge ownership protect routing. <a href="install.html#revoke">See how to revoke a computer →</a></p>
+    <p>Provider webhooks are signed. Bridge ownership is enforced on the server. Each installation can be revoked independently.</p>
   </section>
 </main>
 <footer>
@@ -155,7 +126,5 @@
   <div><a href="https://api.campfiresms.com/login">Log in</a><a href="install.html">Install</a><a href="guides/">Guides</a><a href="sms-opt-in.html">SMS Opt-in</a><a href="privacy.html">Privacy</a><a href="terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div>
   <small>© 2026 CampfireSMS</small>
 </footer>
-<div class="mobile-cta"><span>40 messages · no card</span><a href="https://api.campfiresms.com/join">Start free setup →</a></div>
-<script src="demo.js" defer></script>
 </body>
 </html>
