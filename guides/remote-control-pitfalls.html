@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Common pitfalls with remote controls for coding agents | CampfireSMS</title>
+  <meta name="description" content="Dropped connections, slow loading, workspace approval errors, and authentication failures: what to check and when SMS can serve as a fallback.">
+  <link rel="canonical" href="https://campfiresms.com/guides/remote-control-pitfalls.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Common pitfalls with remote controls for coding agents">
+  <meta property="og:description" content="Dropped connections, slow loading, workspace approval errors, and authentication failures: what to check and when SMS can serve as a fallback.">
+  <meta property="og:url" content="https://campfiresms.com/guides/remote-control-pitfalls.html">
+  <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v2.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../assets/favicon-32.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../icon.css">
+  <link rel="stylesheet" href="../pages.css">
+  <link rel="stylesheet" href="../guides.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Common pitfalls with remote controls for coding agents", "description": "Dropped connections, slow loading, workspace approval errors, and authentication failures: what to check and when SMS can serve as a fallback.", "mainEntityOfPage": "https://campfiresms.com/guides/remote-control-pitfalls.html", "datePublished": "2026-09-12", "dateModified": "2026-09-12", "author": {"@type": "Organization", "name": "CampfireSMS", "url": "https://campfiresms.com/"}, "publisher": {"@type": "Organization", "name": "CampfireSMS", "url": "https://campfiresms.com/"}}</script>
+</head>
+<body class="manual-site guides-site">
+<a class="skip-link" href="#content">Skip to content</a>
+<header><a class="brand" href="../index.html"><img class="brand-icon" src="../assets/favicon-32.png" alt=""> CampfireSMS</a><nav aria-label="Primary navigation"><a href="./" class="active">Guides</a><a href="../install.html">Install</a><a class="nav-cta" href="https://api.campfiresms.com/join">Start setup</a></nav></header>
+<main class="legal" id="content">
+<section class="legalhead"><span class="kicker"><a href="./">GUIDES</a> / TROUBLESHOOTING</span><h1>Common pitfalls with remote controls for coding agents</h1><p>Dropped connections, slow loading, workspace approval errors, and authentication failures: what to check and when SMS can serve as a fallback.</p><p class="byline">By CampfireSMS · <time datetime="2026-09-12">September 12, 2026</time></p></section>
+<article>
+<p>You open your coding agent’s remote control from your phone. It spins, disconnects, or asks for an approval you cannot complete. The task might still be running. Or it might have stopped ten minutes ago.</p>
+<p>First, find out which part failed: the remote interface, the connection to your computer, or the agent itself. CampfireSMS can offer another way to get a short update or send a reply. It does not fix the underlying problem.</p>
+<h2 id="connection">1. Losing the connection</h2>
+<p>A dropped connection does not tell you whether the task stopped. Your phone may have changed networks, a relay may be unavailable, or the computer may have gone to sleep. How a task behaves after disconnection depends on the tool running it.</p>
+<p><strong>Check:</strong> Is the host awake and online? Can you reach it through another connection you already configured? Reconnect to the same session and check its latest output before starting the task again. Repeating a command without knowing its result can duplicate work.</p>
+<p><strong>SMS fallback:</strong> If only the remote interface or your phone’s data connection failed, an active CampfireSMS bridge may still carry updates over cellular SMS. If the host is asleep, offline, or the local agent has stopped, that bridge cannot do the work for you. Set it up and test it before leaving.</p>
+<h2 id="loading">2. Slow loading and blank screens</h2>
+<p>A slow dashboard is not proof of a slow agent. It may be loading conversation history, waiting for a service, or struggling with a poor connection. A remote development tool may also need to download server components before it opens the workspace. VS Code documents that setup behavior in its <a href="https://code.visualstudio.com/docs/remote/ssh">Remote SSH guide</a>.</p>
+<p><strong>Check:</strong> See whether the host is still making progress. Inspect the remote tool’s connection log and service status, then try reopening the view or using another network. Avoid restarting a working agent just because its interface is slow.</p>
+<p><strong>SMS fallback:</strong> Ask for the result you actually need: “Did the tests finish? Summarize any failures.” A short text can spare you loading a full transcript. It will not make the tests run faster, and SMS delivery can be delayed too.</p>
+<h2 id="approval">3. Workspace and approval errors</h2>
+<p>“Needs approval” can mean several things: an untrusted workspace, a folder outside the allowed scope, an operating-system permission, or a command waiting for the agent’s native approval. These need different fixes. For example, VS Code’s <a href="https://code.visualstudio.com/docs/editing/workspaces/workspace-trust">Workspace Trust</a> controls which features can run in a folder; it is not the same as an agent’s approval for a particular command.</p>
+<p><strong>Check:</strong> Read the exact error. Confirm the session opened the intended repository and path. Review the workspace or action through the tool’s supported approval flow. If the remote client cannot display that prompt, return to the local client or an already-configured remote desktop. Do not disable approvals globally just to get past one blocked step.</p>
+<p><strong>SMS fallback:</strong> An agent that can still use CampfireSMS may tell you what is blocked or ask a clarification. You can direct it toward work already authorized and within scope. A text cannot grant new permissions, override workspace restrictions, or substitute for native approval. If the agent is fully blocked, it may be unable to text you at all.</p>
+<h2 id="authentication">4. Authentication failures</h2>
+<p>Your remote-control account, host login, coding-agent login, and repository credentials may be separate. Successfully signing into one does not prove the others are valid. An expired session or a hidden login prompt can look like a connection failure.</p>
+<p><strong>Check:</strong> Identify which service is rejecting access. Read its error or connection log, check that you selected the right account and host, and complete sign-in through its official flow. Some remote tools expose otherwise-hidden password prompts in a login terminal; VS Code covers this in its <a href="https://code.visualstudio.com/docs/remote/troubleshooting">remote troubleshooting guide</a>.</p>
+<p><strong>SMS fallback:</strong> CampfireSMS has its own connection and device credential. It may remain usable if only your remote-control login expired. If the coding agent itself lost access to its model or repository, SMS does not restore it. Do not send passwords, API keys, or verification codes through the bridge. SMS is not end-to-end encrypted.</p>
+<h2 id="fallback">Prepare a fallback before you need it</h2>
+<ul>
+<li>Give the task a clear finish line and agree on what the agent should leave for review.</li>
+<li>Test one CampfireSMS update and one reply while you are still at the computer.</li>
+<li>Ask for a text at completion or a blocker. The agent must remain active and able to use the bridge.</li>
+<li>Keep a way to inspect the actual session, such as your existing remote client or configured SSH access. A text summary cannot replace a detailed diff or approval screen.</li>
+<li>Check the latest task state before retrying anything after a disconnect.</li>
+</ul>
+<p>If CampfireSMS also goes quiet, check your message allowance, device credential, and active bridge. Keep the host awake and online. The local connector does not provide arbitrary idle wake-up, and silence does not mean the task is running.</p>
+<p>CampfireSMS is useful when you need a short update or reply and the usual remote interface is inconvenient or unavailable. It still needs a working agent, a reachable service, and cellular SMS. For setup and recovery steps, see the <a href="../install.html">install guide</a> and <a href="monitor-coding-agent-away-from-desk.html">away-from-desk workflow</a>.</p>
+</article>
+</main>
+<footer><a class="brand" href="../index.html"><img class="brand-icon" src="../assets/favicon-32.png" alt=""> CampfireSMS</a><p>SMS bridge for coding agents.</p><div><a href="./">Guides</a><a href="../install.html">Install</a><a href="../privacy.html">Privacy</a><a href="../terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div><small>© 2026 CampfireSMS</small></footer>
+</body>
+</html>
