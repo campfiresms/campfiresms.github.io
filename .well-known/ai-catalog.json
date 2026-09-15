@@ -1,0 +1,14 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "CampfireSMS"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:campfiresms.com:mcp:bridge",
+      "displayName": "CampfireSMS bridge",
+      "type": "application/mcp-server-card+json",
+      "url": "https://campfiresms.com/.well-known/mcp/server-card.json"
+    }
+  ]
+}

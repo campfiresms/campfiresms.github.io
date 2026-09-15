@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
+  "name": "com.campfiresms/bridge",
+  "version": "0.1.0",
+  "title": "CampfireSMS",
+  "description": "Connect an active coding-agent task to a verified user's phone over SMS.",
+  "websiteUrl": "https://campfiresms.com",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.campfiresms.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Installation bearer issued after human enrollment. Use: Bearer <credential>.",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string",
+          "placeholder": "Bearer ..."
+        }
+      ],
+      "supportedProtocolVersions": ["2026-07-28"]
+    }
+  ]
+}

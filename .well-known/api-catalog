@@ -1,0 +1,39 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://campfiresms.com/",
+      "sitemap": [
+        {
+          "href": "https://campfiresms.com/sitemap.xml",
+          "type": "application/xml"
+        }
+      ],
+      "describedby": [
+        {
+          "href": "https://campfiresms.com/llms.txt",
+          "type": "text/plain"
+        },
+        {
+          "href": "https://campfiresms.com/auth.md",
+          "type": "text/markdown"
+        }
+      ],
+      "service-desc": [
+        {
+          "href": "https://api.campfiresms.com/openapi.json",
+          "type": "application/vnd.oai.openapi+json"
+        },
+        {
+          "href": "https://campfiresms.com/.well-known/mcp/server-card.json",
+          "type": "application/mcp-server-card+json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://campfiresms.com/install.html",
+          "type": "text/html"
+        }
+      ]
+    }
+  ]
+}
