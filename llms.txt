@@ -1,0 +1,23 @@
+# CampfireSMS
+
+> CampfireSMS is an SMS bridge for an already-running Codex or Grok Build coding-agent task. It carries concise updates, questions, replies, and instructions between a verified phone and that task. It does not run another model, move source code, grant permissions, or replace native approvals.
+
+## Primary pages
+
+- [Home](https://campfiresms.com/): Product summary, pricing, and security boundaries.
+- [Install](https://campfiresms.com/install.html): Human enrollment and connector installation.
+- [Guides](https://campfiresms.com/guides/): Practical CampfireSMS workflows.
+- [Privacy](https://campfiresms.com/privacy.html): Privacy policy.
+- [SMS terms](https://campfiresms.com/terms.html): Messaging terms.
+
+## Agent interfaces
+
+- [Authentication](https://campfiresms.com/auth.md): Enrollment and bearer-authentication rules.
+- [API catalog](https://campfiresms.com/.well-known/api-catalog): Linkset catalog for the site and API.
+- [AI catalog](https://campfiresms.com/.well-known/ai-catalog.json): CampfireSMS MCP discovery entry.
+- [MCP server card](https://campfiresms.com/.well-known/mcp/server-card.json): Hosted MCP transport metadata.
+- [OpenAPI](https://api.campfiresms.com/openapi.json): REST API description.
+
+## Skills
+
+- [campfiresms](https://campfiresms.com/.well-known/agent-skills/campfiresms/SKILL.md): Safely use the CampfireSMS MCP tools for a user-facing coding task.

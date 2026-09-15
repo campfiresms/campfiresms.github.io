@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "campfiresms",
+      "type": "skill-md",
+      "description": "Use CampfireSMS to send concise progress updates and receive replies for an already-running coding-agent task.",
+      "url": "/.well-known/agent-skills/campfiresms/SKILL.md",
+      "digest": "sha256:6471f7ba1c3435e11897d6ba82dd05ef321ae6db8365bacd51df3f346b8cc792"
+    }
+  ]
+}
