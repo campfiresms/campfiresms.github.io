@@ -1,4 +1,6 @@
-# CampfireSMS authentication
+# Auth.md
+
+CampfireSMS authentication instructions for people and AI agents.
 
 CampfireSMS does not support autonomous agent registration or OAuth.
 
