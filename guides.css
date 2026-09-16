@@ -4,7 +4,7 @@
 .guides-site .legal li { margin: 10px 0; color: #514d45; }
 .guides-site .legal pre { white-space: pre-wrap; overflow-wrap: anywhere; }
 .guides-site .legal code { font-size: .9em; overflow-wrap: anywhere; }
-.guides-site .legalhead .byline { margin-top: 22px; font: 12px/1.6 ui-monospace, Consolas, monospace; }
+.guides-site .legalhead .byline { margin-top: 22px; font: 12px/1.6 var(--font-body); }
 .guides-site .kicker a { color: inherit; text-underline-offset: 3px; }
 .guides-site .guide-entry { padding: 32px 0; border-bottom: 1px solid var(--manual-rule); }
 .guides-site .guide-entry h2 { margin-top: 10px; }

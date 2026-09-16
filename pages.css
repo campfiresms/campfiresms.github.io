@@ -11,7 +11,7 @@
 body.manual-site {
   background: var(--manual-paper);
   color: var(--manual-ink);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-body);
 }
 
 .manual-site header {
@@ -29,12 +29,12 @@ body.manual-site {
 .manual-site .fine-print,
 .manual-site .steps,
 .manual-site footer {
-  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  font-family: var(--font-body);
 }
 
 .manual-site header .brand {
   font-size: 17px;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.025em;
 }
 
 .manual-site header nav {
@@ -91,7 +91,7 @@ body.manual-site {
 .manual-site .legalhead h1 {
   margin: 11px 0 16px;
   font-size: clamp(48px, 7vw, 74px);
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: -0.055em;
   line-height: 0.98;
 }
@@ -118,7 +118,7 @@ body.manual-site {
 .manual-site .legal h2 {
   margin: 44px 0 9px;
   font-size: 26px;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: -0.035em;
 }
 
@@ -168,7 +168,7 @@ body.manual-site {
 .join-heading h1 {
   margin: 11px 0 16px;
   font-size: clamp(49px, 7vw, 74px);
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: -0.06em;
   line-height: 0.98;
 }
@@ -206,14 +206,14 @@ body.manual-site {
 .option-number {
   margin: 0;
   color: var(--manual-red);
-  font: 11px ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 11px var(--font-body);
   letter-spacing: 0.04em;
 }
 
 .join-option h2 {
   margin: 32px 0 10px;
   font-size: 38px;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: -0.05em;
   line-height: 1;
 }
@@ -250,7 +250,7 @@ body.manual-site {
 .option-note {
   margin: 14px 0 0 !important;
   color: #6b655b !important;
-  font: 11px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 11px/1.5 var(--font-body);
 }
 
 .join-option-primary .option-note {
@@ -269,7 +269,7 @@ body.manual-site {
 
 .join-links {
   margin: 25px 0 0;
-  font: 12px/1.6 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 12px/1.6 var(--font-body);
 }
 
 .join-links a {
@@ -292,7 +292,7 @@ body.manual-site {
   max-width: 680px;
   margin: 13px 0 22px;
   font-size: clamp(52px, 7vw, 82px);
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: -0.06em;
   line-height: 0.96;
 }
@@ -370,20 +370,20 @@ body.manual-site {
   padding-bottom: 12px;
   border-bottom: 1px solid var(--manual-ink);
   color: #5b564e;
-  font: 11px ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 11px var(--font-body);
   letter-spacing: 0.04em;
 }
 
 .entry-card-head strong {
   color: var(--manual-green);
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .entry-card h2 {
   margin: 28px 0 21px;
   font-size: 31px;
-  font-weight: 400;
-  letter-spacing: -0.04em;
+  font-weight: 600;
+  letter-spacing: -0.025em;
   line-height: 1.05;
 }
 
@@ -433,7 +433,7 @@ body.manual-site {
   max-width: 720px;
   margin: 11px 0 33px;
   font-size: clamp(36px, 4.5vw, 55px);
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: -0.05em;
   line-height: 1.04;
 }
@@ -447,7 +447,7 @@ body.manual-site {
 .start-grid h3 {
   margin: 0 0 8px;
   font-size: 21px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .start-grid p {
@@ -467,7 +467,7 @@ body.manual-site {
   padding: 12px 0;
   border-bottom: 1px solid var(--manual-rule);
   color: #514d45;
-  font: 13px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 13px/1.5 var(--font-body);
 }
 
 .start-list li::before {
@@ -478,7 +478,7 @@ body.manual-site {
 
 .start-links {
   margin-top: 26px !important;
-  font: 12px/1.6 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 12px/1.6 var(--font-body);
 }
 
 .start-links a {
@@ -503,7 +503,7 @@ body.manual-site {
   border-radius: 50%;
   background: var(--manual-green);
   color: #fff;
-  font: 15px Georgia, serif;
+  font: 15px var(--font-body);
 }
 
 .sms-notice p {
@@ -524,7 +524,7 @@ body.manual-site {
   }
 
   .manual-site header nav a:nth-child(-n + 3) {
-    display: none;
+    display: inline-block;
   }
 
   .start-page {
@@ -607,7 +607,7 @@ body.manual-site {
 /* Keep secondary pages consistent with the square, document-like homepage. */
 .manual-site .legalhead h1 {
   font-size: clamp(40px, 5vw, 58px);
-  letter-spacing: -0.04em;
+  letter-spacing: -0.025em;
   line-height: 1.05;
 }
 
@@ -644,7 +644,7 @@ body.manual-site {
   border-radius: 0;
   background: transparent;
   color: var(--manual-red);
-  font: 14px ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 14px var(--font-body);
 }
 
 .manual-site .guide-note,
@@ -666,7 +666,7 @@ body.manual-site {
 
 .manual-site .sms-number {
   color: var(--manual-green) !important;
-  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-family: var(--font-body);
   font-size: clamp(28px, 5vw, 42px);
   font-weight: 500;
 }
@@ -683,3 +683,16 @@ body.manual-site {
 }
 
 .setup-screens figure{margin:28px 0}.setup-screens img{display:block;width:100%;height:auto;border:1px solid var(--manual-rule)}.setup-screens figcaption{margin-top:12px;color:#514d45;font-size:14px;line-height:1.6}
+
+/* Shared navigation and readable secondary-page type scale. */
+.manual-site header { height: auto; min-height: 86px; padding: 20px 28px; }
+.manual-site header .brand { font-size: 19px; letter-spacing: 0; }
+.manual-site header nav a { font-size: 14px; }
+.manual-site header nav .nav-cta { margin: 0; }
+.manual-site .legalhead h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.15; letter-spacing: -.025em; }
+.manual-site .kicker { font-size: 14px; letter-spacing: 0; }
+.manual-site .button, .manual-site .outline-button { font-size: 15px; }
+@media (max-width: 520px) { .manual-site header { padding: 18px 20px; } }
+
+.manual-site .button.secondary { background: transparent; color: var(--manual-ink); border-color: var(--manual-rule); }
+.manual-site .button.secondary:hover { background: var(--manual-panel); }

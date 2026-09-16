@@ -37,7 +37,7 @@
     execute() {
       return JSON.stringify({
         product: "CampfireSMS",
-        purpose: "SMS bridge for an already-running Codex or Grok Build coding-agent task",
+        purpose: "SMS bridge for an already-running coding-agent task",
         supports: ["concise progress updates", "questions and replies", "task instructions within existing authority"],
         doesNotSupport: ["running an AI model", "native approvals", "permission grants", "secret transfer"],
         install: pages.install,
