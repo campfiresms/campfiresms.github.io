@@ -1,12 +1,13 @@
 # CampfireSMS
 
-> CampfireSMS is an SMS bridge for an already-running Codex or Grok Build coding-agent task. It carries concise updates, questions, replies, and instructions between a verified phone and that task. It does not run another model, move source code, grant permissions, or replace native approvals.
+> CampfireSMS is an SMS bridge for an already-running coding-agent task. It carries concise updates, questions, replies, and instructions between a verified phone and that task. It does not run another model, move source code, grant permissions, or replace native approvals.
 
 ## Primary pages
 
 - [Home](https://campfiresms.com/): Product summary, pricing, and security boundaries.
 - [Install](https://campfiresms.com/install.html): Human enrollment and connector installation.
 - [Guides](https://campfiresms.com/guides/): Practical CampfireSMS workflows.
+- [Grok Bot and Grok Build](https://campfiresms.com/guides/grok-bot-sms-routine.html): Native polling routines and Debian connector setup.
 - [Privacy](https://campfiresms.com/privacy.html): Privacy policy.
 - [SMS terms](https://campfiresms.com/terms.html): Messaging terms.
 
