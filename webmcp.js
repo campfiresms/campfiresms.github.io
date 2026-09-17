@@ -10,6 +10,7 @@
   const registration = new AbortController();
   const pages = Object.freeze({
     home: "https://campfiresms.com/",
+    about: "https://campfiresms.com/about.html",
     install: "https://campfiresms.com/install.html",
     guides: "https://campfiresms.com/guides/",
     privacy: "https://campfiresms.com/privacy.html",
@@ -40,6 +41,12 @@
         purpose: "SMS bridge for an already-running coding-agent task",
         supports: ["concise progress updates", "questions and replies", "task instructions within existing authority"],
         doesNotSupport: ["running an AI model", "native approvals", "permission grants", "secret transfer"],
+        about: pages.about,
+        compatibleAgents: ["Codex", "Grok", "Claude", "OpenCode", "other compatible MCP or HTTP API hosts"],
+        setupRequirements: "Connection steps vary by host. The installer can register detected Codex and Grok Build installations; other compatible hosts need configuration.",
+        localConnectorRequirements: "An available, online agent or scheduled routine must check the bridge for replies. Installation alone does not schedule checks or wake an idle agent.",
+        smsPrivacy: "SMS is not end-to-end encrypted.",
+        pricing: `${pages.home}#pricing`,
         install: pages.install,
         setup: pages.setup,
       });

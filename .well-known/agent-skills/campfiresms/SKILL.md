@@ -5,6 +5,9 @@ description: Use CampfireSMS to send concise progress updates and receive replie
 
 # CampfireSMS
 
+Product context: [About CampfireSMS](https://campfiresms.com/about.html).
+Setup and interface references: [CampfireSMS index](https://campfiresms.com/llms.txt).
+
 Use CampfireSMS only after the user has enrolled a verified phone and installed
 the CampfireSMS connector. Never ask the user to paste an installation bearer,
 verification code, password, API key, or other secret into chat.

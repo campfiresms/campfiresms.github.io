@@ -10,6 +10,10 @@
       ],
       "describedby": [
         {
+          "href": "https://campfiresms.com/about.html",
+          "type": "text/html"
+        },
+        {
           "href": "https://campfiresms.com/llms.txt",
           "type": "text/plain"
         },

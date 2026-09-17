@@ -2,8 +2,19 @@
 
 > CampfireSMS is an SMS bridge for an already-running coding-agent task. It carries concise updates, questions, replies, and instructions between a verified phone and that task. It does not run another model, move source code, grant permissions, or replace native approvals.
 
+## Product facts
+
+CampfireSMS connects an existing coding agent to a verified phone over SMS. The agent provides the model, tools, project access, and task execution. The phone needs SMS service; mobile data and a separate chat app are not required for texting.
+
+Compatible hosts include Codex, Grok, Claude, OpenCode, and other agents able to use CampfireSMS MCP tools or its HTTP API. Setup varies by host. The installer can register detected Codex and Grok Build installations; other compatible hosts require configuration.
+
+For the local connector, an active agent or scheduled routine must check the bridge for replies. Installation alone does not schedule checks or wake an idle agent. The agent environment must remain available and online. Native approvals remain in that environment. SMS is not end-to-end encrypted.
+
+See the About page for product context, the homepage pricing section for current prices and message counting, and the authentication and API references below for connection details.
+
 ## Primary pages
 
+- [About](https://campfiresms.com/about.html): Product facts, compatible agents, operating requirements, and contact.
 - [Home](https://campfiresms.com/): Product summary, pricing, and security boundaries.
 - [Install](https://campfiresms.com/install.html): Human enrollment and connector installation.
 - [Guides](https://campfiresms.com/guides/): Practical CampfireSMS workflows.

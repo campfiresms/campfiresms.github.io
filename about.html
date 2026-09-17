@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About CampfireSMS | SMS bridge for coding agents</title>
+  <meta name="description" content="CampfireSMS connects your existing coding agent to your phone over SMS, so you can receive updates and reply with instructions while away from your desk.">
+  <link rel="canonical" href="https://campfiresms.com/about.html">
+  <link rel="alternate" type="text/plain" href="https://campfiresms.com/llms.txt" title="CampfireSMS product facts and agent interfaces">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About CampfireSMS">
+  <meta property="og:description" content="CampfireSMS connects your existing coding agent to your phone over SMS, so you can receive updates and reply with instructions while away from your desk.">
+  <meta property="og:url" content="https://campfiresms.com/about.html">
+  <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v2.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="assets/favicon-32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="icon.css">
+  <link rel="stylesheet" href="pages.css">
+  <script src="webmcp.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AboutPage", "@id": "https://campfiresms.com/about.html#page", "url": "https://campfiresms.com/about.html", "name": "About CampfireSMS", "description": "CampfireSMS connects your existing coding agent to your phone over SMS, so you can receive updates and reply with instructions while away from your desk.", "mainEntity": {"@type": "SoftwareApplication", "@id": "https://campfiresms.com/#product", "name": "CampfireSMS", "url": "https://campfiresms.com/", "description": "CampfireSMS connects your existing coding agent to your phone over SMS, so you can receive updates and reply with instructions while away from your desk.", "applicationCategory": "DeveloperApplication", "featureList": ["SMS progress updates from a connected coding agent", "Replies and task instructions by SMS", "Local MCP connector and HTTP API"], "isRelatedTo": {"@type": "WebPage", "url": "https://campfiresms.com/install.html"}}}</script>
+</head>
+<body class="manual-site">
+<a class="skip-link" href="#content">Skip to content</a>
+<header><a class="brand" href="index.html"><img class="brand-icon" src="assets/favicon-32.png" alt=""> CampfireSMS</a><nav aria-label="Primary navigation"><a href="index.html#how">How it works</a><a href="index.html#pricing">Pricing</a><a href="guides/">Guides</a><a href="https://api.campfiresms.com/login">Log in</a><a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a></nav></header>
+<main class="legal" id="content">
+  <section class="legalhead">
+    <span class="kicker">About</span>
+    <h1>Stay connected to the work.</h1>
+    <p>CampfireSMS is an SMS bridge for coding agents. Get updates, answer questions, and send instructions from your phone.</p>
+  </section>
+  <article>
+    <p>A coding task can keep running after you step away from your desk. CampfireSMS gives that task a way to reach you through an ordinary text message, and gives you a way to reply.</p>
+    <h2 id="what-it-does">What CampfireSMS does</h2>
+    <p>You connect a verified phone number to your agent’s environment, start a task, and ask the agent to use CampfireSMS. The agent can text you when it finishes work, needs clarification, or hits a blocker. Your reply can provide an answer or change the task’s instructions.</p>
+    <p>The work stays in the agent’s own environment. CampfireSMS carries the conversation; your existing agent provides the model, tools, and access to your project. Your phone needs SMS service, but does not need a mobile data connection or a separate chat app to exchange texts.</p>
+    <h2 id="compatible-agents">Use the agent you already have</h2>
+    <p>CampfireSMS can be used with Codex, Grok, Claude, OpenCode, and other agents that can use its MCP tools or HTTP API. Connection steps depend on the host. The installer can register the local connector with detected Codex and Grok Build installations; other compatible hosts need their own configuration.</p>
+    <p>Grok Bot can use the installed Campfire client with a native routine. Grok Build can host the connector over stdio MCP. The <a href="guides/grok-bot-sms-routine.html">Grok guide</a> explains both setups.</p>
+    <h2 id="staying-connected">What keeps the connection working</h2>
+    <p>The agent’s environment must remain available and online. With the local connector, the agent or a scheduled routine checks the bridge for replies. Installing the connector alone does not schedule those checks or wake an idle agent. Keep a local computer awake, or run the agent in an environment that stays available.</p>
+    <p>CampfireSMS does not run an additional AI model or replace your agent’s permissions. A reply can guide work within existing authority; native approval prompts still need to be handled in the agent’s environment.</p>
+    <h2 id="pricing-and-privacy">Pricing and privacy</h2>
+    <p>Start with free setup messages, then use a monthly plan, one-time message packs, or both. Purchased credits do not expire. See <a href="index.html#pricing">current prices and message counting</a> for the full details.</p>
+    <p>SMS is not end-to-end encrypted. CampfireSMS and telecommunications providers process message content to deliver the conversation, so keep secrets and sensitive project details out of texts. You can revoke an installation from your account or reply STOP to opt out of SMS. Read the <a href="privacy.html">privacy policy</a> and <a href="terms.html">SMS terms</a>.</p>
+    <h2 id="learn-more">Learn more or get help</h2>
+    <p>Follow the <a href="install.html">install guide</a> to connect your phone, or browse the <a href="guides/">workflow guides</a>. For questions about CampfireSMS, email <a href="mailto:campfire.sms.support@gmail.com">campfire.sms.support@gmail.com</a>.</p>
+    <p>For agent setup and product reference, see <a href="llms.txt">the product and interface index</a>, <a href="auth.md">authentication documentation</a>, and <a href="https://api.campfiresms.com/openapi.json">the API reference</a>.</p>
+  </article>
+</main>
+<footer><a class="brand" href="index.html"><img class="brand-icon" src="assets/favicon-32.png" alt=""> CampfireSMS</a><p>SMS bridge for coding agents.</p><div><a href="about.html">About</a><a href="guides/">Guides</a><a href="install.html">Install</a><a href="privacy.html">Privacy</a><a href="terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div><small>© 2026 CampfireSMS</small></footer>
+</body>
+</html>
