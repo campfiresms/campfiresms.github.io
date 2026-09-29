@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://campfiresms.com/</loc></url>
-  <url><loc>https://campfiresms.com/install.html</loc></url>
-  <url><loc>https://campfiresms.com/guides/</loc></url>
-  <url><loc>https://campfiresms.com/guides/coding-agent-sms-notifications.html</loc></url>
-  <url><loc>https://campfiresms.com/guides/monitor-coding-agent-away-from-desk.html</loc></url>
+  <url><loc>https://campfiresms.com/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://campfiresms.com/install.html</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://campfiresms.com/guides/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://campfiresms.com/guides/coding-agent-sms-notifications.html</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://campfiresms.com/guides/monitor-coding-agent-away-from-desk.html</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://campfiresms.com/sms-opt-in.html</loc></url>
   <url><loc>https://campfiresms.com/privacy.html</loc></url>
   <url><loc>https://campfiresms.com/terms.html</loc></url>
-  <url><loc>https://campfiresms.com/guides/remote-control-pitfalls.html</loc><lastmod>2026-09-12</lastmod></url>
-  <url><loc>https://campfiresms.com/guides/grok-bot-sms-routine.html</loc></url>
-  <url><loc>https://campfiresms.com/about.html</loc></url>
-  <url><loc>https://campfiresms.com/sms-bridge-coding-agents/</loc><lastmod>2026-09-19</lastmod></url>
-  <url><loc>https://campfiresms.com/coding-agent-pager/</loc><lastmod>2026-09-19</lastmod></url>
+  <url><loc>https://campfiresms.com/guides/remote-control-pitfalls.html</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://campfiresms.com/guides/grok-bot-sms-routine.html</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://campfiresms.com/about.html</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://campfiresms.com/sms-bridge-coding-agents/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://campfiresms.com/coding-agent-pager/</loc><lastmod>2026-09-29</lastmod></url>
 </urlset>

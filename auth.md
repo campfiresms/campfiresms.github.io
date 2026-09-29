@@ -6,11 +6,13 @@ CampfireSMS does not support autonomous agent registration or OAuth.
 
 ## User enrollment
 
-A human user starts at https://api.campfiresms.com/join, verifies control of a
-phone number, and runs the single-use installation command on the computer that
-will use CampfireSMS. The installer stores a separate installation credential
-locally. Agents must not ask users to paste that credential, a verification
-code, password, API key, or other secret into chat.
+A human starts at https://api.campfiresms.com/join and verifies control of a phone number. Create a separate installation for the Bot or computer that will use CampfireSMS.
+
+For Grok Bot hosted MCP, use the account’s one-time command with `--credential-only`. This enrollment step needs Node.js 18+ and stores the installation credential at the configuration path printed by setup. Transfer that credential only into the host’s secure plugin or MCP authorization setting. Hosted MCP requires no Python or pip installation. Follow the [Grok webhook guide](https://campfiresms.com/guides/grok-bot-sms-routine.html) to configure wake.
+
+For local agents, run the supplied installation command on the computer doing the work. Setup stores its separate installation credential locally and registers supported CLIs. See [local-agent installation](https://campfiresms.com/install.html#local-agents).
+
+Agents must not ask users to paste installation credentials, verification codes, passwords, webhook keys, or other secrets into chat.
 
 ## MCP and REST authentication
 

@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>How to monitor a coding agent away from your desk | CampfireSMS</title>
-  <meta name="description" content="Plan a task handoff, receive concise SMS updates, and steer an active coding session from your phone.">
+  <meta name="description" content="Prepare a task for a running local coding agent, receive SMS updates, and reply while its computer stays awake and online.">
   <link rel="canonical" href="https://campfiresms.com/guides/monitor-coding-agent-away-from-desk.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="How to monitor a coding agent away from your desk">
-  <meta property="og:description" content="Plan a task handoff, receive concise SMS updates, and steer an active coding session from your phone.">
+  <meta property="og:description" content="Prepare a task for a running local coding agent, receive SMS updates, and reply while its computer stays awake and online.">
   <meta property="og:url" content="https://campfiresms.com/guides/monitor-coding-agent-away-from-desk.html">
   <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v2.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -17,14 +17,24 @@
   <link rel="stylesheet" href="../icon.css">
   <link rel="stylesheet" href="../pages.css">
   <link rel="stylesheet" href="../guides.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to monitor a coding agent away from your desk", "description": "Plan a task handoff, receive concise SMS updates, and steer an active coding session from your phone.", "mainEntityOfPage": "https://campfiresms.com/guides/monitor-coding-agent-away-from-desk.html", "author": {"@type": "Organization", "name": "CampfireSMS", "url": "https://campfiresms.com/"}, "publisher": {"@type": "Organization", "name": "CampfireSMS", "url": "https://campfiresms.com/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to monitor a coding agent away from your desk", "description": "Prepare a task for a running local coding agent, receive SMS updates, and reply while its computer stays awake and online.", "mainEntityOfPage": "https://campfiresms.com/guides/monitor-coding-agent-away-from-desk.html", "author": {"@type": "Organization", "name": "CampfireSMS", "url": "https://campfiresms.com/"}, "publisher": {"@type": "Organization", "name": "CampfireSMS", "url": "https://campfiresms.com/"}}</script>
 </head>
 <body class="manual-site guides-site">
 <a class="skip-link" href="#content">Skip to content</a>
-<header><a class="brand" href="../index.html"><img class="brand-icon" src="../assets/favicon-32.png" alt=""> CampfireSMS</a><nav aria-label="Primary navigation"><a href="../index.html#how">How it works</a><a href="../index.html#pricing">Pricing</a><a href="../guides/" class="active" aria-current="page">Guides</a><a href="https://api.campfiresms.com/login">Log in</a><a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a></nav></header>
+<header>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> CampfireSMS</a>
+  <nav aria-label="Primary navigation">
+    <a href="/install.html">Setup</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/guides/">Guides</a>
+    <a href="https://api.campfiresms.com/login">Log in</a>
+    <a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a>
+  </nav>
+</header>
 <main class="legal" id="content">
-<section class="legalhead"><span class="kicker"><a href="./">GUIDES</a> / WORKFLOW</span><h1>How to monitor a coding agent away from your desk</h1><p>Plan a task handoff, receive concise SMS updates, and steer an active coding session from your phone.</p><p class="byline">By CampfireSMS</p></section>
+<section class="legalhead"><span class="kicker"><a href="./">Guides</a> / Local agents</span><h1>How to monitor a coding agent away from your desk</h1><p>Plan a task handoff, receive concise SMS updates, and steer an active coding session from your phone.</p><p class="byline">By CampfireSMS</p></section>
 <article>
+<p class="workflow-scope">This guide covers a running local agent. For a text that starts a cloud Bot run while your PC is off, use <a href="grok-bot-sms-routine.html">Grok Bot webhook wake</a>.</p>
 <p>A useful away-from-desk workflow starts before you leave: give your coding agent a bounded task, agree on when it should contact you, and check that you can reply. CampfireSMS lets an active coding-agent session exchange short messages with your phone while the work stays on your computer.</p>
 <h2>Choose work with a clear finish line</h2>
 <p>A test run, an investigation, or a focused fix makes a good first session. Define what success looks like and what the agent should leave for your review. For example: reproduce a bug, implement a fix, run the relevant tests, and report the result.</p>
@@ -49,9 +59,14 @@
 <p>For a local session, only one active bridge can be bound to your phone at a time. Finish or close the current bridge before switching to another agent session.</p>
 <h2>Finish the session deliberately</h2>
 <p>Ask for a final summary of the changes and checks, then review the work in your coding environment. Ask the agent to close the CampfireSMS bridge when finished. You can also text <code>!bridge off</code> to close the bridge; closing the connection does not itself stop the coding task.</p>
-<p>Ready to try a short session? <a href="https://api.campfiresms.com/join">Connect your phone</a> and start with a task whose result you can easily verify.</p>
+<p>Ready to try a short session? <a href="../install.html#local-agents">Use the local-agent setup</a> and start with a task whose result you can easily verify.</p>
 </article>
 </main>
-<footer><a class="brand" href="../index.html"><img class="brand-icon" src="../assets/favicon-32.png" alt=""> CampfireSMS</a><p>SMS bridge for coding agents.</p><div><a href="../about.html">About</a><a href="./">Guides</a><a href="../install.html">Install</a><a href="../privacy.html">Privacy</a><a href="../terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div><small>© 2026 CampfireSMS</small></footer>
+<footer>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> CampfireSMS</a>
+  <p>SMS bridge for coding agents.</p>
+  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div>
+  <small>© 2026 CampfireSMS</small>
+</footer>
 </body>
 </html>

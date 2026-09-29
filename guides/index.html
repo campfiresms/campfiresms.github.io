@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Practical guides for coding agents over SMS | CampfireSMS</title>
-  <meta name="description" content="Set up text updates and keep an active coding task moving while you are away from your computer.">
+  <title>CampfireSMS guides: Grok wake and local agents | CampfireSMS</title>
+  <meta name="description" content="Start with Grok Bot hosted MCP and webhook wake, then explore local-agent SMS notifications, monitoring, and connection troubleshooting.">
   <link rel="canonical" href="https://campfiresms.com/guides/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Practical guides for coding agents over SMS">
-  <meta property="og:description" content="Set up text updates and keep an active coding task moving while you are away from your computer.">
+  <meta property="og:title" content="CampfireSMS guides: Grok wake and local agents | CampfireSMS">
+  <meta property="og:description" content="Start with Grok Bot hosted MCP and webhook wake, then explore local-agent SMS notifications, monitoring, and connection troubleshooting.">
   <meta property="og:url" content="https://campfiresms.com/guides/">
   <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v2.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -21,11 +21,37 @@
 </head>
 <body class="manual-site guides-site">
 <a class="skip-link" href="#content">Skip to content</a>
-<header><a class="brand" href="../index.html"><img class="brand-icon" src="../assets/favicon-32.png" alt=""> CampfireSMS</a><nav aria-label="Primary navigation"><a href="../index.html#how">How it works</a><a href="../index.html#pricing">Pricing</a><a href="../guides/" class="active" aria-current="page">Guides</a><a href="https://api.campfiresms.com/login">Log in</a><a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a></nav></header>
+<header>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> CampfireSMS</a>
+  <nav aria-label="Primary navigation">
+    <a href="/install.html">Setup</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/guides/">Guides</a>
+    <a href="https://api.campfiresms.com/login">Log in</a>
+    <a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a>
+  </nav>
+</header>
 <main class="legal" id="content">
-<section class="legalhead"><span class="kicker">THE CAMPFIRESMS FIELD GUIDE</span><h1>Practical guides for coding agents over SMS</h1><p>Set up text updates and keep an active coding task moving while you are away from your computer.</p></section>
-<article class="guide-entry"><p class="kicker">01 / WORKFLOW</p><h2><a href="coding-agent-sms-notifications.html">How to get SMS notifications from your coding agent</a></h2><p>Connect CampfireSMS to your coding agent, test two-way texting, and ask for useful task updates.</p><a href="coding-agent-sms-notifications.html">Read the guide →</a></article><article class="guide-entry"><p class="kicker">02 / WORKFLOW</p><h2><a href="monitor-coding-agent-away-from-desk.html">How to monitor a coding agent away from your desk</a></h2><p>Plan a task handoff, receive concise SMS updates, and steer an active coding session from your phone.</p><a href="monitor-coding-agent-away-from-desk.html">Read the guide →</a></article><article class="guide-entry"><p class="kicker">03 / TROUBLESHOOTING</p><h2><a href="remote-control-pitfalls.html">Common pitfalls with remote controls for coding agents</a></h2><p>Dropped connections, slow loading, workspace approval errors, and authentication failures: what to check and when SMS can serve as a fallback.</p><a href="remote-control-pitfalls.html">Read the guide →</a></article><article class="guide-entry"><p class="kicker">04 / GROK</p><h2><a href="grok-bot-sms-routine.html">Use CampfireSMS with Grok Bot and Grok Build</a></h2><p>Set up a native Grok Bot routine to check the bridge, understand how Grok Build differs, and configure the connector on Debian.</p><a href="grok-bot-sms-routine.html">Read the guide →</a></article><div class="guide-note"><strong>New to CampfireSMS?</strong><p><a href="../install.html">Start with installation</a>, then test a message and a reply before your first session.</p></div>
+  <section class="legalhead"><span class="kicker">Guides</span><h1>Set up texting with your agents</h1><p>Start with Grok Bot webhook wake, or connect a local agent for updates and replies.</p></section>
+  <article>
+    <section class="guide-entry"><p class="kicker">Grok Bot setup</p><h2><a href="grok-bot-sms-routine.html">Text Grok Bot with webhook wake</a></h2><p>Connect hosted MCP, configure an active webhook routine, and test a real SMS and reply. The routine runs in the cloud while your PC is off.</p></section>
+    <h2>Local-agent workflows</h2>
+    <section class="guide-entry"><h3><a href="coding-agent-sms-notifications.html">Get SMS notifications from your coding agent</a></h3><p>Install the local connector, test both directions, and choose when an active agent should text you.</p></section>
+    <section class="guide-entry"><h3><a href="monitor-coding-agent-away-from-desk.html">Monitor a coding agent away from your desk</a></h3><p>Give a running local agent a bounded task and handle questions by SMS while its computer stays online.</p></section>
+    <section class="guide-entry"><h3><a href="remote-control-pitfalls.html">Troubleshoot remote controls for coding agents</a></h3><p>Check dropped connections, slow loading, native approvals, and authentication failures.</p></section>
+    <h2>Product explanations</h2>
+    <ul>
+      <li><a href="../sms-bridge-coding-agents/">How the hosted SMS bridge works</a>, including Grok wake and the difference from DIY bridges.</li>
+      <li><a href="../coding-agent-pager/">Coding-agent alerts, SMS replies, and wake</a>: what each behavior does.</li>
+    </ul>
+    <p>See <a href="../install.html">setup options</a> and <a href="../index.html#pricing">pricing</a>.</p>
+  </article>
 </main>
-<footer><a class="brand" href="../index.html"><img class="brand-icon" src="../assets/favicon-32.png" alt=""> CampfireSMS</a><p>SMS bridge for coding agents.</p><div><a href="../about.html">About</a><a href="./">Guides</a><a href="../install.html">Install</a><a href="../privacy.html">Privacy</a><a href="../terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div><small>© 2026 CampfireSMS</small></footer>
+<footer>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> CampfireSMS</a>
+  <p>SMS bridge for coding agents.</p>
+  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div>
+  <small>© 2026 CampfireSMS</small>
+</footer>
 </body>
 </html>

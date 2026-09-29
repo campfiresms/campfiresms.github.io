@@ -3,7 +3,7 @@
   "name": "com.campfiresms/bridge",
   "version": "0.1.0",
   "title": "CampfireSMS",
-  "description": "Connect an active coding-agent task to a verified user's phone over SMS.",
+  "description": "Hosted two-way SMS bridge for Grok Bot cloud webhook wake and active local-agent connections.",
   "websiteUrl": "https://campfiresms.com",
   "remotes": [
     {
@@ -19,7 +19,9 @@
           "placeholder": "Bearer ..."
         }
       ],
-      "supportedProtocolVersions": ["2026-07-28"]
+      "supportedProtocolVersions": [
+        "2026-07-28"
+      ]
     }
   ]
 }

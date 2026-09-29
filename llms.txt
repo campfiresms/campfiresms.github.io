@@ -1,48 +1,54 @@
 # CampfireSMS
 
-> CampfireSMS is an SMS bridge for an already-running coding-agent task. It carries concise updates, questions, replies, and instructions between a verified phone and that task. It does not run another model, move source code, grant permissions, or replace native approvals.
+> CampfireSMS is a hosted two-way SMS bridge for coding agents. With Grok Bot webhook wake configured, an incoming text triggers a cloud routine that retrieves the message and can reply by SMS while the user’s PC is off. Active local-agent connections are also supported.
 
 ## Product facts
 
-CampfireSMS connects an existing coding agent to a verified phone over SMS. The agent provides the model, tools, project access, and task execution. The phone needs SMS service; mobile data and a separate chat app are not required for texting.
+CampfireSMS operates phone enrollment, SMS delivery, the authenticated message queue, and routing. The connected agent supplies the model, tools, project access, and task execution. The phone needs SMS service; mobile data and a separate chat app are not required for texting.
 
-Compatible hosts include Codex, Grok, Claude, OpenCode, and other agents able to use CampfireSMS MCP tools or its HTTP API. Setup varies by host. The installer can register detected Codex and Grok Build installations; other compatible hosts require configuration.
+### Grok Bot webhook wake
 
-For the local connector, an active agent or scheduled routine must check the bridge for replies. Installation alone does not schedule checks or wake an idle agent. The agent environment must remain available and online. Native approvals remain in that environment. SMS is not end-to-end encrypted.
+Connect the hosted Streamable HTTP MCP at `https://api.campfiresms.com/mcp` with a per-installation bearer in the host’s secure credential settings. Create an active webhook-triggered routine on the owning Bot, then save its URL and sender key in the CampfireSMS account’s Grok Bot 24/7 wake panel. One installation owns wake per account.
 
-See the About page for product context, the homepage pricing section for current prices and message counting, and the authentication and API references below for connection details.
+An incoming SMS queues a message and wake job. The webhook event contains an event name, delivery ID, and bridge ID; the SMS body stays in the authenticated MCP queue. Grok’s cloud routine opens or reuses the bridge, retrieves pending messages, handles them, acknowledges handled IDs, and can send an SMS reply. A routine can run while the user’s PC is off. This does not start a stopped local coding-agent session.
 
-## Linux and VM setup
+A successful webhook probe confirms run acceptance only. Verify a real SMS → webhook run → authenticated message retrieval → SMS reply before treating a setup as working. Duplicate wakes with an empty message queue should finish quietly.
 
-For Linux / VM local installs, run as the same non-root user that runs the
-agent. Use Python 3.12+ with venv support: `python3 -m venv "$HOME/.local/share/campfire/venv"`,
-then `. "$HOME/.local/share/campfire/venv/bin/activate"` before the supplied
-`npx` setup command. Do not use `sudo pip`, global/system pip, or
-`--break-system-packages`. Configure the MCP host with the venv's absolute
-Python path (for example `/home/agent/.local/share/campfire/venv/bin/python`),
-since routine runs do not inherit shell activation. A hosted MCP connection
-does not require Python or pip; use the host's secure credential setup.
+### Local-agent connections
 
-See [VM install instructions](https://campfiresms.com/install.html#linux-vm).
+Codex, Grok Build, Claude Code, OpenCode, and other compatible MCP or HTTP API hosts can send updates and retrieve replies during active work. For a local connector, keep the computer awake and online with the agent running. Installation alone does not schedule checks or wake stopped sessions. Local scheduled workflows require an available runtime.
+
+SMS instructions stay within the agent’s existing permissions. Native approvals remain in its environment. CampfireSMS does not run an additional AI model. SMS is not end-to-end encrypted; keep credentials and sensitive information out of texts.
+
+## Enrollment and local setup
+
+Start with human phone verification. For hosted MCP, use the account’s one-time command with `--credential-only`; this enrollment step needs Node.js 18+ but no Python or pip. Transfer the stored credential only into the host’s secure credential field.
+
+For local installation, use Node.js 18+ and Python 3.12+. The installer can register detected Codex and Grok Build CLIs; other compatible hosts require their own MCP configuration. On Linux or a VM, run as the same non-root user as the agent, create and activate a Python virtual environment before setup, and configure MCP with its absolute Python path. Do not use sudo pip, system pip, or --break-system-packages.
+
+See [local setup](https://campfiresms.com/install.html#local-agents) and [Linux/VM instructions](https://campfiresms.com/install.html#linux-vm).
 
 ## Primary pages
 
-- [About](https://campfiresms.com/about.html): Product facts, compatible agents, operating requirements, and contact.
-- [Home](https://campfiresms.com/): Product summary, pricing, and security boundaries.
-- [Install](https://campfiresms.com/install.html): Human enrollment and connector installation.
-- [Guides](https://campfiresms.com/guides/): Practical CampfireSMS workflows.
-- [Grok Bot and Grok Build](https://campfiresms.com/guides/grok-bot-sms-routine.html): Native polling routines and Debian connector setup.
+- [Home](https://campfiresms.com/): Grok webhook wake, one SMS example, and current pricing and message counting.
+- [Grok Bot webhook setup](https://campfiresms.com/guides/grok-bot-sms-routine.html): Hosted MCP, webhook routine, secure wake configuration, and a real text-and-reply test.
+- [Setup](https://campfiresms.com/install.html): Grok Bot first; local-agent installation, recovery, and removal second.
+- [Guides](https://campfiresms.com/guides/): Grok wake setup and supporting local-agent workflows.
+- [SMS bridge](https://campfiresms.com/sms-bridge-coding-agents/): Hosted bridge, webhook wake, and the DIY contrast.
+- [Alerts, replies, and wake](https://campfiresms.com/coding-agent-pager/): What each behavior does.
+- [About](https://campfiresms.com/about.html): Product context and support contact.
 - [Privacy](https://campfiresms.com/privacy.html): Privacy policy.
 - [SMS terms](https://campfiresms.com/terms.html): Messaging terms.
+- [SMS opt-in](https://campfiresms.com/sms-opt-in.html): Consent and activation disclosure.
 
 ## Agent interfaces
 
-- [Authentication](https://campfiresms.com/auth.md): Enrollment and bearer-authentication rules.
-- [API catalog](https://campfiresms.com/.well-known/api-catalog): Linkset catalog for the site and API.
-- [AI catalog](https://campfiresms.com/.well-known/ai-catalog.json): CampfireSMS MCP discovery entry.
-- [MCP server card](https://campfiresms.com/.well-known/mcp/server-card.json): Hosted MCP transport metadata.
+- [Authentication](https://campfiresms.com/auth.md): Human enrollment and installation bearer rules.
+- [API catalog](https://campfiresms.com/.well-known/api-catalog): Links to setup and API documentation.
+- [AI catalog](https://campfiresms.com/.well-known/ai-catalog.json): MCP discovery entry.
+- [MCP server card](https://campfiresms.com/.well-known/mcp/server-card.json): Hosted transport metadata.
 - [OpenAPI](https://api.campfiresms.com/openapi.json): REST API description.
 
 ## Skills
 
-- [campfiresms](https://campfiresms.com/.well-known/agent-skills/campfiresms/SKILL.md): Safely use the CampfireSMS MCP tools for a user-facing coding task.
+- [campfiresms](https://campfiresms.com/.well-known/agent-skills/campfiresms/SKILL.md): Handle Grok webhook wake and use SMS with active local-agent tasks.
