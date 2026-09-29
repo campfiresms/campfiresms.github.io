@@ -34,6 +34,10 @@
       ],
       "service-doc": [
         {
+          "href": "https://campfiresms.com/guides/grok-bot-sms-routine.html",
+          "type": "text/html"
+        },
+        {
           "href": "https://campfiresms.com/install.html",
           "type": "text/html"
         }

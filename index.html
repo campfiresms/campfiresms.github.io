@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="CampfireSMS is an SMS bridge for coding agents. Get agent updates and continue by text with two-way SMS. Start with 40 free messages.">
+  <meta name="description" content="Text Grok Bot to trigger a cloud webhook routine and get an SMS reply, even while your PC is off. CampfireSMS also connects active local coding agents.">
   <link rel="canonical" href="https://campfiresms.com/">
   <link rel="sitemap" type="application/xml" href="https://campfiresms.com/sitemap.xml">
   <link rel="api-catalog" type="application/linkset+json" href="https://campfiresms.com/.well-known/api-catalog">
   <link rel="alternate" type="text/markdown" href="https://campfiresms.com/llms.txt" title="CampfireSMS for language models">
   <meta property="og:type" content="website">
   <meta property="og:title" content="CampfireSMS — SMS bridge for coding agents">
-  <meta property="og:description" content="Two-way SMS for coding agents: get agent updates and continue by text. Start free with 40 messages.">
+  <meta property="og:description" content="Text Grok Bot to trigger a cloud webhook routine and get an SMS reply, even while your PC is off. CampfireSMS also connects active local coding agents.">
   <meta property="og:url" content="https://campfiresms.com/">
   <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v2.png">
   <meta property="og:image:secure_url" content="https://campfiresms.com/assets/campfiresms-social-card-v2.png">
@@ -20,7 +20,7 @@
   <meta property="og:image:alt" content="CampfireSMS - SMS bridge for coding agents">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="CampfireSMS — SMS bridge for coding agents">
-  <meta name="twitter:description" content="Two-way SMS for coding agents: get agent updates and continue by text. Start free with 40 messages.">
+  <meta name="twitter:description" content="Text Grok Bot to trigger a cloud webhook routine and get an SMS reply, even while your PC is off. CampfireSMS also connects active local coding agents.">
   <meta name="twitter:image" content="https://campfiresms.com/assets/campfiresms-social-card-v2.png">
   <meta name="twitter:image:alt" content="CampfireSMS - SMS bridge for coding agents">
   <title>CampfireSMS — SMS bridge for coding agents</title>
@@ -29,58 +29,121 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="icon.css">
   <link rel="stylesheet" href="home.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://campfiresms.com/#website",
+        "url": "https://campfiresms.com/",
+        "name": "CampfireSMS",
+        "description": "Text Grok Bot to trigger a cloud webhook routine and get an SMS reply, even while your PC is off. CampfireSMS also connects active local coding agents."
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://campfiresms.com/#webpage",
+        "url": "https://campfiresms.com/",
+        "name": "CampfireSMS — SMS bridge for coding agents",
+        "isPartOf": {
+          "@id": "https://campfiresms.com/#website"
+        },
+        "about": {
+          "@id": "https://campfiresms.com/#product"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://campfiresms.com/#product",
+        "name": "CampfireSMS",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Windows, macOS, Linux",
+        "url": "https://campfiresms.com/",
+        "description": "Text Grok Bot to trigger a cloud webhook routine and get an SMS reply, even while your PC is off. CampfireSMS also connects active local coding agents.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Free start",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "40 messages after phone verification. No card required."
+          },
+          {
+            "@type": "Offer",
+            "name": "Monthly plan",
+            "price": "8",
+            "priceCurrency": "USD",
+            "description": "500 messages per month. Unused monthly messages do not roll over."
+          },
+          {
+            "@type": "Offer",
+            "name": "200 messages",
+            "price": "5",
+            "priceCurrency": "USD",
+            "description": "One-time pack. Credits do not expire."
+          },
+          {
+            "@type": "Offer",
+            "name": "500 messages",
+            "price": "10",
+            "priceCurrency": "USD",
+            "description": "One-time pack. Credits do not expire."
+          },
+          {
+            "@type": "Offer",
+            "name": "1300 messages",
+            "price": "20",
+            "priceCurrency": "USD",
+            "description": "One-time pack. Credits do not expire."
+          },
+          {
+            "@type": "Offer",
+            "name": "2800 messages",
+            "price": "40",
+            "priceCurrency": "USD",
+            "description": "One-time pack. Credits do not expire."
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <script src="webmcp.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#content">Skip to content</a>
 <header>
-  <a class="brand" href="index.html"><img class="brand-icon" src="assets/favicon-32.png" alt=""> CampfireSMS</a>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> CampfireSMS</a>
   <nav aria-label="Primary navigation">
-    <a href="#how">How it works</a>
-    <a href="#pricing">Pricing</a>
-    <a href="guides/">Guides</a>
+    <a href="/install.html">Setup</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/guides/">Guides</a>
     <a href="https://api.campfiresms.com/login">Log in</a>
     <a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a>
   </nav>
 </header>
 <main id="content">
-  <section class="v1-hero">
+  <section class="v1-hero" id="how">
     <div class="hero-copy">
-      <h1>Your coding agent,<br>one text away.</h1>
-      <p class="lede">CampfireSMS is an SMS bridge for coding agents: get agent updates and continue by text from your phone. Your agent keeps working in its own environment.</p>
-      <p class="compatibility-line">Two-way SMS for coding agents, including Codex, Claude Code, Grok, OpenCode, and more.</p>
-      <div class="actions">
-        <a class="button" href="https://api.campfiresms.com/join">Start free setup <span>→</span></a>
-        <a class="quiet-link" href="install.html">Install guide <span aria-hidden="true">→</span></a>
-      </div>
-      <p class="signal-line">40 free messages. No credit card required.</p>
+      <h1>Text your agents</h1>
+      <p class="lede">CampfireSMS connects your phone to your agents over SMS. With Grok Bot, an incoming text triggers a webhook routine so the bot can handle your message and text you back—even while your PC is off.</p>
     </div>
-    <div class="relay-window" aria-label="Example CampfireSMS exchange">
-      <div class="relay-window-head"><span>A task, continued by text</span><span>Example</span></div>
+    <figure class="relay-window" aria-labelledby="example-caption">
+      <figcaption class="relay-window-head" id="example-caption"><span>Text → Grok wakes → Grok replies</span><span>Illustrative example</span></figcaption>
       <div class="relay-window-body">
-        <p><b>Your agent</b>The fix passes the focused tests. Should I run the full suite?</p>
-        <p class="from-you"><b>You</b>Yes. Text me the result.</p>
-        <p><b>Your agent</b>All tests passed. Ready for review on your computer.</p>
+        <p class="from-you"><b>You text</b>Summarize the open issues in my project.</p>
+        <p class="wake-step"><b>Grok wakes</b>Your text starts the cloud routine. Grok reads your message through CampfireSMS.</p>
+        <p><b>Grok replies by SMS</b>Two issues need attention: a failing login test and an outdated setup guide.</p>
       </div>
-    </div>
+    </figure>
   </section>
-
-  <section class="manual-section" id="how">
-    <div class="section-copy">
-      <h2>How it works</h2>
-      <ol class="procedure">
-        <li><h3>Connect your phone</h3><p>Verify your number, then connect CampfireSMS to your coding agent.</p></li>
-        <li><h3>Start a task</h3><p>Give your agent instructions and ask it to use CampfireSMS for updates and questions.</p></li>
-        <li><h3>Continue by text</h3><p>Read updates and reply with instructions from your phone. No mobile data needed.</p></li>
-      </ol>
-      <p class="how-note">Keep your agent running and online. For local agents, keep your computer awake. Native approval prompts still need to be handled in your agent’s environment.</p>
-    </div>
-  </section>
-
-  <section class="manual-section pricing-ledger" id="pricing">
+  <div class="manual-section setup-link">
+    <a class="quiet-link" href="guides/grok-bot-sms-routine.html">Set up Grok Bot webhook wake <span aria-hidden="true">→</span></a>
+  </div>
+  <section class="manual-section" id="pricing">
     <div class="section-copy">
       <h2>Pricing</h2>
-      <p class="section-intro">Start with 40 free messages. Then subscribe, buy a pack, or use both.</p>
+      <p class="section-intro">Start with 40 free messages after phone verification. No card required. Then subscribe, buy a pack, or use both.</p>
       <div class="pricing-options">
         <div class="monthly-plan">
           <h3>Monthly plan</h3>
@@ -104,28 +167,20 @@
         </div>
       </div>
       <p class="pricing-note">Each text sent or received counts as one message. No automatic overage charges: messaging pauses when your included messages and purchased credits run out. Prices are in USD; carrier message and data rates may apply.</p>
-      <div class="pricing-action"><a class="button" href="https://api.campfiresms.com/join">Start free setup <span aria-hidden="true">→</span></a><p>40 messages after phone verification.<br>No card required. No automatic charge.</p></div>
     </div>
   </section>
-
-  <section class="manual-section" id="guides">
-    <div class="section-copy">
-      <h2>Get started</h2>
-      <div class="guide-links">
-        <a href="sms-bridge-coding-agents/">How the SMS bridge for coding agents works <span aria-hidden="true">→</span></a>
-        <a href="install.html">Install CampfireSMS <span aria-hidden="true">→</span></a>
-        <a href="guides/coding-agent-sms-notifications.html">Set up useful text updates <span aria-hidden="true">→</span></a>
-        <a href="guides/monitor-coding-agent-away-from-desk.html">Prepare a task before you leave <span aria-hidden="true">→</span></a>
-      </div>
-      <p class="security-note">Your verified phone connects to your agent through a separate credential for each installation. Revoke any installation from your account. SMS is not end-to-end encrypted. <a href="privacy.html">Privacy details</a></p>
+  <section class="manual-section" id="local-agents">
+    <div class="section-copy compatibility-note">
+      <h2>Also works with local agents</h2>
+      <p>Connect Codex, Grok Build, Claude Code, OpenCode, or another compatible MCP or HTTP API host to receive updates and reply by text. For local agents, keep the computer awake and online with the agent running; the local connector does not wake a stopped session.</p>
+      <p><a href="install.html#local-agents">Local-agent setup</a> · <a href="guides/">All guides</a></p>
     </div>
   </section>
-
 </main>
 <footer>
-  <a class="brand" href="index.html"><img class="brand-icon" src="assets/favicon-32.png" alt=""> CampfireSMS</a>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> CampfireSMS</a>
   <p>SMS bridge for coding agents.</p>
-  <div><a href="about.html">About</a><a href="https://api.campfiresms.com/login">Log in</a><a href="install.html">Install</a><a href="guides/">Guides</a><a href="sms-opt-in.html">SMS Opt-in</a><a href="privacy.html">Privacy</a><a href="terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div>
+  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div>
   <small>© 2026 CampfireSMS</small>
 </footer>
 </body>

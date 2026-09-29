@@ -68,3 +68,9 @@
   .relay-window-body p { margin-right: 16px; }
   .relay-window-body p.from-you { margin-left: 24px; }
 }
+
+.relay-window { margin: 0; }
+.relay-window-body .wake-step { padding: 8px 0; background: transparent; font-size: 14px; }
+.setup-link { padding-bottom: 38px; }
+.compatibility-note h2 { margin-bottom: 16px; font-size: 23px; }
+.compatibility-note p { max-width: 840px; margin: 12px 0 0; color: var(--muted); font-size: 15px; }

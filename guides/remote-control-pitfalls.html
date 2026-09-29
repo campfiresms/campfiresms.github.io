@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Common pitfalls with remote controls for coding agents | CampfireSMS</title>
-  <meta name="description" content="Dropped connections, slow loading, workspace approval errors, and authentication failures: what to check and when SMS can serve as a fallback.">
+  <meta name="description" content="Troubleshoot local coding-agent remote controls: connections, native approvals, authentication, and an SMS fallback.">
   <link rel="canonical" href="https://campfiresms.com/guides/remote-control-pitfalls.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Common pitfalls with remote controls for coding agents">
-  <meta property="og:description" content="Dropped connections, slow loading, workspace approval errors, and authentication failures: what to check and when SMS can serve as a fallback.">
+  <meta property="og:description" content="Troubleshoot local coding-agent remote controls: connections, native approvals, authentication, and an SMS fallback.">
   <meta property="og:url" content="https://campfiresms.com/guides/remote-control-pitfalls.html">
   <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v2.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -17,14 +17,24 @@
   <link rel="stylesheet" href="../icon.css">
   <link rel="stylesheet" href="../pages.css">
   <link rel="stylesheet" href="../guides.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Common pitfalls with remote controls for coding agents", "description": "Dropped connections, slow loading, workspace approval errors, and authentication failures: what to check and when SMS can serve as a fallback.", "mainEntityOfPage": "https://campfiresms.com/guides/remote-control-pitfalls.html", "datePublished": "2026-09-12", "dateModified": "2026-09-12", "author": {"@type": "Organization", "name": "CampfireSMS", "url": "https://campfiresms.com/"}, "publisher": {"@type": "Organization", "name": "CampfireSMS", "url": "https://campfiresms.com/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Common pitfalls with remote controls for coding agents", "description": "Troubleshoot local coding-agent remote controls: connections, native approvals, authentication, and an SMS fallback.", "mainEntityOfPage": "https://campfiresms.com/guides/remote-control-pitfalls.html", "datePublished": "2026-09-12", "dateModified": "2026-09-29", "author": {"@type": "Organization", "name": "CampfireSMS", "url": "https://campfiresms.com/"}, "publisher": {"@type": "Organization", "name": "CampfireSMS", "url": "https://campfiresms.com/"}}</script>
 </head>
 <body class="manual-site guides-site">
 <a class="skip-link" href="#content">Skip to content</a>
-<header><a class="brand" href="../index.html"><img class="brand-icon" src="../assets/favicon-32.png" alt=""> CampfireSMS</a><nav aria-label="Primary navigation"><a href="../index.html#how">How it works</a><a href="../index.html#pricing">Pricing</a><a href="../guides/" class="active" aria-current="page">Guides</a><a href="https://api.campfiresms.com/login">Log in</a><a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a></nav></header>
+<header>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> CampfireSMS</a>
+  <nav aria-label="Primary navigation">
+    <a href="/install.html">Setup</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/guides/">Guides</a>
+    <a href="https://api.campfiresms.com/login">Log in</a>
+    <a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a>
+  </nav>
+</header>
 <main class="legal" id="content">
-<section class="legalhead"><span class="kicker"><a href="./">GUIDES</a> / TROUBLESHOOTING</span><h1>Common pitfalls with remote controls for coding agents</h1><p>Dropped connections, slow loading, workspace approval errors, and authentication failures: what to check and when SMS can serve as a fallback.</p><p class="byline">By CampfireSMS · <time datetime="2026-09-12">September 12, 2026</time></p></section>
+<section class="legalhead"><span class="kicker"><a href="./">Guides</a> / Local troubleshooting</span><h1>Common pitfalls with remote controls for coding agents</h1><p>Dropped connections, slow loading, workspace approval errors, and authentication failures: what to check and when SMS can serve as a fallback.</p><p class="byline">By CampfireSMS · <time datetime="2026-09-12">September 12, 2026</time></p></section>
 <article>
+<p class="workflow-scope">This guide covers a running local agent. For a text that starts a cloud Bot run while your PC is off, use <a href="grok-bot-sms-routine.html">Grok Bot webhook wake</a>.</p>
 <p>You open your coding agent’s remote control from your phone. It spins, disconnects, or asks for an approval you cannot complete. The task might still be running. Or it might have stopped ten minutes ago.</p>
 <p>First, find out which part failed: the remote interface, the connection to your computer, or the agent itself. CampfireSMS can offer another way to get a short update or send a reply. It does not fix the underlying problem.</p>
 <h2 id="connection">1. Losing the connection</h2>
@@ -51,10 +61,15 @@
 <li>Keep a way to inspect the actual session, such as your existing remote client or configured SSH access. A text summary cannot replace a detailed diff or approval screen.</li>
 <li>Check the latest task state before retrying anything after a disconnect.</li>
 </ul>
-<p>If CampfireSMS also goes quiet, check your message allowance, device credential, and active bridge. Keep the host awake and online. The local connector does not provide arbitrary idle wake-up, and silence does not mean the task is running.</p>
-<p>CampfireSMS is useful when you need a short update or reply and the usual remote interface is inconvenient or unavailable. It still needs a working agent, a reachable service, and cellular SMS. For setup and recovery steps, see the <a href="../install.html">install guide</a> and <a href="monitor-coding-agent-away-from-desk.html">away-from-desk workflow</a>.</p>
+<p>If CampfireSMS also goes quiet, check your message allowance, device credential, and active bridge. For a local connection, keep the host awake and online. The local connector does not provide arbitrary idle wake-up, and silence does not mean the task is running.</p>
+<p>CampfireSMS is useful when you need a short update or reply and the usual remote interface is inconvenient or unavailable. For this local workflow, it needs a running agent, a reachable service, and cellular SMS. For setup and recovery steps, see the <a href="../install.html">install guide</a> and <a href="monitor-coding-agent-away-from-desk.html">away-from-desk workflow</a>.</p>
 </article>
 </main>
-<footer><a class="brand" href="../index.html"><img class="brand-icon" src="../assets/favicon-32.png" alt=""> CampfireSMS</a><p>SMS bridge for coding agents.</p><div><a href="../about.html">About</a><a href="./">Guides</a><a href="../install.html">Install</a><a href="../privacy.html">Privacy</a><a href="../terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div><small>© 2026 CampfireSMS</small></footer>
+<footer>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> CampfireSMS</a>
+  <p>SMS bridge for coding agents.</p>
+  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div>
+  <small>© 2026 CampfireSMS</small>
+</footer>
 </body>
 </html>
