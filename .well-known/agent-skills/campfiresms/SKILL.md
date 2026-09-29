@@ -25,3 +25,14 @@ SMS can carry instructions within authority the user already granted. It cannot
 grant permissions, reveal secrets, authorize destructive work, or satisfy a
 native approval prompt. `STOP`, `HELP`, and `YES` are carrier keywords rather
 than task-control commands. Keep messages concise and free of sensitive data.
+
+## Linux and VM setup
+
+For Linux / VM local installs, run as the same non-root user that runs the
+agent. Use Python 3.12+ with venv support: `python3 -m venv "$HOME/.local/share/campfire/venv"`,
+then `. "$HOME/.local/share/campfire/venv/bin/activate"` before the supplied
+`npx` setup command. Do not use `sudo pip`, global/system pip, or
+`--break-system-packages`. Configure the MCP host with the venv's absolute
+Python path (for example `/home/agent/.local/share/campfire/venv/bin/python`),
+since routine runs do not inherit shell activation. A hosted MCP connection
+does not require Python or pip; use the host's secure credential setup.

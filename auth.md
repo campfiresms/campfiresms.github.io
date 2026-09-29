@@ -29,3 +29,14 @@ work, or bypass the coding agent's native approval system.
 Existing users sign in at https://api.campfiresms.com/login using the supported
 phone-verification and PIN flow. Agents should direct the user to that page and
 must not collect or submit the user's PIN or verification code.
+
+## Linux and VM setup
+
+For Linux / VM local installs, run as the same non-root user that runs the
+agent. Use Python 3.12+ with venv support: `python3 -m venv "$HOME/.local/share/campfire/venv"`,
+then `. "$HOME/.local/share/campfire/venv/bin/activate"` before the supplied
+`npx` setup command. Do not use `sudo pip`, global/system pip, or
+`--break-system-packages`. Configure the MCP host with the venv's absolute
+Python path (for example `/home/agent/.local/share/campfire/venv/bin/python`),
+since routine runs do not inherit shell activation. A hosted MCP connection
+does not require Python or pip; use the host's secure credential setup.

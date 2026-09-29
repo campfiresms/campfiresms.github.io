@@ -44,6 +44,7 @@
         about: pages.about,
         compatibleAgents: ["Codex", "Grok", "Claude", "OpenCode", "other compatible MCP or HTTP API hosts"],
         setupRequirements: "Connection steps vary by host. The installer can register detected Codex and Grok Build installations; other compatible hosts need configuration.",
+        vmSetup: "Linux/VM: run as the agent user, create and activate a Python 3.12+ venv before npx setup, and configure MCP with its absolute Python path. Do not use sudo pip, system pip, or --break-system-packages. Hosted MCP needs no pip install. See https://campfiresms.com/install.html#linux-vm.",
         localConnectorRequirements: "An available, online agent or scheduled routine must check the bridge for replies. Installation alone does not schedule checks or wake an idle agent.",
         smsPrivacy: "SMS is not end-to-end encrypted.",
         pricing: `${pages.home}#pricing`,
