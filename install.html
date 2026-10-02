@@ -28,13 +28,14 @@
   <section class="legalhead">
     <span class="kicker">Setup</span>
     <h1>Connect your phone to your agents</h1>
-    <p>Set up Grok Bot to wake when you text, or connect an active local coding agent for updates and replies.</p>
+    <p>First, create your CampfireSMS account and verify your phone. Then connect Grok Bot to wake when you text, or an active local coding agent for updates and replies.</p>
+    <div class="guide-actions"><a class="button" href="https://api.campfiresms.com/join">Start free setup <span aria-hidden="true">→</span></a></div>
   </section>
   <article>
     <h2 id="grok-bot">Grok Bot: hosted MCP and webhook wake</h2>
     <p>A text can trigger Grok’s cloud routine even while your PC is off. The Bot reads the message through CampfireSMS’s hosted MCP and can reply by SMS.</p>
     <ol>
-      <li>Verify your phone using the setup link in the navigation and create an installation for the Bot.</li>
+      <li><a href="https://api.campfiresms.com/join">Create your account and verify your phone</a>, then create an installation for the Bot.</li>
       <li>Connect <code>https://api.campfiresms.com/mcp</code> in Grok’s secure plugin or MCP settings using that installation’s credential.</li>
       <li>Create an active webhook routine, then save its URL and key under <strong>Grok Bot 24/7 wake</strong> in your CampfireSMS account.</li>
       <li>Send a real text. Check the webhook run, message retrieval, and SMS reply.</li>
@@ -51,7 +52,7 @@
       <p>Set the MCP server command to the virtual environment’s absolute Python path, such as <code>/home/agent/.local/share/campfire/venv/bin/python -m campfire_mcp.cli serve</code>. Future runs do not inherit shell activation.</p>
     </details>
     <ol class="setup-steps">
-      <li><h3>Verify your phone</h3><p>CampfireSMS sends a verification code. Choose and confirm a six-digit account PIN; later sign-ins use your phone number and PIN.</p></li>
+      <li><h3>Verify your phone</h3><p><a href="https://api.campfiresms.com/join">Start free setup</a> to create your account. CampfireSMS sends a verification code. Choose and confirm a six-digit account PIN; later sign-ins use your phone number and PIN.</p></li>
       <li><h3>Run your installation command</h3><pre><code>npx -y @campfiresms/setup YOUR_INSTALLATION_CODE</code></pre><p>Use the value supplied by your account. The command is single use and expires after 10 minutes.</p></li>
       <li><h3>Connect your agent</h3><p>Setup stores the installation credential locally and registers detected Codex and Grok Build CLIs. For another compatible agent, add a local MCP server named <code>campfire</code> using the command printed by setup. Open or restart the agent.</p></li>
       <li><h3>Test both directions</h3><p>Send the account’s test message and reply <strong>TEST</strong>. Wait for the setup confirmation. Then ask your running agent to open a bridge, text you, retrieve a harmless reply, and respond.</p></li>
