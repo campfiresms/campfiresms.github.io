@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Text Grok Bot to trigger a cloud webhook routine and get an SMS reply, even while your PC is off. CampfireSMS also connects active local coding agents.">
+  <meta name="description" content="Text your agent. Connect the agent you already use and keep talking about customers, invoices, and everyday tasks in your normal SMS inbox.">
   <link rel="canonical" href="https://campfiresms.com/">
   <link rel="sitemap" type="application/xml" href="https://campfiresms.com/sitemap.xml">
   <link rel="api-catalog" type="application/linkset+json" href="https://campfiresms.com/.well-known/api-catalog">
   <link rel="alternate" type="text/markdown" href="https://campfiresms.com/llms.txt" title="CampfireSMS for language models">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="CampfireSMS — SMS bridge for coding agents">
-  <meta property="og:description" content="Text Grok Bot to trigger a cloud webhook routine and get an SMS reply, even while your PC is off. CampfireSMS also connects active local coding agents.">
+  <meta property="og:title" content="Text your agent. | CampfireSMS">
+  <meta property="og:description" content="Text your agent. Connect the agent you already use and keep talking about customers, invoices, and everyday tasks in your normal SMS inbox.">
   <meta property="og:url" content="https://campfiresms.com/">
   <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v2.png">
   <meta property="og:image:secure_url" content="https://campfiresms.com/assets/campfiresms-social-card-v2.png">
@@ -19,11 +19,11 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="CampfireSMS - SMS bridge for coding agents">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CampfireSMS — SMS bridge for coding agents">
-  <meta name="twitter:description" content="Text Grok Bot to trigger a cloud webhook routine and get an SMS reply, even while your PC is off. CampfireSMS also connects active local coding agents.">
+  <meta name="twitter:title" content="Text your agent. | CampfireSMS">
+  <meta name="twitter:description" content="Text your agent. Connect the agent you already use and keep talking about customers, invoices, and everyday tasks in your normal SMS inbox.">
   <meta name="twitter:image" content="https://campfiresms.com/assets/campfiresms-social-card-v2.png">
   <meta name="twitter:image:alt" content="CampfireSMS - SMS bridge for coding agents">
-  <title>CampfireSMS — SMS bridge for coding agents</title>
+  <title>Text your agent. | CampfireSMS</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
@@ -38,13 +38,13 @@
         "@id": "https://campfiresms.com/#website",
         "url": "https://campfiresms.com/",
         "name": "CampfireSMS",
-        "description": "Text Grok Bot to trigger a cloud webhook routine and get an SMS reply, even while your PC is off. CampfireSMS also connects active local coding agents."
+        "description": "Text your agent. Connect the agent you already use and keep talking about customers, invoices, and everyday tasks in your normal SMS inbox."
       },
       {
         "@type": "WebPage",
         "@id": "https://campfiresms.com/#webpage",
         "url": "https://campfiresms.com/",
-        "name": "CampfireSMS — SMS bridge for coding agents",
+        "name": "Text your agent. | CampfireSMS",
         "isPartOf": {
           "@id": "https://campfiresms.com/#website"
         },
@@ -59,7 +59,7 @@
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Windows, macOS, Linux",
         "url": "https://campfiresms.com/",
-        "description": "Text Grok Bot to trigger a cloud webhook routine and get an SMS reply, even while your PC is off. CampfireSMS also connects active local coding agents.",
+        "description": "Text your agent. Connect the agent you already use and keep talking about customers, invoices, and everyday tasks in your normal SMS inbox.",
         "offers": [
           {
             "@type": "Offer",
@@ -109,6 +109,7 @@
   }
   </script>
   <script src="webmcp.js" defer></script>
+  <script src="homepage-demo.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#content">Skip to content</a>
@@ -125,21 +126,81 @@
 <main id="content">
   <section class="v1-hero" id="how">
     <div class="hero-copy">
-      <h1>Text your agents</h1>
-      <p class="lede">CampfireSMS connects your phone to your agents over SMS. With Grok Bot, an incoming text triggers a webhook routine so the bot can handle your message and text you back—even while your PC is off.</p>
+      <h1>Text your agent.</h1>
+      <p class="lede">Connect the agent you already use. Keep talking about customers, invoices, and everyday tasks in your normal text inbox.</p>
+      <p class="hero-detail">Your agent texts you. You text back. No phone app to install.</p>
     </div>
-    <figure class="relay-window" aria-labelledby="example-caption">
-      <figcaption class="relay-window-head" id="example-caption"><span>Text → Grok wakes → Grok replies</span><span>Illustrative example</span></figcaption>
-      <div class="relay-window-body">
-        <p class="from-you"><b>You text</b>Summarize the open issues in my project.</p>
-        <p class="wake-step"><b>Grok wakes</b>Your text starts the cloud routine. Grok reads your message through CampfireSMS.</p>
-        <p><b>Grok replies by SMS</b>Two issues need attention: a failing login test and an outdated setup guide.</p>
+    <figure class="exchange-demo" aria-labelledby="exchange-caption" data-demo>
+      <figcaption class="exchange-caption" id="exchange-caption">A lead needs a closer look</figcaption>
+      <div class="exchange-screens">
+        <section class="agent-terminal" aria-label="Your agent terminal">
+          <div class="terminal-bar">
+            <span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>Your agent</span>
+            <span class="terminal-connection"><i aria-hidden="true"></i>Connected</span>
+          </div>
+          <div class="terminal-body">
+            <p class="terminal-task">Checking a new lead</p>
+            <ol class="terminal-events">
+              <li data-beat="0"><span class="event-label">EMAIL</span><p>Staff forwarded a new lead with a PDF attachment.</p></li>
+              <li data-beat="1"><span class="event-label">SMS OUT <span aria-hidden="true">↗</span></span><p>Your staff forwarded a lead email with a PDF. The sender’s domain doesn’t match the company. Ask staff to verify it first?</p></li>
+              <li class="incoming-event" data-beat="4"><span class="event-label">SMS IN <span aria-hidden="true">↙</span></span><p>Ask staff to verify through the company’s published contact details. Leave the PDF unopened.</p></li>
+              <li class="completed-event" data-beat="5"><span class="event-label">DONE <span aria-hidden="true">✓</span></span><p>Staff asked to verify. Lead on hold. Sending you the update.</p></li>
+            </ol>
+          </div>
+          <div class="terminal-status"><span class="status-dot" aria-hidden="true"></span><span data-agent-status>Staff verifying the sender</span></div>
+        </section>
+        <div class="delivery-path" aria-hidden="true"><span>SMS</span><div class="delivery-line"><i class="delivery-packet"></i></div><b>⇄</b></div>
+        <section class="demo-phone" aria-label="Phone SMS conversation with Campfire SMS">
+          <div class="phone-screen">
+            <div class="phone-status" aria-hidden="true"><span>9:41</span><span class="phone-island"></span><span class="phone-icons"><svg viewBox="0 0 36 12"><path d="M1 11V9h2v2zm4 0V6h2v5zm4 0V3h2v8zm4 0V0h2v11z" fill="currentColor"/><rect x="20" y="2" width="12" height="8" rx="2" fill="none" stroke="currentColor"/><rect x="22" y="4" width="8" height="4" rx="1" fill="currentColor"/><path d="M34 4v4" stroke="currentColor" stroke-width="2"/></svg></span></div>
+            <div class="phone-contact"><span class="phone-back" aria-hidden="true">‹</span><img src="assets/favicon-32.png" width="32" height="32" alt=""><strong>Campfire SMS</strong><span class="phone-contact-arrow" aria-hidden="true">›</span></div>
+            <div class="phone-thread">
+              <p class="thread-time">Today 9:41 AM · Text Message</p>
+              <div class="sms-bubble" data-beat="2"><p><b>Campfire SMS:</b> Your staff forwarded a lead email with a PDF. The sender’s domain doesn’t match the company. Ask staff to verify it first?</p></div>
+              <div class="sms-bubble sms-from-you" data-beat="3"><p>Ask staff to verify through the company’s published contact details. Leave the PDF unopened.</p><span class="sms-delivered">Delivered</span></div>
+              <div class="sms-bubble" data-beat="6"><p><b>Campfire SMS:</b> Done. I asked staff to verify the sender. The lead is on hold until they confirm.</p></div>
+            </div>
+            <div class="phone-compose" aria-hidden="true"><span class="compose-plus">+</span><div class="compose-field"><span data-compose>Text Message</span><i>↑</i></div></div>
+            <div class="phone-home" aria-hidden="true"></div>
+          </div>
+        </section>
+      </div>
+      <div class="exchange-controls">
+        <p class="exchange-progress" role="status" aria-live="polite" data-progress>Staff verifying · PDF unopened</p>
+        <div><button class="demo-pause" type="button" hidden>Pause</button><button class="demo-replay" type="button" hidden>Replay exchange <span aria-hidden="true">↻</span></button></div>
       </div>
     </figure>
   </section>
-  <div class="manual-section setup-link">
-    <a class="quiet-link" href="guides/grok-bot-sms-routine.html">Set up Grok Bot webhook wake <span aria-hidden="true">→</span></a>
-  </div>
+  <section class="manual-section" id="setup">
+    <div class="section-copy">
+      <h2>Connect the agent you already use.</h2>
+      <p class="section-intro">Grok Bot, Codex, Grok Build, Claude Code, OpenCode, and other compatible MCP or HTTP API hosts.</p>
+      <ol class="procedure">
+        <li>
+          <h3>Verify your phone</h3>
+          <p>Create your CampfireSMS account and verify your number. You get 40 free messages to try it.</p>
+        </li>
+        <li>
+          <h3>Connect your agent</h3>
+          <p>Use hosted MCP and webhook wake for Grok Bot, or install the local connector for an agent on your computer.</p>
+        </li>
+        <li>
+          <h3>Send a text. Get a reply.</h3>
+          <p>Test both directions. Then tell your agent what work to handle and when to text you.</p>
+        </li>
+      </ol>
+      <details class="connection-details" id="local-agents">
+        <summary>What your connection needs</summary>
+        <div>
+          <p><strong>Grok Bot:</strong> Configure hosted MCP and an active webhook routine. Incoming texts can start the cloud routine while your PC is off. <a href="guides/grok-bot-sms-routine.html">Grok Bot walkthrough</a>.</p>
+          <p><strong>Local agents:</strong> Keep your computer awake and online with the agent running and checking for replies. Setup needs Node.js 18+ and Python 3.12+. The connector does not wake a stopped session. <a href="install.html#local-agents">Local-agent setup</a>.</p>
+        </div>
+      </details>
+      <p class="how-note">Your agent uses its existing tools and permissions. SMS replies can steer that work; native permission approvals stay in the agent.</p>
+      <p class="setup-guide-link"><a class="quiet-link" href="install.html">Full setup instructions <span aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
   <section class="manual-section" id="pricing">
     <div class="section-copy">
       <h2>Pricing</h2>
@@ -169,17 +230,10 @@
       <p class="pricing-note">Each text sent or received counts as one message. No automatic overage charges: messaging pauses when your included messages and purchased credits run out. Prices are in USD; carrier message and data rates may apply.</p>
     </div>
   </section>
-  <section class="manual-section" id="local-agents">
-    <div class="section-copy compatibility-note">
-      <h2>Also works with local agents</h2>
-      <p>Connect Codex, Grok Build, Claude Code, OpenCode, or another compatible MCP or HTTP API host to receive updates and reply by text. For local agents, keep the computer awake and online with the agent running; the local connector does not wake a stopped session.</p>
-      <p><a href="install.html#local-agents">Local-agent setup</a> · <a href="guides/">All guides</a></p>
-    </div>
-  </section>
 </main>
 <footer>
   <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> CampfireSMS</a>
-  <p>SMS bridge for coding agents.</p>
+  <p>Text your agent.</p>
   <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div>
   <small>© 2026 CampfireSMS</small>
 </footer>
