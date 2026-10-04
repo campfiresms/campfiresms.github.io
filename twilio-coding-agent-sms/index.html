@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Twilio for Codex and Claude Code: DIY vs hosted SMS | CampfireSMS</title>
+  <meta name="description" content="Building Twilio SMS for Codex or Claude Code? Compare a DIY webhook bridge with hosted CampfireSMS, including message routing, replies, and runtime needs.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://campfiresms.com/twilio-coding-agent-sms/">
+  <link rel="sitemap" type="application/xml" href="https://campfiresms.com/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Twilio for Codex and Claude Code: DIY vs hosted SMS | CampfireSMS">
+  <meta property="og:description" content="Building Twilio SMS for Codex or Claude Code? Compare a DIY webhook bridge with hosted CampfireSMS, including message routing, replies, and runtime needs.">
+  <meta property="og:url" content="https://campfiresms.com/twilio-coding-agent-sms/">
+  <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="CampfireSMS: a two-way SMS exchange with your existing agent.">
+  <meta property="article:published_time" content="2026-10-04">
+  <meta property="article:modified_time" content="2026-10-04">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Twilio for Codex and Claude Code: DIY vs hosted SMS | CampfireSMS">
+  <meta name="twitter:description" content="Building Twilio SMS for Codex or Claude Code? Compare a DIY webhook bridge with hosted CampfireSMS, including message routing, replies, and runtime needs.">
+  <meta name="twitter:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/icon.css">
+  <link rel="stylesheet" href="/pages.css">
+  <link rel="stylesheet" href="/agent-guides.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://campfiresms.com/twilio-coding-agent-sms/#article",
+      "headline": "Twilio SMS for Codex and Claude Code",
+      "description": "Building Twilio SMS for Codex or Claude Code? Compare a DIY webhook bridge with hosted CampfireSMS, including message routing, replies, and runtime needs.",
+      "mainEntityOfPage": "https://campfiresms.com/twilio-coding-agent-sms/",
+      "url": "https://campfiresms.com/twilio-coding-agent-sms/",
+      "inLanguage": "en-US",
+      "datePublished": "2026-10-04",
+      "dateModified": "2026-10-04",
+      "image": "https://campfiresms.com/assets/campfiresms-social-card-v3.png",
+      "articleSection": "DIY and hosted SMS",
+      "author": {
+        "@type": "Organization",
+        "name": "CampfireSMS",
+        "url": "https://campfiresms.com/about.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CampfireSMS",
+        "url": "https://campfiresms.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://campfiresms.com/assets/campfire-icon-512.png"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://campfiresms.com/twilio-coding-agent-sms/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "CampfireSMS",
+          "item": "https://campfiresms.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://campfiresms.com/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Twilio SMS for Codex and Claude Code",
+          "item": "https://campfiresms.com/twilio-coding-agent-sms/"
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body class="agent-guide-site">
+<a class="skip-link" href="#content">Skip to content</a>
+<header>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> CampfireSMS</a>
+  <nav aria-label="Primary navigation">
+    <a href="/install.html">Setup</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a>
+    <a href="https://api.campfiresms.com/login">Log in</a><a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a>
+  </nav>
+</header>
+<main class="legal" id="content">
+  <div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/guides/">Guides</a><span aria-hidden="true">/</span><span>DIY and hosted SMS</span></div>
+  <section class="legalhead"><p class="kicker">DIY and hosted SMS</p><h1>Twilio SMS for Codex and Claude Code</h1><p>Build the messaging bridge yourself, or connect the agent you already use.</p><p class="byline">By CampfireSMS · Published <time datetime="2026-10-04">October 4, 2026</time></p></section>
+  <article>
+    <p class="quick-answer">Twilio supplies SMS delivery APIs and inbound webhooks. A coding-agent integration also needs routing, message state, authentication, and a path back into the agent. CampfireSMS provides a hosted bridge you connect to your existing runtime.</p>
+    <figure class="message-flow"><figcaption>The existing-agent SMS route</figcaption><ol><li><strong>Your existing agent</strong><span>Your repo, tools, and runtime</span></li><li><strong>CampfireSMS</strong><span>Updates out · replies back</span></li><li><strong>Your phone</strong><span>Your normal SMS inbox</span></li></ol></figure>
+    <figure class="sms-example"><figcaption>Example task exchange</figcaption><div class="exchange-panels"><section aria-label="Existing agent workspace"><h2>Your agent</h2><p><span class="event-tag">SMS OUT</span>The integration test needs a callback URL. Use the staging fixture?</p><p><span class="event-tag">SMS IN</span>Use the existing staging fixture. Keep production untouched.</p><p><span class="event-tag">RESULT</span>Fixture connected. Integration check passes in the current repo.</p></section><section aria-label="Phone SMS conversation"><h2>Your phone</h2><p class="text-in"><strong>Campfire SMS:</strong> The integration test needs a callback URL. Use the staging fixture?</p><p class="text-out"><strong>You:</strong> Use the existing staging fixture. Keep production untouched.</p><p class="text-in"><strong>Campfire SMS:</strong> Fixture connected. Integration check passes in the current repo.</p></section></div></figure>
+    <nav class="article-contents" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#sending-a-text-is-the-first-half">Sending a text is the first half</a></li><li><a href="#what-a-diy-bridge-needs">What a DIY bridge needs</a></li><li><a href="#what-the-hosted-campfiresms-route-does">What the hosted CampfireSMS route does</a></li><li><a href="#connect-without-building-a-new-bot">Connect without building a new bot</a></li><li><a href="#budget-for-the-complete-workflow">Budget for the complete workflow</a></li><li><a href="#questions">Common questions</a></li></ol></nav>
+    <section aria-labelledby="sending-a-text-is-the-first-half"><h2 id="sending-a-text-is-the-first-half">Sending a text is the first half</h2>
+<p>Twilio's <a href="https://www.twilio.com/docs/messaging/tutorials/how-to-receive-and-reply">receive-and-reply guide</a> shows how an application handles an incoming message. For a coding workflow, your application must also decide which agent and task should receive the text.</p><p>An outbound-only SMS tool can report “tests finished.” To answer “investigate the failure,” you need an inbound path that returns the reply to the correct active session. That is the bridge between SMS transport and coding-agent work.</p></section><section aria-labelledby="what-a-diy-bridge-needs"><h2 id="what-a-diy-bridge-needs">What a DIY bridge needs</h2>
+<div class="comparison-scroll" role="region" aria-label="DIY coding-agent SMS responsibilities" tabindex="0"><table><caption>DIY coding-agent SMS responsibilities</caption><thead><tr><th scope="col">Part</th><th scope="col">Question to resolve</th></tr></thead><tbody><tr><th scope="row">SMS provider</th><td>How will your application send and receive messages?</td></tr><tr><th scope="row">Inbound authentication</th><td>How will you validate the provider request and allowed sender?</td></tr><tr><th scope="row">Message queue</th><td>Where does a reply wait while the agent is busy?</td></tr><tr><th scope="row">Task routing</th><td>Which active agent should handle this message?</td></tr><tr><th scope="row">Retry handling</th><td>How will repeated delivery avoid repeated work?</td></tr><tr><th scope="row">Runtime connection</th><td>How does the existing agent retrieve and acknowledge replies?</td></tr><tr><th scope="row">Operations</th><td>Who maintains hosting, credentials, delivery failures, and opt-out handling?</td></tr></tbody></table></div><p>These are design questions for your application, not features an SMS send call supplies on its own. A DIY route makes sense when you need custom behavior and want to own that service.</p></section><section aria-labelledby="what-the-hosted-campfiresms-route-does"><h2 id="what-the-hosted-campfiresms-route-does">What the hosted CampfireSMS route does</h2>
+<p>CampfireSMS handles phone enrollment, SMS transport, authenticated message retrieval, and the bridge to your connected agent. You use an account and connector instead of provisioning your own Twilio account, public inbound endpoint, and message-routing service.</p><p>The connector's tools let an active agent open a bridge, check pending messages, acknowledge handled messages, and send an SMS. Those steps make the reply loop explicit. The agent continues using its own repo and tools.</p></section><section aria-labelledby="connect-without-building-a-new-bot"><h2 id="connect-without-building-a-new-bot">Connect without building a new bot</h2>
+<p>Follow the <a href="/codex-sms/">Codex</a> or <a href="/claude-code-sms/">Claude Code</a> setup for the environment where your agent already runs. The local installation starts with the one-time command supplied after phone verification:</p><pre><code>npx -y @campfiresms/setup YOUR_INSTALLATION_CODE</code></pre><p>Then test an outbound message and an inbound reply with the running agent. You do not need to create a Campfire coding project or move your repository.</p></section><section aria-labelledby="budget-for-the-complete-workflow"><h2 id="budget-for-the-complete-workflow">Budget for the complete workflow</h2>
+<p>For DIY, consider provider charges, hosting, and the time to maintain the application. Provider pricing depends on the sender and destination; inspect current Twilio pricing for your setup rather than assuming a single universal rate.</p><p>CampfireSMS offers 40 free messages after phone verification, then a monthly plan or one-time packs. Read <a href="/#pricing">pricing and message counting</a> for the current options. Your coding agent and compute costs remain separate.</p><p>Neither route grants native tool permissions or supplies a running coding model. Keep the host available and decide how the agent should check replies.</p></section>
+    <section aria-labelledby="questions"><h2 id="questions">Common questions</h2><details><summary>Do I need my own Twilio account for CampfireSMS?</summary><p>No. The hosted CampfireSMS service handles SMS delivery. You verify your phone and connect the agent through CampfireSMS.</p></details><details><summary>Is an outbound Twilio MCP tool enough for two-way control?</summary><p>An outbound send tool can alert you. Two-way steering also requires an inbound path, routing to the agent, and message handling.</p></details><details><summary>Should I build my own bridge?</summary><p>Build one when owning custom messaging infrastructure is part of your product. Use a hosted bridge when you mainly want to reach an existing agent by text.</p></details></section>
+    <aside class="related-guides" aria-labelledby="related"><h2 id="related">Related guides</h2><ul><li><a href="/photon-vs-campfiresms/">Photon vs CampfireSMS</a></li><li><a href="/codex-sms/">Text OpenAI Codex from your phone</a></li><li><a href="/claude-code-sms/">Use Claude Code by SMS</a></li><li><a href="/imessage-vs-sms-coding-agents/">iMessage vs SMS for coding agents</a></li></ul></aside>
+    <div class="guide-actions"><a class="button" href="/install.html#local-agents">Connect your existing agent</a><a href="/#pricing">Pricing and free messages</a></div>
+  </article>
+</main>
+<footer>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> CampfireSMS</a>
+  <p>Text your existing agent.</p>
+  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div>
+  <small>© 2026 CampfireSMS</small>
+</footer>
+</body>
+</html>

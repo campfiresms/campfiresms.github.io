@@ -1,0 +1,45 @@
+/* Supporting coding-agent articles share the existing site type and colors. */
+.agent-guide-site .legal { max-width: 1064px; }
+.agent-guide-site .legalhead, .agent-guide-site .legal article { max-width: 880px; }
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; color: var(--muted); font-size: 13px; }
+.quick-answer { font-size: 18px; line-height: 1.7; color: var(--ink) !important; }
+.message-flow { margin: 28px 0; border: 1px solid var(--line); padding: 20px; }
+.message-flow figcaption, .sms-example > figcaption { margin-bottom: 12px; color: var(--muted); font-size: 14px; }
+.message-flow ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 0; padding: 0; list-style: none; }
+.message-flow li { position: relative; margin: 0; }
+.message-flow li + li::before { content: "↔"; position: absolute; left: -20px; top: 1px; color: var(--orange); }
+.message-flow strong, .message-flow span { display: block; }
+.message-flow span { font-size: 13px; margin-top: 5px; }
+.sms-example { margin: 32px 0; }
+.exchange-panels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.exchange-panels section { padding: 20px; min-width: 0; background: var(--cream); border: 1px solid var(--line); }
+.exchange-panels h2 { font-size: 16px; margin: 0 0 18px; letter-spacing: 0; }
+.exchange-panels section:first-child { background: var(--ink); color: var(--paper); }
+.exchange-panels section:first-child p { color: #e4ded2; font-size: 14px; }
+.event-tag { display: block; margin-bottom: 4px; font: 11px/1.5 var(--font-code); color: #caba9b; }
+.exchange-panels .text-in, .exchange-panels .text-out { padding: 12px 14px; font-size: 14px; background: #fffdf8; border-radius: 12px; }
+.exchange-panels .text-out { background: var(--green); color: white; margin-left: 20px; }
+.exchange-panels .text-out strong { color: white; }
+.article-contents { display: block; margin: 36px 0; padding: 22px 24px; border-block: 1px solid var(--line); }
+.article-contents ol { columns: 2; margin: 12px 0 0; padding-left: 20px; }
+.article-contents li { margin: 0 0 8px; break-inside: avoid; }
+.article-contents a { color: var(--green); font-size: 14px; text-decoration: underline; }
+.account-example { margin: 28px 0; }
+.account-example img { display: block; width: 100%; max-width: 602px; height: auto; border: 1px solid var(--line); }
+.account-example figcaption, .source-note { margin-top: 12px; font-size: 13px; color: var(--muted); }
+.comparison-scroll { max-width: 100%; overflow-x: auto; margin: 24px 0; }
+.comparison-scroll table { width: 100%; border-collapse: collapse; text-align: left; font-size: 15px; }
+.comparison-scroll caption { text-align: left; margin-bottom: 12px; font-size: 14px; color: var(--muted); }
+.comparison-scroll th, .comparison-scroll td { padding: 14px 12px; vertical-align: top; border-bottom: 1px solid var(--line); }
+.comparison-scroll thead th { background: var(--cream); color: var(--ink); }
+.comparison-scroll tbody th { width: 25%; font-weight: 600; }
+.comparison-scroll td { color: var(--muted); }
+.related-guides { margin-top: 36px; border-top: 1px solid var(--line); }
+@media (max-width: 640px) {
+  .exchange-panels { grid-template-columns: 1fr; }
+  .article-contents ol { columns: 1; }
+  .message-flow ol { grid-template-columns: 1fr; gap: 28px; }
+  .message-flow li + li::before { content: "↕"; left: 0; top: -24px; }
+  .comparison-scroll table { min-width: 580px; }
+  .comparison-scroll th, .comparison-scroll td { padding: 12px; }
+}
