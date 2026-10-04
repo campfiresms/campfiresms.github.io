@@ -3,21 +3,50 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>CampfireSMS guides: Grok wake and local agents | CampfireSMS</title>
-  <meta name="description" content="Start with Grok Bot hosted MCP and webhook wake, then explore local-agent SMS notifications, monitoring, and connection troubleshooting.">
+  <title>Codex, Claude Code and agent SMS guides | CampfireSMS</title>
+  <meta name="description" content="Add SMS to your existing Codex or Claude Code workspace. Setup, phone notifications, remote access, Photon comparisons, and Grok Bot webhook wake.">
   <link rel="canonical" href="https://campfiresms.com/guides/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="CampfireSMS guides: Grok wake and local agents | CampfireSMS">
-  <meta property="og:description" content="Start with Grok Bot hosted MCP and webhook wake, then explore local-agent SMS notifications, monitoring, and connection troubleshooting.">
+  <meta property="og:title" content="Codex, Claude Code and agent SMS guides | CampfireSMS">
+  <meta property="og:description" content="Add SMS to your existing Codex or Claude Code workspace. Setup, phone notifications, remote access, Photon comparisons, and Grok Bot webhook wake.">
   <meta property="og:url" content="https://campfiresms.com/guides/">
   <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Codex, Claude Code and agent SMS guides | CampfireSMS">
+  <meta name="twitter:description" content="Add SMS to your existing Codex or Claude Code workspace. Setup, phone notifications, remote access, Photon comparisons, and Grok Bot webhook wake.">
+  <meta name="twitter:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
   <link rel="icon" type="image/png" href="../assets/favicon-32.png">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../icon.css">
   <link rel="stylesheet" href="../pages.css">
   <link rel="stylesheet" href="../guides.css">
-  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://campfiresms.com/guides/#webpage",
+    "url": "https://campfiresms.com/guides/",
+    "name": "Codex, Claude Code and agent SMS guides",
+    "description": "Add SMS to your existing Codex or Claude Code workspace. Setup, phone notifications, remote access, Photon comparisons, and Grok Bot webhook wake.",
+    "isPartOf": { "@id": "https://campfiresms.com/#website" },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Text Grok Bot with webhook wake", "url": "https://campfiresms.com/guides/grok-bot-sms-routine.html" },
+        { "@type": "ListItem", "position": 2, "name": "Text OpenAI Codex from your phone", "url": "https://campfiresms.com/codex-sms/" },
+        { "@type": "ListItem", "position": 3, "name": "Use Claude Code by SMS", "url": "https://campfiresms.com/claude-code-sms/" },
+        { "@type": "ListItem", "position": 4, "name": "Get Codex notifications on your phone", "url": "https://campfiresms.com/codex-phone-notifications/" },
+        { "@type": "ListItem", "position": 5, "name": "Get Claude Code notifications on your phone", "url": "https://campfiresms.com/claude-code-phone-notifications/" },
+        { "@type": "ListItem", "position": 6, "name": "Control Codex away from your computer", "url": "https://campfiresms.com/remote-control-codex/" },
+        { "@type": "ListItem", "position": 7, "name": "Claude Code Remote Control or SMS?", "url": "https://campfiresms.com/remote-control-claude-code/" },
+        { "@type": "ListItem", "position": 8, "name": "Coding-agent decisions and approvals from your phone", "url": "https://campfiresms.com/approve-coding-agent-from-phone/" },
+        { "@type": "ListItem", "position": 9, "name": "Photon vs CampfireSMS", "url": "https://campfiresms.com/photon-vs-campfiresms/" },
+        { "@type": "ListItem", "position": 10, "name": "iMessage vs SMS for coding agents", "url": "https://campfiresms.com/imessage-vs-sms-coding-agents/" },
+        { "@type": "ListItem", "position": 11, "name": "Twilio for Codex and Claude Code: DIY vs hosted SMS", "url": "https://campfiresms.com/twilio-coding-agent-sms/" }
+      ]
+    }
+  }
+  </script>
 </head>
 <body class="manual-site guides-site">
 <a class="skip-link" href="#content">Skip to content</a>
@@ -32,9 +61,22 @@
   </nav>
 </header>
 <main class="legal" id="content">
-  <section class="legalhead"><span class="kicker">Guides</span><h1>Set up texting with your agents</h1><p>Start with Grok Bot webhook wake, or connect a local agent for updates and replies.</p></section>
+  <section class="legalhead"><span class="kicker">Guides</span><h1>Text the agent you already use</h1><p>Keep your workspace and tools. Add SMS for task updates and replies, or configure Grok Bot cloud wake.</p></section>
   <article>
     <section class="guide-entry"><p class="kicker">Grok Bot setup</p><h2><a href="grok-bot-sms-routine.html">Text Grok Bot with webhook wake</a></h2><p>Connect hosted MCP, configure an active webhook routine, and test a real SMS and reply. The routine runs in the cloud while your PC is off.</p></section>
+    <h2>Connect your existing coding agent</h2>
+    <section class="guide-entry"><h3><a href="/codex-sms/">Text OpenAI Codex from your phone</a></h3><p>Add MCP to the Codex environment you already use. Keep the repo and tools, then test an SMS and reply.</p></section>
+    <section class="guide-entry"><h3><a href="/claude-code-sms/">Use Claude Code by SMS</a></h3><p>Register the local connector in Claude Code and reach the existing session from your normal text inbox.</p></section>
+    <h2>Phone notifications and remote work</h2>
+    <section class="guide-entry"><h3><a href="/codex-phone-notifications/">Get Codex notifications on your phone</a></h3><p>Choose completion, blocker, and decision alerts for an active Codex task.</p></section>
+    <section class="guide-entry"><h3><a href="/claude-code-phone-notifications/">Get Claude Code notifications on your phone</a></h3><p>Define useful SMS updates and reply with the next step.</p></section>
+    <section class="guide-entry"><h3><a href="/remote-control-codex/">Control Codex away from your computer</a></h3><p>Compare SMS steering, SSH, remote desktop, and a hosted Codex runtime.</p></section>
+    <section class="guide-entry"><h3><a href="/remote-control-claude-code/">Claude Code Remote Control or SMS?</a></h3><p>Choose between a native session view and brief messages in your SMS inbox.</p></section>
+    <section class="guide-entry"><h3><a href="/approve-coding-agent-from-phone/">Coding-agent decisions and approvals from your phone</a></h3><p>Learn which task choices SMS can carry and which native permissions still need the agent's approval interface.</p></section>
+    <h2>Compare messaging approaches</h2>
+    <section class="guide-entry"><h3><a href="/photon-vs-campfiresms/">Photon vs CampfireSMS</a></h3><p>Messaging infrastructure, project setup, and a focused SMS connection to your existing workflow.</p></section>
+    <section class="guide-entry"><h3><a href="/imessage-vs-sms-coding-agents/">iMessage vs SMS for coding agents</a></h3><p>Compare phone interfaces, richer messages, and the runtime each route still needs.</p></section>
+    <section class="guide-entry"><h3><a href="/twilio-coding-agent-sms/">Twilio for Codex and Claude Code: DIY vs hosted SMS</a></h3><p>What an inbound reply bridge needs beyond an outbound SMS call.</p></section>
     <h2>Local-agent workflows</h2>
     <section class="guide-entry"><h3><a href="coding-agent-sms-notifications.html">Get SMS notifications from your coding agent</a></h3><p>Install the local connector, test both directions, and choose when an active agent should text you.</p></section>
     <section class="guide-entry"><h3><a href="monitor-coding-agent-away-from-desk.html">Monitor a coding agent away from your desk</a></h3><p>Give a running local agent a bounded task and handle questions by SMS while its computer stays online.</p></section>

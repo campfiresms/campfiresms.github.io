@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://campfiresms.com/</loc><lastmod>2026-09-29</lastmod></url>
-  <url><loc>https://campfiresms.com/install.html</loc><lastmod>2026-09-29</lastmod></url>
-  <url><loc>https://campfiresms.com/guides/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://campfiresms.com/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://campfiresms.com/install.html</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://campfiresms.com/guides/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://campfiresms.com/guides/coding-agent-sms-notifications.html</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://campfiresms.com/guides/monitor-coding-agent-away-from-desk.html</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://campfiresms.com/sms-opt-in.html</loc></url>
@@ -13,4 +13,14 @@
   <url><loc>https://campfiresms.com/about.html</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://campfiresms.com/sms-bridge-coding-agents/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://campfiresms.com/coding-agent-pager/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://campfiresms.com/codex-sms/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://campfiresms.com/claude-code-sms/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://campfiresms.com/codex-phone-notifications/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://campfiresms.com/claude-code-phone-notifications/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://campfiresms.com/remote-control-codex/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://campfiresms.com/remote-control-claude-code/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://campfiresms.com/approve-coding-agent-from-phone/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://campfiresms.com/photon-vs-campfiresms/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://campfiresms.com/imessage-vs-sms-coding-agents/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://campfiresms.com/twilio-coding-agent-sms/</loc><lastmod>2026-10-04</lastmod></url>
 </urlset>

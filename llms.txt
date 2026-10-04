@@ -6,6 +6,8 @@
 
 CampfireSMS operates phone enrollment, SMS delivery, the authenticated message queue, and routing. The connected agent supplies the model, tools, project access, and task execution. The phone needs SMS service; mobile data and a separate chat app are not required for texting.
 
+The local connector adds messaging to the agent's existing workspace. It does not require a Campfire coding project, repository import, or a second coding model. Account verification and connector configuration are still required.
+
 ### Grok Bot webhook wake
 
 Connect the hosted Streamable HTTP MCP at `https://api.campfiresms.com/mcp` with a per-installation bearer in the host’s secure credential settings. Create an active webhook-triggered routine on the owning Bot, then save its URL and sender key in the CampfireSMS account’s Grok Bot 24/7 wake panel. One installation owns wake per account.
@@ -34,6 +36,16 @@ See [local setup](https://campfiresms.com/install.html#local-agents) and [Linux/
 - [Grok Bot webhook setup](https://campfiresms.com/guides/grok-bot-sms-routine.html): Hosted MCP, webhook routine, secure wake configuration, and a real text-and-reply test.
 - [Setup](https://campfiresms.com/install.html): Grok Bot first; local-agent installation, recovery, and removal second.
 - [Guides](https://campfiresms.com/guides/): Grok wake setup and supporting local-agent workflows.
+- [Codex SMS](https://campfiresms.com/codex-sms/): Add SMS to the existing Codex repository and runtime, with setup and a reply test.
+- [Claude Code SMS](https://campfiresms.com/claude-code-sms/): Register the local MCP connector with an existing Claude Code environment.
+- [Codex phone notifications](https://campfiresms.com/codex-phone-notifications/): Define completion, blocker, and decision alerts for an active task.
+- [Claude Code phone notifications](https://campfiresms.com/claude-code-phone-notifications/): Set useful SMS update rules and retrieve replies.
+- [Remote Codex](https://campfiresms.com/remote-control-codex/): Compare short SMS steering, SSH, remote desktop, and a hosted agent.
+- [Claude Code Remote Control vs SMS](https://campfiresms.com/remote-control-claude-code/): Compare a native remote session view and SMS while keeping the local workspace.
+- [Phone task decisions and native approvals](https://campfiresms.com/approve-coding-agent-from-phone/): SMS replies clarify tasks but do not replace native permission approvals.
+- [Photon vs CampfireSMS](https://campfiresms.com/photon-vs-campfiresms/): Project-based messaging SDK setup versus a focused connection to the existing coding workflow. Photon can also integrate into an application the developer owns.
+- [iMessage vs SMS for coding agents](https://campfiresms.com/imessage-vs-sms-coding-agents/): Compare messaging interfaces and separate channel choice from agent runtime availability.
+- [Twilio coding-agent SMS](https://campfiresms.com/twilio-coding-agent-sms/): DIY transport and inbound routing versus a hosted bridge for an existing agent.
 - [SMS bridge](https://campfiresms.com/sms-bridge-coding-agents/): Hosted bridge, webhook wake, and the DIY contrast.
 - [Alerts, replies, and wake](https://campfiresms.com/coding-agent-pager/): What each behavior does.
 - [About](https://campfiresms.com/about.html): Product context and support contact.
