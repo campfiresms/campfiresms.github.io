@@ -44,12 +44,14 @@
 <pre><code>npx -y @campfiresms/setup XXXX-XXXX</code></pre>
 <p><code>XXXX-XXXX</code> is a placeholder, not a working code. Use the command from your account; it is single use and expires after ten minutes. The installer registers the connector with the supported local agents it finds and stores the installation credential locally. Open or restart your agent afterward.</p>
 <p>The <a href="../install.html">install guide</a> covers the complete setup flow and removal instructions.</p>
+<p>For the tool-level workflow, see <a href="/mcp-sms-notifications/">MCP SMS notifications and human replies</a>.</p>
 <h2>2. Test both directions</h2>
 <p>Follow the setup test: send the test message, then reply <strong>TEST</strong> from your verified phone. Wait for the setup confirmation before relying on task updates. Receiving a text proves only one direction works; the reply checks the return path too.</p>
 <h2>3. Tell your agent when to text you</h2>
 <p>Give the agent a concrete task and describe which events deserve a message. For example, adapt this prompt to your repository:</p>
 <blockquote><p>Investigate the failing tests and fix the issue within the scope we've discussed. Use CampfireSMS to send a short update when you have a result, hit a blocker, or need clarification. Check for my replies while you work. Keep updates brief and close the bridge when we're finished.</p></blockquote>
 <p>This asks the agent to use the connection for that task. The local connector does not wake an arbitrarily idle agent, so sending a text to a stopped session is not a reliable way to restart work.</p>
+<p>Use a focused rule for <a href="/build-complete-sms/">build completion texts</a>, <a href="/pull-request-sms-notifications/">PR notifications</a>, or <a href="/agent-needs-input/">questions that need your input</a>. If you need a future notification after the session ends, compare <a href="/agent-notifications-vs-reminders/">agent notifications and scheduled reminders</a>.</p>
 <h2>What an update can look like</h2>
 <p>The following is an illustrative exchange, not a recorded test result:</p>
 <blockquote><p><strong>Agent:</strong> The test failure comes from date parsing. I have a fix and am running the suite.<br><strong>You:</strong> Include a regression case for an empty date.<br><strong>Agent:</strong> Added the case. The suite passes. Changes are ready for your review.</p></blockquote>
