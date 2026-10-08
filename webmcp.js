@@ -34,18 +34,18 @@
 
   register({
     name: "campfiresms_get_site_info",
-    title: "Get CampfireSMS site information",
-    description: "Return CampfireSMS capabilities, safety boundaries, and canonical setup links.",
+    title: "Get Campfire SMS site information",
+    description: "Return Campfire SMS capabilities, safety boundaries, and canonical setup links.",
     inputSchema: { type: "object", properties: {}, additionalProperties: false },
     annotations: { readOnlyHint: true, untrustedContentHint: false },
     execute() {
       return JSON.stringify({
-        product: "CampfireSMS",
+        product: "Campfire SMS",
         purpose: "Hosted two-way SMS bridge for Grok Bot webhook wake and active local-agent connections",
         supports: ["incoming SMS triggers a configured Grok Bot cloud routine", "SMS updates and replies with active local agents", "task instructions within existing authority"],
         grokWebhookWake: {
           behavior: "Incoming SMS queues a message and wake event. Grok’s cloud routine retrieves the message through hosted MCP and can reply by SMS while the user’s PC is off.",
-          requirements: "Hosted MCP with the owning installation’s bearer, an active webhook routine, and its URL and key saved in the CampfireSMS account.",
+          requirements: "Hosted MCP with the owning installation’s bearer, an active webhook routine, and its URL and key saved in the Campfire SMS account.",
           verification: "A real SMS, webhook run, authenticated message retrieval, and received SMS reply. A webhook probe confirms acceptance only.",
           guide: pages.grokWake,
         },
@@ -65,15 +65,15 @@
 
   register({
     name: "campfiresms_open_page",
-    title: "Open a CampfireSMS page",
-    description: "Navigate this browser tab to a canonical CampfireSMS information, setup, or account page.",
+    title: "Open a Campfire SMS page",
+    description: "Navigate this browser tab to a canonical Campfire SMS information, setup, or account page.",
     inputSchema: {
       type: "object",
       properties: {
         page: {
           type: "string",
           enum: Object.keys(pages),
-          description: "The CampfireSMS page to open.",
+          description: "The Campfire SMS page to open.",
         },
       },
       required: ["page"],
@@ -82,7 +82,7 @@
     annotations: { readOnlyHint: false, untrustedContentHint: false },
     execute({ page }) {
       const destination = pages[page];
-      if (!destination) throw new TypeError("Unknown CampfireSMS page");
+      if (!destination) throw new TypeError("Unknown Campfire SMS page");
       window.location.assign(destination);
       return `Opening ${destination}`;
     },

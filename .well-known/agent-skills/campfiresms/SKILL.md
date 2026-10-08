@@ -1,15 +1,15 @@
 ---
 name: campfiresms
-description: Use CampfireSMS for Grok Bot webhook wake and SMS updates and replies with active local coding agents.
+description: Use Campfire SMS for Grok Bot webhook wake and SMS updates and replies with active local coding agents.
 ---
 
-# CampfireSMS
+# Campfire SMS
 
 [Product and interface index](https://campfiresms.com/llms.txt).
 [Grok Bot webhook setup](https://campfiresms.com/guides/grok-bot-sms-routine.html).
 [Local-agent setup](https://campfiresms.com/install.html#local-agents).
 
-Use CampfireSMS after human phone enrollment and a configured hosted MCP or local connector. Keep installation bearers, webhook keys, verification codes, passwords, and other secrets out of chat and SMS. Credentials belong in the host’s secure settings.
+Use Campfire SMS after human phone enrollment and a configured hosted MCP or local connector. Keep installation bearers, webhook keys, verification codes, passwords, and other secrets out of chat and SMS. Credentials belong in the host’s secure settings.
 
 ## Grok Bot webhook routine
 

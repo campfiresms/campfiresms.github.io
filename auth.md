@@ -1,12 +1,12 @@
 # Auth.md
 
-CampfireSMS authentication instructions for people and AI agents.
+Campfire SMS authentication instructions for people and AI agents.
 
-CampfireSMS does not support autonomous agent registration or OAuth.
+Campfire SMS does not support autonomous agent registration or OAuth.
 
 ## User enrollment
 
-A human starts at https://api.campfiresms.com/join and verifies control of a phone number. Create a separate installation for the Bot or computer that will use CampfireSMS.
+A human starts at https://api.campfiresms.com/join and verifies control of a phone number. Create a separate installation for the Bot or computer that will use Campfire SMS.
 
 For Grok Bot hosted MCP, use the account’s one-time command with `--credential-only`. This enrollment step needs Node.js 18+ and stores the installation credential at the configuration path printed by setup. Transfer that credential only into the host’s secure plugin or MCP authorization setting. Hosted MCP requires no Python or pip installation. Follow the [Grok webhook guide](https://campfiresms.com/guides/grok-bot-sms-routine.html) to configure wake.
 
@@ -22,7 +22,7 @@ and bridge REST requests use the installation credential as an HTTP bearer:
 `Authorization: Bearer <installation-credential>`
 
 The credential is scoped to one installation and can be revoked independently
-from the user's CampfireSMS account. A verified phone and installation bearer
+from the user's Campfire SMS account. A verified phone and installation bearer
 do not grant authority to approve tools, reveal secrets, perform destructive
 work, or bypass the coding agent's native approval system.
 

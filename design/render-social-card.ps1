@@ -91,7 +91,7 @@ try {
 
   # Brand and headline stay readable when a social feed halves the image size.
   Draw-BrandIcon 64 64 44
-  Draw-Copy 'CampfireSMS' 28 $inkBrush 122 66 'Segoe UI Semibold'
+  Draw-Copy 'Campfire SMS' 28 $inkBrush 122 66 'Segoe UI Semibold'
   Draw-Copy 'Text your' 88 $inkBrush 62 187 'Segoe UI Semibold'
   Draw-Copy 'agent.' 88 $inkBrush 62 276 'Segoe UI Semibold'
   $graphics.FillRectangle($emberBrush, 68, 400, 52, 4)

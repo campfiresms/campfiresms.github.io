@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Text Grok Bot with webhook wake | CampfireSMS</title>
-  <meta name="description" content="Connect hosted MCP, configure a Grok Bot webhook routine, and test a real text and SMS reply. The routine runs in the cloud while your PC is off.">
+  <title>Text Grok Bot with webhook wake | Campfire SMS</title>
+  <meta name="description" content="Text Grok Bot and get an SMS reply, even while your PC is off. Connect Campfire SMS, set up a webhook routine, and test the round trip.">
   <link rel="canonical" href="https://campfiresms.com/guides/grok-bot-sms-routine.html">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Text Grok Bot with webhook wake | CampfireSMS">
-  <meta property="og:description" content="Connect hosted MCP, configure a Grok Bot webhook routine, and test a real text and SMS reply. The routine runs in the cloud while your PC is off.">
+  <meta property="og:title" content="Text Grok Bot with webhook wake | Campfire SMS">
+  <meta property="og:description" content="Text Grok Bot and get an SMS reply, even while your PC is off. Connect Campfire SMS, set up a webhook routine, and test the round trip.">
   <meta property="og:url" content="https://campfiresms.com/guides/grok-bot-sms-routine.html">
   <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -17,12 +17,12 @@
   <link rel="stylesheet" href="../icon.css">
   <link rel="stylesheet" href="../pages.css">
   <link rel="stylesheet" href="../guides.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Text Grok Bot with webhook wake", "description": "Connect hosted MCP, configure a Grok Bot webhook routine, and test a real text and SMS reply. The routine runs in the cloud while your PC is off.", "mainEntityOfPage": "https://campfiresms.com/guides/grok-bot-sms-routine.html", "author": {"@type": "Organization", "name": "CampfireSMS", "url": "https://campfiresms.com/"}, "publisher": {"@type": "Organization", "name": "CampfireSMS", "url": "https://campfiresms.com/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Text Grok Bot with webhook wake", "description": "Text Grok Bot and get an SMS reply, even while your PC is off. Connect Campfire SMS, set up a webhook routine, and test the round trip.", "mainEntityOfPage": "https://campfiresms.com/guides/grok-bot-sms-routine.html", "author": {"@type": "Organization", "name": "Campfire SMS", "url": "https://campfiresms.com/"}, "publisher": {"@type": "Organization", "name": "Campfire SMS", "url": "https://campfiresms.com/"}}</script>
 </head>
 <body class="manual-site guides-site">
 <a class="skip-link" href="#content">Skip to content</a>
 <header>
-  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> CampfireSMS</a>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
   <nav aria-label="Primary navigation">
     <a href="/install.html">Setup</a>
     <a href="/#pricing">Pricing</a>
@@ -36,15 +36,15 @@
     <span class="kicker"><a href="./">Guides</a> / Grok Bot</span>
     <h1>Text Grok Bot with webhook wake</h1>
     <p>Connect hosted MCP, set up a webhook routine, then send a text that starts work and gets an SMS reply—even while your PC is off.</p>
-    <p class="byline">By CampfireSMS</p>
+    <p class="byline">By Campfire SMS</p>
   </section>
   <article>
-    <p>CampfireSMS queues your incoming SMS and sends a wake event to Grok Bot. The routine retrieves the message through authenticated MCP tools, handles it, and can text you back. Grok’s <a href="https://cursor.com/help/grok-bot/routines">routine documentation</a> confirms that routines run in the cloud while your laptop is closed.</p>
+    <p>Campfire SMS queues your incoming SMS and sends a wake event to Grok Bot. The routine retrieves the message through authenticated MCP tools, handles it, and can text you back. Grok’s <a href="https://cursor.com/help/grok-bot/routines">routine documentation</a> confirms that routines run in the cloud while your laptop is closed.</p>
     <h2 id="hosted-mcp">1. Connect the hosted MCP</h2>
-    <p>Verify your phone through the setup link in the navigation, then create an installation for the Bot in your CampfireSMS account. Give it a recognizable label. Use the one-time installation command supplied by your account with <code>--credential-only</code>:</p>
+    <p>Verify your phone through the setup link in the navigation, then create an installation for the Bot in your Campfire SMS account. Give it a recognizable label. Use the one-time installation command supplied by your account with <code>--credential-only</code>:</p>
     <pre><code>npx -y @campfiresms/setup YOUR_INSTALLATION_CODE --credential-only</code></pre>
     <p>Replace <code>YOUR_INSTALLATION_CODE</code> with the value from your account. This enrollment step needs Node.js 18+ and stores a permanent installation credential in the configuration file whose path the command prints. Hosted MCP needs no Python, pip, or local coding CLI.</p>
-    <p>In Grok Bot’s plugin or MCP settings, connect <code>https://api.campfiresms.com/mcp</code>. If the CampfireSMS plugin is available in your workspace, use its secure <code>CAMPFIRE_CREDENTIAL</code> field. For a manually configured hosted MCP connection, use the installation credential as the bearer in its secure authorization-header setting:</p>
+    <p>In Grok Bot’s plugin or MCP settings, connect <code>https://api.campfiresms.com/mcp</code>. If the Campfire SMS plugin is available in your workspace, use its secure <code>CAMPFIRE_CREDENTIAL</code> field. For a manually configured hosted MCP connection, use the installation credential as the bearer in its secure authorization-header setting:</p>
     <pre><code>Authorization: Bearer &lt;installation-credential&gt;</code></pre>
     <p>Transfer the credential from the saved configuration only into the host’s secure credential setting. Keep it out of Bot chats, SMS, screenshots, and source control. A team administrator may need to enable the plugin or allowlist the MCP URL.</p>
     <p>Confirm the Bot can see <code>campfire_open_bridge</code>, <code>campfire_check_messages</code>, <code>campfire_ack</code>, <code>campfire_send_message</code>, and <code>campfire_close_bridge</code>. Ask it to open the bridge and send a harmless test text before configuring wake.</p>
@@ -52,9 +52,9 @@
     <p>Ask the same Bot to create a routine triggered by a webhook. Give it the behavior below, then review the saved instruction and trigger:</p>
     <blockquote><p>For campfire.wake.probe or action: skip, finish quietly without calling tools. For campfire.message.available, call campfire_open_bridge to reuse the active bridge, then campfire_check_messages. Handle pending messages in order within the task’s existing permissions. Acknowledge each message ID with campfire_ack only after incorporating its instruction. Send a result, question, or blocker using campfire_send_message. If no messages are pending, finish quietly. After completing the task and sending its result, close the bridge with campfire_close_bridge.</p></blockquote>
     <p>On desktop, open the Bot’s details, choose <strong>Tasks</strong>, and open the routine under <strong>Routines</strong>. Confirm it is active and <strong>When to run</strong> includes a webhook trigger. Its <strong>Webhook</strong> section shows a <strong>POST to</strong> URL and a <strong>key</strong>. Keep the key private.</p>
-    <h2 id="save-wake">3. Save the wake connection in CampfireSMS</h2>
+    <h2 id="save-wake">3. Save the wake connection in Campfire SMS</h2>
     <ol>
-      <li>Open your CampfireSMS account and find <strong>Grok Bot 24/7 wake</strong>.</li>
+      <li>Open your Campfire SMS account and find <strong>Grok Bot 24/7 wake</strong>.</li>
       <li>Select the same installation whose credential the Bot uses for hosted MCP. One installation owns wake per account.</li>
       <li>Copy the routine’s <strong>POST to</strong> URL into <strong>Webhook URL</strong> and its <strong>key</strong> into <strong>Sender key</strong>.</li>
       <li>Choose <strong>Test webhook and save</strong>.</li>
@@ -63,33 +63,33 @@
     <p>The save test sends <code>campfire.wake.probe</code>. A successful webhook response confirms that Grok accepted a run. It does not confirm that the routine retrieved an SMS or sent a reply.</p>
     <h2 id="real-sms-test">4. Test a real SMS and reply</h2>
     <ol>
-      <li>From your verified phone, text the CampfireSMS number: “Send me a one-sentence status.”</li>
+      <li>From your verified phone, text the Campfire SMS number: “Send me a one-sentence status.”</li>
       <li>Open Grok’s routine history and confirm a new webhook run started for this message.</li>
       <li>In the run, confirm the Bot opened or reused the bridge, called <code>campfire_check_messages</code>, and retrieved that text.</li>
       <li>Confirm it sent its response with <code>campfire_send_message</code> and that the SMS reached your phone. Confirm the handled message was acknowledged.</li>
     </ol>
     <p>Only this complete text → webhook run → message retrieval → SMS reply verifies your wake setup. The account’s <strong>TEST</strong> setup reply and a successful webhook probe do not establish that flow. To check operation while your PC is off, repeat the harmless text after turning it off and inspect the cloud run afterward.</p>
     <h2 id="delivery">Message delivery and repeated wakes</h2>
-    <p>The SMS body stays in CampfireSMS’s authenticated message queue. The webhook carries an event name, delivery ID, and bridge ID. Pending messages repeat until acknowledged; a duplicate wake with an empty queue should finish quietly.</p>
+    <p>The SMS body stays in Campfire SMS’s authenticated message queue. The webhook carries an event name, delivery ID, and bridge ID. Pending messages repeat until acknowledged; a duplicate wake with an empty queue should finish quietly.</p>
     <p>The backend queues incoming SMS and a wake job before acknowledging the carrier. Its background worker retries failed wake deliveries independently of carrier retries. Check the account’s wake status and Grok’s run history when a reply is missing.</p>
     <h2 id="troubleshooting">If the Bot does not reply</h2>
     <ul>
-      <li><strong>No webhook run:</strong> confirm the routine is active, its webhook URL and key are current, and CampfireSMS wake is enabled for the right installation.</li>
+      <li><strong>No webhook run:</strong> confirm the routine is active, its webhook URL and key are current, and Campfire SMS wake is enabled for the right installation.</li>
       <li><strong>Run starts but reads no message:</strong> confirm hosted MCP uses that installation’s valid credential, and another agent does not own the open bridge.</li>
       <li><strong>Message retrieved but no reply:</strong> check the run’s result, tool errors, message balance, and Grok account limits. A webhook success only starts the run.</li>
       <li><strong>Repeated work:</strong> acknowledge handled message IDs and have empty-queue runs exit quietly. Avoid two independent consumers on the same bridge.</li>
     </ul>
-    <p>To stop future SMS-triggered runs, disable wake in CampfireSMS and pause the Grok routine, then close the bridge. With wake enabled, a later ordinary text can open a new Bot bridge.</p>
+    <p>To stop future SMS-triggered runs, disable wake in Campfire SMS and pause the Grok routine, then close the bridge. With wake enabled, a later ordinary text can open a new Bot bridge.</p>
     <h2 id="local-build">Grok Build and other local agents</h2>
     <p>For a local Grok Build, Codex, or other compatible session, follow <a href="../install.html#local-agents">local-agent installation</a>. The agent must be running and check for replies at useful work boundaries. A scheduled local workflow needs an awake, online machine; the connector alone does not start a stopped session. The <a href="../install.html#linux-vm">Linux and VM instructions</a> cover Python virtual environments.</p>
-    <p>SMS instructions use the agent’s existing tools and permissions. Native approval prompts stay in its environment. Keep secrets out of texts; SMS is not end-to-end encrypted. See <a href="../index.html#pricing">pricing and message counting</a>.</p>
+    <p>SMS instructions use the agent’s existing tools and permissions. Native approval prompts stay in its environment. Keep secrets out of texts; SMS is not end-to-end encrypted. See <a href="/#pricing">pricing and message counting</a>.</p>
   </article>
 </main>
 <footer>
-  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> CampfireSMS</a>
-  <p>SMS bridge for coding agents.</p>
-  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div>
-  <small>© 2026 CampfireSMS</small>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <p>SMS bridge for AI agents.</p>
+  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:support@campfiresms.com">Contact</a></div>
+  <small>© 2026 Campfire SMS</small>
 </footer>
 </body>
 </html>

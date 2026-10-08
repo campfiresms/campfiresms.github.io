@@ -4,9 +4,9 @@
     {
       "name": "campfiresms",
       "type": "skill-md",
-      "description": "Use CampfireSMS for Grok Bot webhook wake and SMS updates and replies with active local coding agents.",
+      "description": "Use Campfire SMS for Grok Bot webhook wake and SMS updates and replies with active local coding agents.",
       "url": "/.well-known/agent-skills/campfiresms/SKILL.md",
-      "digest": "sha256:07ed40b85e31f9700f8924db91fd81bc9ee49d1cfa266380fc927086dc24859e"
+      "digest": "sha256:0165facb0e7d7aea0e2139a8a5c9f0de5a9ef634972561548559591f753b43cb"
     }
   ]
 }
