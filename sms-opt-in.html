@@ -1,5 +1,23 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Enable Campfire SMS messaging for updates and replies from your connected agent."><link rel="canonical" href="https://campfiresms.com/sms-opt-in.html"><title>SMS opt-in — Campfire SMS</title><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="icon.css"><link rel="stylesheet" href="opt-in.css"><link rel="stylesheet" href="pages.css"></head>
+<html lang="en"><head><meta charset="utf-8">
+  <!-- Google tag (gtag.js) - GA4 G-VWDPRPD2SK -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWDPRPD2SK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VWDPRPD2SK');
+    // sign_up_start: signup happens on api.campfiresms.com/join, so count clicks on any link to it. No PII in params.
+    document.addEventListener('click', function (e) {
+      try {
+        var a = e.target && e.target.closest && e.target.closest('a[href^="https://api.campfiresms.com/join"]');
+        if (!a || typeof window.gtag !== 'function') return;
+        var where = a.closest('header') ? 'header' : (a.closest('footer') ? 'footer' : 'content');
+        window.gtag('event', 'sign_up_start', { method: 'join_link', link_location: where, transport_type: 'beacon' });
+      } catch (err) {}
+    }, true);
+  </script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Enable Campfire SMS messaging for updates and replies from your connected agent."><link rel="canonical" href="https://campfiresms.com/sms-opt-in.html"><title>SMS opt-in — Campfire SMS</title><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="icon.css"><link rel="stylesheet" href="opt-in.css"><link rel="stylesheet" href="pages.css"></head>
 <body class="manual-site"><a class="skip-link" href="#content">Skip to content</a>
 <header>
   <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
