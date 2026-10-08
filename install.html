@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Set up Grok Bot with hosted MCP and webhook wake first, or install the local connector for active coding-agent sessions.">
+  <meta name="description" content="Text your coding agent from your phone. Set up Grok Bot to answer texts while your PC is off, or connect Codex, Claude Code, Grok Build, or OpenCode on your computer.">
   <link rel="canonical" href="https://campfiresms.com/install.html">
-  <title>Set up CampfireSMS with Grok Bot or local agents | CampfireSMS</title>
+  <title>Set up Campfire SMS with Grok Bot or local agents | Campfire SMS</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
@@ -15,7 +15,7 @@
 <body class="manual-site">
 <a class="skip-link" href="#content">Skip to content</a>
 <header>
-  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> CampfireSMS</a>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
   <nav aria-label="Primary navigation">
     <a href="/install.html">Setup</a>
     <a href="/#pricing">Pricing</a>
@@ -28,32 +28,34 @@
   <section class="legalhead">
     <span class="kicker">Setup</span>
     <h1>Connect your phone to your agents</h1>
-    <p>First, create your CampfireSMS account and verify your phone. Then connect Grok Bot to wake when you text, or an active local coding agent for updates and replies.</p>
+    <p>First, create your Campfire SMS account and verify your phone. Then connect Grok Bot to wake when you text, or an active local coding agent for updates and replies.</p>
+    <p><strong>Which path is for me?</strong> Want texts answered while your PC is off? → <a href="#grok-bot">Grok Bot</a>. Working in Codex, Claude Code, Grok Build, or OpenCode on your computer? → <a href="#local-agents">Local agents</a>.</p>
     <div class="guide-actions"><a class="button" href="https://api.campfiresms.com/join">Start free setup <span aria-hidden="true">→</span></a></div>
   </section>
   <article>
     <h2 id="grok-bot">Grok Bot: hosted MCP and webhook wake</h2>
-    <p>A text can trigger Grok’s cloud routine even while your PC is off. The Bot reads the message through CampfireSMS’s hosted MCP and can reply by SMS.</p>
+    <p>A text can trigger Grok’s cloud routine even while your PC is off. The Bot reads the message through Campfire SMS’s hosted MCP and can reply by SMS.</p>
     <ol>
-      <li><a href="https://api.campfiresms.com/join">Create your account and verify your phone</a>, then create an installation for the Bot.</li>
+      <li><a href="https://api.campfiresms.com/join">Create your account and verify your phone</a>. Then sign in, go to <strong>Add computers</strong>, open <strong>Add a computer or Bot</strong>, and choose <strong>Create install command</strong>. Run the command your account shows, adding <code>--credential-only</code>. It saves the installation credential to a file and prints where.</li>
       <li>Connect <code>https://api.campfiresms.com/mcp</code> in Grok’s secure plugin or MCP settings using that installation’s credential.</li>
-      <li>Create an active webhook routine, then save its URL and key under <strong>Grok Bot 24/7 wake</strong> in your CampfireSMS account.</li>
+      <li>Create an active webhook routine, then save its URL and key under <strong>Grok Bot 24/7 wake</strong> in your Campfire SMS account.</li>
       <li>Send a real text. Check the webhook run, message retrieval, and SMS reply.</li>
     </ol>
     <p>The <a href="guides/grok-bot-sms-routine.html">Grok Bot walkthrough</a> covers enrollment, secure credentials, the routine instruction, and the complete test. Hosted MCP requires no Python or pip installation.</p>
     <h2 id="local-agents">Local agents: install the connector</h2>
-    <p>Use this path for Codex, Grok Build, Claude Code, OpenCode, or another compatible MCP host running on your computer. You need Windows, macOS, or Linux, Node.js 18+ with <code>npx</code>, and Python 3.12+. Keep the computer awake and online with the agent running. The local connector does not wake stopped sessions.</p>
-    <details id="linux-vm"><summary>Installing locally on Linux or a VM?</summary>
-      <p>Run setup as the same non-root user that runs the agent. Use Python 3.12+ with venv support and activate an isolated environment before running the one-time command:</p>
-      <pre><code>python3 -m venv "$HOME/.local/share/campfire/venv"
+    <p>Use this path for Codex, Grok Build, Claude Code, OpenCode, or another compatible MCP host running on your computer. Grok Build is Grok’s coding agent on your computer; unlike Grok Bot, it can’t be woken by a text while your PC is off. You need Windows, macOS, or Linux, Node.js 18+ with <code>npx</code>, and Python 3.12+. Keep the computer awake and online with the agent running. The local connector does not wake stopped sessions.</p>
+    <ol class="setup-steps">
+      <li><h3>Verify your phone</h3><p><a href="https://api.campfiresms.com/join">Start free setup</a> to create your account. Campfire SMS sends a verification code. Choose and confirm a six-digit account PIN; later sign-ins use your phone number and PIN.</p></li>
+      <li><h3>Run your installation command</h3><p>Sign in, go to <strong>Add computers</strong>, open <strong>Add a computer or Bot</strong>, give the computer a label, and choose <strong>Create install command</strong>. Your account then shows the command with your installation code. Copy it and run it on the computer where your agent runs:</p>
+      <details id="linux-vm"><summary>Installing on Linux or a VM? Do this first.</summary>
+        <p>Run setup as the same non-root user that runs the agent. Use Python 3.12+ with venv support and activate an isolated environment before running the one-time command:</p>
+        <pre><code>python3 -m venv "$HOME/.local/share/campfire/venv"
 . "$HOME/.local/share/campfire/venv/bin/activate"
 # Now run the npx setup command from your account.</code></pre>
-      <p>Do not use <code>sudo pip</code>, global/system pip, or <code>--break-system-packages</code>. If venv support is missing, have the VM administrator install the matching Python venv package.</p>
-      <p>Set the MCP server command to the virtual environment’s absolute Python path, such as <code>/home/agent/.local/share/campfire/venv/bin/python -m campfire_mcp.cli serve</code>. Future runs do not inherit shell activation.</p>
-    </details>
-    <ol class="setup-steps">
-      <li><h3>Verify your phone</h3><p><a href="https://api.campfiresms.com/join">Start free setup</a> to create your account. CampfireSMS sends a verification code. Choose and confirm a six-digit account PIN; later sign-ins use your phone number and PIN.</p></li>
-      <li><h3>Run your installation command</h3><pre><code>npx -y @campfiresms/setup YOUR_INSTALLATION_CODE</code></pre><p>Use the value supplied by your account. The command is single use and expires after 10 minutes.</p></li>
+        <p>Do not use <code>sudo pip</code>, global/system pip, or <code>--break-system-packages</code>. If venv support is missing, have the VM administrator install the matching Python venv package.</p>
+        <p>Set the MCP server command to the virtual environment’s absolute Python path, such as <code>/home/agent/.local/share/campfire/venv/bin/python -m campfire_mcp.cli serve</code>. Future runs do not inherit shell activation.</p>
+      </details>
+      <pre><code>npx -y @campfiresms/setup YOUR_INSTALLATION_CODE</code></pre><p>The command is single use and expires after 10 minutes. If it expires, create a new one.</p></li>
       <li><h3>Connect your agent</h3><p>Setup stores the installation credential locally and registers detected Codex and Grok Build CLIs. For another compatible agent, add a local MCP server named <code>campfire</code> using the command printed by setup. Open or restart the agent.</p></li>
       <li><h3>Test both directions</h3><p>Send the account’s test message and reply <strong>TEST</strong>. Wait for the setup confirmation. Then ask your running agent to open a bridge, text you, retrieve a harmless reply, and respond.</p></li>
     </ol>
@@ -62,7 +64,7 @@
       <h2 id="setup-screens-title">Account verification and installations</h2>
       <p>These screenshots show the account interface with fictional sample data.</p>
       <figure><img src="assets/setup-pin-example.png" width="642" height="410" loading="lazy" alt="After phone verification, create and confirm a six-digit account PIN."><figcaption>The PIN is used for later account sign-ins.</figcaption></figure>
-      <figure><img src="assets/setup-revoke-example.png" width="602" height="266" loading="lazy" alt="A sample Work laptop installation with Rename, Save name, and Revoke controls."><figcaption>Each installation has a separate credential and can be renamed or revoked.</figcaption></figure>
+      <figure><img src="assets/setup-revoke-example.png" width="602" height="266" loading="lazy" alt="A sample Work laptop installation with a Rename field and Save name and Revoke access buttons."><figcaption>Each installation has a separate credential. Use Save name to rename it or Revoke access to disable it.</figcaption></figure>
     </section>
     <h2 id="recovery">Update or recover a local connection</h2>
     <p>If an installation command has expired or was already used, sign in and create a new one. If your saved credential is valid, refresh the local connector with:</p>
@@ -73,15 +75,17 @@
     <h2>Remove a local connector</h2>
     <p>After revoking the installation, remove the MCP entry from each CLI you use:</p>
     <pre><code>codex mcp remove campfire
-grok mcp remove campfire</code></pre>
-    <p>See <a href="index.html#pricing">pricing and message counting</a> for plan and credit options.</p>
+grok mcp remove campfire
+claude mcp remove campfire --scope user</code></pre>
+    <p>For OpenCode, delete the <code>campfire</code> entry from the <code>mcp</code> section of your OpenCode config (usually <code>~/.config/opencode/opencode.json</code>, or <code>opencode.json</code> in your project). For any other MCP host, remove the <code>campfire</code> server in its MCP settings.</p>
+    <p>See <a href="/#pricing">pricing and message counting</a> for plan and credit options.</p>
   </article>
 </main>
 <footer>
-  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> CampfireSMS</a>
-  <p>SMS bridge for coding agents.</p>
-  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:campfire.sms.support@gmail.com">Contact</a></div>
-  <small>© 2026 CampfireSMS</small>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <p>SMS bridge for AI agents.</p>
+  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:support@campfiresms.com">Contact</a></div>
+  <small>© 2026 Campfire SMS</small>
 </footer>
 </body>
 </html>

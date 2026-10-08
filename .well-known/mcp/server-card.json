@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
   "name": "com.campfiresms/bridge",
   "version": "0.1.0",
-  "title": "CampfireSMS",
+  "title": "Campfire SMS",
   "description": "Hosted two-way SMS bridge for Grok Bot cloud webhook wake and active local-agent connections.",
   "websiteUrl": "https://campfiresms.com",
   "remotes": [

@@ -1,16 +1,16 @@
-# CampfireSMS
+# Campfire SMS
 
-> CampfireSMS is a hosted two-way SMS bridge for coding agents. With Grok Bot webhook wake configured, an incoming text triggers a cloud routine that retrieves the message and can reply by SMS while the user’s PC is off. Active local-agent connections are also supported.
+> Campfire SMS is a hosted two-way SMS bridge for coding agents. With Grok Bot webhook wake configured, an incoming text triggers a cloud routine that retrieves the message and can reply by SMS while the user’s PC is off. Active local-agent connections are also supported.
 
 ## Product facts
 
-CampfireSMS operates phone enrollment, SMS delivery, the authenticated message queue, and routing. The connected agent supplies the model, tools, project access, and task execution. The phone needs SMS service; mobile data and a separate chat app are not required for texting.
+Campfire SMS operates phone enrollment, SMS delivery, the authenticated message queue, and routing. The connected agent supplies the model, tools, project access, and task execution. The phone needs SMS service; mobile data and a separate chat app are not required for texting.
 
-The local connector adds messaging to the agent's existing workspace. It does not require a Campfire coding project, repository import, or a second coding model. Account verification and connector configuration are still required.
+The local connector adds messaging to the agent's existing workspace. It does not require a Campfire SMS coding project, repository import, or a second coding model. Account verification and connector configuration are still required.
 
 ### Grok Bot webhook wake
 
-Connect the hosted Streamable HTTP MCP at `https://api.campfiresms.com/mcp` with a per-installation bearer in the host’s secure credential settings. Create an active webhook-triggered routine on the owning Bot, then save its URL and sender key in the CampfireSMS account’s Grok Bot 24/7 wake panel. One installation owns wake per account.
+Connect the hosted Streamable HTTP MCP at `https://api.campfiresms.com/mcp` with a per-installation bearer in the host’s secure credential settings. Create an active webhook-triggered routine on the owning Bot, then save its URL and sender key in the Campfire SMS account’s Grok Bot 24/7 wake panel. One installation owns wake per account.
 
 An incoming SMS queues a message and wake job. The webhook event contains an event name, delivery ID, and bridge ID; the SMS body stays in the authenticated MCP queue. Grok’s cloud routine opens or reuses the bridge, retrieves pending messages, handles them, acknowledges handled IDs, and can send an SMS reply. A routine can run while the user’s PC is off. This does not start a stopped local coding-agent session.
 
@@ -20,7 +20,7 @@ A successful webhook probe confirms run acceptance only. Verify a real SMS → w
 
 Codex, Grok Build, Claude Code, OpenCode, and other compatible MCP or HTTP API hosts can send updates and retrieve replies during active work. For a local connector, keep the computer awake and online with the agent running. Installation alone does not schedule checks or wake stopped sessions. Local scheduled workflows require an available runtime.
 
-SMS instructions stay within the agent’s existing permissions. Native approvals remain in its environment. CampfireSMS does not run an additional AI model. SMS is not end-to-end encrypted; keep credentials and sensitive information out of texts.
+SMS instructions stay within the agent’s existing permissions. Native approvals remain in its environment. Campfire SMS does not run an additional AI model. SMS is not end-to-end encrypted; keep credentials and sensitive information out of texts.
 
 ## Enrollment and local setup
 
@@ -36,7 +36,7 @@ See [local setup](https://campfiresms.com/install.html#local-agents) and [Linux/
 - [Grok Bot webhook setup](https://campfiresms.com/guides/grok-bot-sms-routine.html): Hosted MCP, webhook routine, secure wake configuration, and a real text-and-reply test.
 - [Setup](https://campfiresms.com/install.html): Grok Bot first; local-agent installation, recovery, and removal second.
 - [Guides](https://campfiresms.com/guides/): Grok wake setup and supporting local-agent workflows.
-- [NudgeBell vs CampfireSMS](https://campfiresms.com/nudgebell-vs-campfiresms/): Scheduled reminders and escalation versus two-way agent SMS, with sources and runtime requirements.
+- [NudgeBell vs Campfire SMS](https://campfiresms.com/nudgebell-vs-campfiresms/): Scheduled reminders and escalation versus two-way agent SMS, with sources and runtime requirements.
 - [MCP SMS notifications](https://campfiresms.com/mcp-sms-notifications/): Send, retrieve, and acknowledge tools, setup routes, and a complete reply test.
 - [Build completion SMS](https://campfiresms.com/build-complete-sms/): Have an active agent report build, test, or evaluation results and handle follow-up questions.
 - [Pull request SMS notifications](https://campfiresms.com/pull-request-sms-notifications/): Agent-observed PR readiness, summaries, and reply handling; setup alone does not watch GitHub events.
@@ -49,7 +49,7 @@ See [local setup](https://campfiresms.com/install.html#local-agents) and [Linux/
 - [Remote Codex](https://campfiresms.com/remote-control-codex/): Compare short SMS steering, SSH, remote desktop, and a hosted agent.
 - [Claude Code Remote Control vs SMS](https://campfiresms.com/remote-control-claude-code/): Compare a native remote session view and SMS while keeping the local workspace.
 - [Phone task decisions and native approvals](https://campfiresms.com/approve-coding-agent-from-phone/): SMS replies clarify tasks but do not replace native permission approvals.
-- [Photon vs CampfireSMS](https://campfiresms.com/photon-vs-campfiresms/): Project-based messaging SDK setup versus a focused connection to the existing coding workflow. Photon can also integrate into an application the developer owns.
+- [Photon vs Campfire SMS](https://campfiresms.com/photon-vs-campfiresms/): Project-based messaging SDK setup versus a focused connection to the existing coding workflow. Photon can also integrate into an application the developer owns.
 - [iMessage vs SMS for coding agents](https://campfiresms.com/imessage-vs-sms-coding-agents/): Compare messaging interfaces and separate channel choice from agent runtime availability.
 - [Twilio coding-agent SMS](https://campfiresms.com/twilio-coding-agent-sms/): DIY transport and inbound routing versus a hosted bridge for an existing agent.
 - [SMS bridge](https://campfiresms.com/sms-bridge-coding-agents/): Hosted bridge, webhook wake, and the DIY contrast.

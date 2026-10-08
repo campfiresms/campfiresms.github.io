@@ -1,12 +1,12 @@
 {
   "specVersion": "1.0",
   "host": {
-    "displayName": "CampfireSMS"
+    "displayName": "Campfire SMS"
   },
   "entries": [
     {
       "identifier": "urn:air:campfiresms.com:mcp:bridge",
-      "displayName": "CampfireSMS: Grok webhook wake and local-agent SMS",
+      "displayName": "Campfire SMS: Grok webhook wake and local-agent SMS",
       "type": "application/mcp-server-card+json",
       "url": "https://campfiresms.com/.well-known/mcp/server-card.json"
     }
