@@ -77,18 +77,18 @@
       <li><h3>Test both directions</h3><p>Send the account’s test message and reply <strong>TEST</strong>. Wait for the setup confirmation. Then ask your running agent to open a bridge, text you, retrieve a harmless reply, and respond.</p></li>
     </ol>
     <h2 id="cursor">Cursor</h2>
-    <p>Found Campfire SMS in the Cursor Marketplace? Cursor uses the same local connector as the agents above, and the install command adds it to Cursor for you. Setup takes about five minutes.</p>
+    <p>Found Campfire SMS on <a href="https://cursor.directory/plugins/campfire-sms">Cursor Directory</a>? The easiest way to connect it is the install command below. It adds Campfire SMS to Cursor for you, with no token to copy. Setup takes about five minutes.</p>
     <ol class="setup-steps">
-      <li><h3>Check the requirements</h3><p>You need Node.js 18+ and Python 3.12+ on the computer where Cursor runs. Open Cursor at least once before setup so its settings folder exists. No Python? Use the <a href="#cursor-hosted">hosted server</a> instead.</p></li>
+      <li><h3>Check the requirements</h3><p>You need Node.js 18+ and Python 3.12+ on the computer where Cursor runs. Open Cursor at least once before setup so its settings folder exists. No Python? Use the <a href="#cursor-hosted">Add to Cursor button</a> instead.</p></li>
       <li><h3>Create your install command</h3><p><a href="https://api.campfiresms.com/join">Start free setup</a>, verify your phone, and choose your PIN. Then go to <strong>Add computers</strong>, open <strong>Add a computer or Bot</strong>, and choose <strong>Create install command</strong>.</p></li>
       <li><h3>Run it</h3><p>Paste the command into a terminal. Cursor’s own terminal works (<strong>Terminal → New Terminal</strong>). Setup adds a server named <code>campfire</code> to Cursor’s global settings file, <code>~/.cursor/mcp.json</code>, and keeps your other servers. When it finishes, Cursor should be in its list of connected apps.</p>
       <pre><code>npx -y @campfiresms/setup YOUR_INSTALLATION_CODE</code></pre>
-      <p>Already set up Campfire SMS on this computer for another agent? Run <code>npx -y @campfiresms/setup update</code> instead. It adds Cursor without a new code.</p></li>
-      <li><h3>Restart Cursor and check the server</h3><p>Quit Cursor completely and reopen it. Open Cursor Settings (<strong>Ctrl+,</strong> on Windows and Linux, <strong>Cmd+,</strong> on Mac), go to the MCP section (named <strong>Tools &amp; MCP</strong> in many versions), and make sure <code>campfire</code> is on with a green dot. If you also installed the Campfire SMS plugin from the Marketplace, turn off that plugin’s <code>campfiresms</code> server. It needs a credential that a Cursor team admin enters, and you only need one Campfire server.</p></li>
+      <p>Already set up Campfire SMS on this computer for another agent? Run <code>npx -y @campfiresms/setup@latest update</code> instead. It adds Cursor without a new code.</p></li>
+      <li><h3>Restart Cursor and check the server</h3><p>Quit Cursor completely and reopen it. Open Cursor Settings (<strong>Ctrl+,</strong> on Windows and Linux, <strong>Cmd+,</strong> on Mac), go to the MCP section (named <strong>Tools &amp; MCP</strong> in many versions), and make sure <code>campfire</code> is on with a green dot. If you clicked <strong>Add to Cursor</strong> on Cursor Directory earlier, you’ll also see a second Campfire SMS server with an error. Turn that one off. The <code>campfire</code> server from the install command does the same job without a token.</p></li>
       <li><h3>Test it</h3><p>Send the account’s test message and reply <strong>TEST</strong>. Then ask Cursor’s agent: “Use Campfire to text me ‘Hello from Cursor. Reply with any word.’ Then check for my reply.” Reply to the text. The agent reads your reply the next time it checks Campfire.</p></li>
     </ol>
-    <details id="cursor-hosted"><summary>No Python, or setting up a Cursor team? Use the hosted server.</summary>
-      <p>The hosted server at <code>https://api.campfiresms.com/mcp</code> needs no Python. It uses your installation credential instead.</p>
+    <details id="cursor-hosted"><summary>No Python? Use the Add to Cursor button.</summary>
+      <p>The <strong>Add to Cursor</strong> button on <a href="https://cursor.directory/plugins/campfire-sms">Cursor Directory</a> connects Cursor to the hosted server at <code>https://api.campfiresms.com/mcp</code>. It needs no Python, but it reads your installation credential from an environment variable named <code>CAMPFIRE_TOKEN</code>, so set that up first.</p>
       <ol>
         <li>Create an install command as above and run it with <code>--credential-only</code> added at the end. Setup saves the credential and prints the file’s location: <code>%LOCALAPPDATA%\Campfire\config.json</code> on Windows, or <code>~/.config/campfire/config.json</code> on macOS and Linux.</li>
         <li>Open that file and copy the <code>credential</code> value, which starts with <code>cfi_</code>. Treat it like a password. Never paste it into a chat, an issue, or a repo.</li>
@@ -96,18 +96,18 @@
           <pre><code>[Environment]::SetEnvironmentVariable("CAMPFIRE_TOKEN", "PASTE_CREDENTIAL_HERE", "User")</code></pre>
           On macOS or Linux, add this line to <code>~/.zshrc</code> or <code>~/.bashrc</code>:
           <pre><code>export CAMPFIRE_TOKEN="PASTE_CREDENTIAL_HERE"</code></pre></li>
-        <li>Add this server to <code>~/.cursor/mcp.json</code>. If the file already lists servers, add the <code>campfire</code> entry inside its existing <code>mcpServers</code>.
-          <pre><code>{
+        <li>Quit Cursor completely and reopen it so it picks up the variable. Then click <strong>Add to Cursor</strong> on the <a href="https://cursor.directory/plugins/campfire-sms">Cursor Directory</a> listing and confirm the install in Cursor.</li>
+        <li>Check that the new Campfire SMS server has a green dot in Cursor’s MCP settings. Then test it as above.</li>
+      </ol>
+      <p>Prefer to add it by hand? Put this in <code>~/.cursor/mcp.json</code>. If the file already lists servers, add the <code>campfire</code> entry inside its existing <code>mcpServers</code>.</p>
+      <pre><code>{
   "mcpServers": {
     "campfire": {
       "url": "https://api.campfiresms.com/mcp",
       "headers": { "Authorization": "Bearer ${env:CAMPFIRE_TOKEN}" }
     }
   }
-}</code></pre></li>
-        <li>Quit Cursor completely, reopen it, and check that <code>campfire</code> has a green dot. Then test it as above.</li>
-      </ol>
-      <p>Cursor team admins can install the Campfire SMS plugin from the Marketplace for the whole team instead. Enter the credential in the plugin’s <code>CAMPFIRE_CREDENTIAL</code> field under <strong>Plugins → Configure</strong> in the Cursor dashboard.</p>
+}</code></pre>
     </details>
     <p>For client-specific steps, use <a href="/codex-sms/">Codex SMS setup</a> or <a href="/claude-code-sms/">Claude Code SMS setup</a>. Use the <a href="guides/coding-agent-sms-notifications.html">local-agent notifications guide</a> to choose when the agent should text, or the <a href="guides/monitor-coding-agent-away-from-desk.html">away-from-desk guide</a> to prepare a task.</p>
     <section class="setup-screens" aria-labelledby="setup-screens-title">
@@ -118,7 +118,7 @@
     </section>
     <h2 id="recovery">Update or recover a local connection</h2>
     <p>If an installation command has expired or was already used, sign in and create a new one. If your saved credential is valid, refresh the local connector with:</p>
-    <pre><code>npx -y @campfiresms/setup update</code></pre>
+    <pre><code>npx -y @campfiresms/setup@latest update</code></pre>
     <p>If the credential was revoked or is missing, create a new installation instead. Restart the agent and test the message round trip. Check your account’s message balance if delivery still fails.</p>
     <h2 id="revoke">Revoke an installation</h2>
     <p>Sign in, find the installation under <strong>Add computers</strong>, and open <strong>Manage installation</strong>. Use <strong>Save name</strong> to identify it or <strong>Revoke access</strong> to disable its credential. For Grok Bot, disable wake and pause its routine first.</p>
