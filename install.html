@@ -20,7 +20,7 @@
     }, true);
   </script>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Text your coding agent from your phone. Set up Grok Bot to answer texts while your PC is off, or connect Codex, Claude Code, Grok Build, or OpenCode on your computer.">
+  <meta name="description" content="Text your coding agent from your phone. Set up Grok Bot to answer texts while your PC is off, or connect Codex, Claude Code, Cursor, Grok Build, or OpenCode on your computer.">
   <link rel="canonical" href="https://campfiresms.com/install.html">
   <title>Set up Campfire SMS with Grok Bot or local agents | Campfire SMS</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -46,7 +46,7 @@
     <span class="kicker">Setup</span>
     <h1>Connect your phone to your agents</h1>
     <p>First, create your Campfire SMS account and verify your phone. Then connect Grok Bot to wake when you text, or an active local coding agent for updates and replies.</p>
-    <p><strong>Which path is for me?</strong> Want texts answered while your PC is off? → <a href="#grok-bot">Grok Bot</a>. Working in Codex, Claude Code, Grok Build, or OpenCode on your computer? → <a href="#local-agents">Local agents</a>.</p>
+    <p><strong>Which path is for me?</strong> Want texts answered while your PC is off? → <a href="#grok-bot">Grok Bot</a>. Working in Codex, Claude Code, Grok Build, or OpenCode on your computer? → <a href="#local-agents">Local agents</a>. Using Cursor? → <a href="#cursor">Cursor</a>.</p>
     <div class="guide-actions"><a class="button" href="https://api.campfiresms.com/join">Start free setup <span aria-hidden="true">→</span></a></div>
   </section>
   <article>
@@ -60,7 +60,7 @@
     </ol>
     <p>The <a href="guides/grok-bot-sms-routine.html">Grok Bot walkthrough</a> covers enrollment, secure credentials, the routine instruction, and the complete test. Hosted MCP requires no Python or pip installation.</p>
     <h2 id="local-agents">Local agents: install the connector</h2>
-    <p>Use this path for Codex, Grok Build, Claude Code, OpenCode, or another compatible MCP host running on your computer. Grok Build is Grok’s coding agent on your computer; unlike Grok Bot, it can’t be woken by a text while your PC is off. You need Windows, macOS, or Linux, Node.js 18+ with <code>npx</code>, and Python 3.12+. Keep the computer awake and online with the agent running. The local connector does not wake stopped sessions.</p>
+    <p>Use this path for Codex, Grok Build, Claude Code, Cursor, OpenCode, or another compatible MCP host running on your computer. Grok Build is Grok’s coding agent on your computer; unlike Grok Bot, it can’t be woken by a text while your PC is off. You need Windows, macOS, or Linux, Node.js 18+ with <code>npx</code>, and Python 3.12+. Keep the computer awake and online with the agent running. The local connector does not wake stopped sessions.</p>
     <ol class="setup-steps">
       <li><h3>Verify your phone</h3><p><a href="https://api.campfiresms.com/join">Start free setup</a> to create your account. Campfire SMS sends a verification code. Choose and confirm a six-digit account PIN; later sign-ins use your phone number and PIN.</p></li>
       <li><h3>Run your installation command</h3><p>Sign in, go to <strong>Add computers</strong>, open <strong>Add a computer or Bot</strong>, give the computer a label, and choose <strong>Create install command</strong>. Your account then shows the command with your installation code. Copy it and run it on the computer where your agent runs:</p>
@@ -73,9 +73,42 @@
         <p>Set the MCP server command to the virtual environment’s absolute Python path, such as <code>/home/agent/.local/share/campfire/venv/bin/python -m campfire_mcp.cli serve</code>. Future runs do not inherit shell activation.</p>
       </details>
       <pre><code>npx -y @campfiresms/setup YOUR_INSTALLATION_CODE</code></pre><p>The command is single use and expires after 10 minutes. If it expires, create a new one.</p></li>
-      <li><h3>Connect your agent</h3><p>Setup stores the installation credential locally and registers detected Codex and Grok Build CLIs. For another compatible agent, add a local MCP server named <code>campfire</code> using the command printed by setup. Open or restart the agent.</p></li>
+      <li><h3>Connect your agent</h3><p>Setup stores the installation credential locally and adds Campfire SMS to each agent app it finds: Codex, Claude Code, Cursor, and Grok Build. For another compatible agent, add a local MCP server named <code>campfire</code> using the command printed by setup. Open or restart the agent.</p></li>
       <li><h3>Test both directions</h3><p>Send the account’s test message and reply <strong>TEST</strong>. Wait for the setup confirmation. Then ask your running agent to open a bridge, text you, retrieve a harmless reply, and respond.</p></li>
     </ol>
+    <h2 id="cursor">Cursor</h2>
+    <p>Found Campfire SMS in the Cursor Marketplace? Cursor uses the same local connector as the agents above, and the install command adds it to Cursor for you. Setup takes about five minutes.</p>
+    <ol class="setup-steps">
+      <li><h3>Check the requirements</h3><p>You need Node.js 18+ and Python 3.12+ on the computer where Cursor runs. Open Cursor at least once before setup so its settings folder exists. No Python? Use the <a href="#cursor-hosted">hosted server</a> instead.</p></li>
+      <li><h3>Create your install command</h3><p><a href="https://api.campfiresms.com/join">Start free setup</a>, verify your phone, and choose your PIN. Then go to <strong>Add computers</strong>, open <strong>Add a computer or Bot</strong>, and choose <strong>Create install command</strong>.</p></li>
+      <li><h3>Run it</h3><p>Paste the command into a terminal. Cursor’s own terminal works (<strong>Terminal → New Terminal</strong>). Setup adds a server named <code>campfire</code> to Cursor’s global settings file, <code>~/.cursor/mcp.json</code>, and keeps your other servers. When it finishes, Cursor should be in its list of connected apps.</p>
+      <pre><code>npx -y @campfiresms/setup YOUR_INSTALLATION_CODE</code></pre>
+      <p>Already set up Campfire SMS on this computer for another agent? Run <code>npx -y @campfiresms/setup update</code> instead. It adds Cursor without a new code.</p></li>
+      <li><h3>Restart Cursor and check the server</h3><p>Quit Cursor completely and reopen it. Open Cursor Settings (<strong>Ctrl+,</strong> on Windows and Linux, <strong>Cmd+,</strong> on Mac), go to the MCP section (named <strong>Tools &amp; MCP</strong> in many versions), and make sure <code>campfire</code> is on with a green dot. If you also installed the Campfire SMS plugin from the Marketplace, turn off that plugin’s <code>campfiresms</code> server. It needs a credential that a Cursor team admin enters, and you only need one Campfire server.</p></li>
+      <li><h3>Test it</h3><p>Send the account’s test message and reply <strong>TEST</strong>. Then ask Cursor’s agent: “Use Campfire to text me ‘Hello from Cursor. Reply with any word.’ Then check for my reply.” Reply to the text. The agent reads your reply the next time it checks Campfire.</p></li>
+    </ol>
+    <details id="cursor-hosted"><summary>No Python, or setting up a Cursor team? Use the hosted server.</summary>
+      <p>The hosted server at <code>https://api.campfiresms.com/mcp</code> needs no Python. It uses your installation credential instead.</p>
+      <ol>
+        <li>Create an install command as above and run it with <code>--credential-only</code> added at the end. Setup saves the credential and prints the file’s location: <code>%LOCALAPPDATA%\Campfire\config.json</code> on Windows, or <code>~/.config/campfire/config.json</code> on macOS and Linux.</li>
+        <li>Open that file and copy the <code>credential</code> value, which starts with <code>cfi_</code>. Treat it like a password. Never paste it into a chat, an issue, or a repo.</li>
+        <li>Save it as an environment variable named <code>CAMPFIRE_TOKEN</code>. On Windows, run this in PowerShell:
+          <pre><code>[Environment]::SetEnvironmentVariable("CAMPFIRE_TOKEN", "PASTE_CREDENTIAL_HERE", "User")</code></pre>
+          On macOS or Linux, add this line to <code>~/.zshrc</code> or <code>~/.bashrc</code>:
+          <pre><code>export CAMPFIRE_TOKEN="PASTE_CREDENTIAL_HERE"</code></pre></li>
+        <li>Add this server to <code>~/.cursor/mcp.json</code>. If the file already lists servers, add the <code>campfire</code> entry inside its existing <code>mcpServers</code>.
+          <pre><code>{
+  "mcpServers": {
+    "campfire": {
+      "url": "https://api.campfiresms.com/mcp",
+      "headers": { "Authorization": "Bearer ${env:CAMPFIRE_TOKEN}" }
+    }
+  }
+}</code></pre></li>
+        <li>Quit Cursor completely, reopen it, and check that <code>campfire</code> has a green dot. Then test it as above.</li>
+      </ol>
+      <p>Cursor team admins can install the Campfire SMS plugin from the Marketplace for the whole team instead. Enter the credential in the plugin’s <code>CAMPFIRE_CREDENTIAL</code> field under <strong>Plugins → Configure</strong> in the Cursor dashboard.</p>
+    </details>
     <p>For client-specific steps, use <a href="/codex-sms/">Codex SMS setup</a> or <a href="/claude-code-sms/">Claude Code SMS setup</a>. Use the <a href="guides/coding-agent-sms-notifications.html">local-agent notifications guide</a> to choose when the agent should text, or the <a href="guides/monitor-coding-agent-away-from-desk.html">away-from-desk guide</a> to prepare a task.</p>
     <section class="setup-screens" aria-labelledby="setup-screens-title">
       <h2 id="setup-screens-title">Account verification and installations</h2>
@@ -94,6 +127,7 @@
     <pre><code>codex mcp remove campfire
 grok mcp remove campfire
 claude mcp remove campfire --scope user</code></pre>
+    <p>For Cursor, delete the <code>campfire</code> entry from <code>~/.cursor/mcp.json</code>, or turn it off in Cursor’s MCP settings.</p>
     <p>For OpenCode, delete the <code>campfire</code> entry from the <code>mcp</code> section of your OpenCode config (usually <code>~/.config/opencode/opencode.json</code>, or <code>opencode.json</code> in your project). For any other MCP host, remove the <code>campfire</code> server in its MCP settings.</p>
     <p>See <a href="/#pricing">pricing and message counting</a> for plan and credit options.</p>
   </article>
