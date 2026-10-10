@@ -37,6 +37,10 @@ See [local setup](https://campfiresms.com/install.html#local-agents) and [Linux/
 - [Setup](https://campfiresms.com/install.html): Grok Bot first; local-agent installation, recovery, and removal second.
 - [Guides](https://campfiresms.com/guides/): Grok wake setup and supporting local-agent workflows.
 - [NudgeBell vs Campfire SMS](https://campfiresms.com/nudgebell-vs-campfiresms/): Scheduled reminders and escalation versus two-way agent SMS, with sources and runtime requirements.
+- [AgentPhone vs Campfire SMS](https://campfiresms.com/agentphone-vs-campfiresms/): Phone numbers, voice, and verification codes for agents, compared with your existing agent texting you. Checked with dated pricing.
+- [AgentCall vs Campfire SMS](https://campfiresms.com/agentcall-vs-campfiresms/): Agent phone numbers, AI voice, OTP extraction, and relay mode (which needs a webhook the agent hosts) versus a hosted bridge with no webhook.
+- [textbee vs Campfire SMS](https://campfiresms.com/textbee-vs-campfiresms/): Same-direction agent notifications from your own Android phone and SIM (open source) versus a hosted bridge with no phone app or gateway device.
+- [Sendblue vs Campfire SMS](https://campfiresms.com/sendblue-vs-campfiresms/): iMessage API for customer-facing agents and sales versus SMS between you and the agent you already run.
 - [MCP SMS notifications](https://campfiresms.com/mcp-sms-notifications/): Send, retrieve, and acknowledge tools, setup routes, and a complete reply test.
 - [Build completion SMS](https://campfiresms.com/build-complete-sms/): Have an active agent report build, test, or evaluation results and handle follow-up questions.
 - [Pull request SMS notifications](https://campfiresms.com/pull-request-sms-notifications/): Agent-observed PR readiness, summaries, and reply handling; setup alone does not watch GitHub events.
