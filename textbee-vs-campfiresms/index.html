@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Google tag (gtag.js) - GA4 G-VWDPRPD2SK -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWDPRPD2SK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VWDPRPD2SK');
+    // sign_up_start: signup happens on api.campfiresms.com/join, so count clicks on any link to it. No PII in params.
+    document.addEventListener('click', function (e) {
+      try {
+        var a = e.target && e.target.closest && e.target.closest('a[href^="https://api.campfiresms.com/join"]');
+        if (!a || typeof window.gtag !== 'function') return;
+        var where = a.closest('header') ? 'header' : (a.closest('footer') ? 'footer' : 'content');
+        window.gtag('event', 'sign_up_start', { method: 'join_link', link_location: where, transport_type: 'beacon' });
+      } catch (err) {}
+    }, true);
+  </script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>textbee vs Campfire SMS: your Android phone as the gateway vs your agent texts you | Campfire SMS</title>
+  <meta name="description" content="textbee texts from your own Android phone and SIM, open source. Campfire SMS is hosted: your agent texts you, no phone app or device. Compared October 2026.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://campfiresms.com/textbee-vs-campfiresms/">
+  <link rel="sitemap" type="application/xml" href="https://campfiresms.com/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="textbee vs Campfire SMS: your Android phone as the gateway vs your agent texts you | Campfire SMS">
+  <meta property="og:description" content="textbee texts from your own Android phone and SIM, open source. Campfire SMS is hosted: your agent texts you, no phone app or device. Compared October 2026.">
+  <meta property="og:url" content="https://campfiresms.com/textbee-vs-campfiresms/">
+  <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Campfire SMS: a two-way SMS exchange with your existing agent.">
+  <meta property="article:published_time" content="2026-10-09">
+  <meta property="article:modified_time" content="2026-10-09">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="textbee vs Campfire SMS: your Android phone as the gateway vs your agent texts you | Campfire SMS">
+  <meta name="twitter:description" content="textbee texts from your own Android phone and SIM, open source. Campfire SMS is hosted: your agent texts you, no phone app or device. Compared October 2026.">
+  <meta name="twitter:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/icon.css">
+  <link rel="stylesheet" href="/pages.css">
+  <link rel="stylesheet" href="/agent-guides.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://campfiresms.com/textbee-vs-campfiresms/#article",
+      "headline": "textbee vs Campfire SMS",
+      "description": "textbee texts from your own Android phone and SIM, open source. Campfire SMS is hosted: your agent texts you, no phone app or device. Compared October 2026.",
+      "mainEntityOfPage": "https://campfiresms.com/textbee-vs-campfiresms/",
+      "url": "https://campfiresms.com/textbee-vs-campfiresms/",
+      "inLanguage": "en-US",
+      "datePublished": "2026-10-09",
+      "dateModified": "2026-10-09",
+      "image": "https://campfiresms.com/assets/campfiresms-social-card-v3.png",
+      "articleSection": "Messaging comparison",
+      "author": {
+        "@type": "Organization",
+        "name": "Campfire SMS",
+        "url": "https://campfiresms.com/about.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Campfire SMS",
+        "url": "https://campfiresms.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://campfiresms.com/assets/campfire-icon-512.png"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://campfiresms.com/textbee-vs-campfiresms/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Campfire SMS",
+          "item": "https://campfiresms.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://campfiresms.com/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "textbee vs Campfire SMS",
+          "item": "https://campfiresms.com/textbee-vs-campfiresms/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://campfiresms.com/textbee-vs-campfiresms/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Campfire SMS a textbee alternative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For an agent texting you and reading your reply, yes. textbee sends from your own Android phone and SIM and is open source. Campfire SMS is hosted and needs no phone app or gateway device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does textbee work with an iPhone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not as the sending device. As of October 2026, textbee says it works only on Android 7.0 or later. Campfire SMS has no app; you receive and reply in your normal SMS inbox on any phone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can my agent read my reply with textbee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. textbee says its MCP server exposes message reading, and its API offers a messages endpoint and webhooks. Campfire SMS returns your reply to the connected agent through its own connector."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does textbee cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As of October 2026, textbee has a free tier of 300 messages a month (50 a day) with no card, and Pro at $14.99 a month for 5,000 messages. Your carrier plan carries the SMS."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body class="agent-guide-site">
+<a class="skip-link" href="#content">Skip to content</a>
+<header>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <nav aria-label="Primary navigation">
+    <a href="/install.html">Setup</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a>
+    <a href="https://api.campfiresms.com/login">Log in</a><a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a>
+  </nav>
+</header>
+<main class="legal" id="content">
+  <div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/guides/">Guides</a><span aria-hidden="true">/</span><span>Messaging comparison</span></div>
+  <section class="legalhead"><p class="kicker">Messaging comparison</p><h1>textbee vs Campfire SMS</h1><p>Both let an agent text a person and read the reply. The difference is what does the sending.</p><p class="byline">By Campfire SMS · Published <time datetime="2026-10-09">October 9, 2026</time></p></section>
+  <article>
+    <p class="quick-answer">textbee and Campfire SMS cover the same direction: an agent texts a person and reads the reply. With textbee, an Android phone holding your SIM sends the text from your own number, and the software is open source. Campfire SMS is hosted, so there is no phone app or gateway device to keep running.</p>
+    <div class="comparison-scroll" role="region" aria-label="Who texts whom: textbee and Campfire SMS" tabindex="0"><table><caption>Who texts whom. textbee details as observed on its public pages, October 2026.</caption><thead><tr><th scope="col">Decision</th><th scope="col">textbee</th><th scope="col">Campfire SMS</th></tr></thead><tbody><tr><th scope="row">Who texts whom</th><td>Your agent texts a person, such as the task owner, from your own Android number. Recipients can reply.</td><td>Your existing agent texts you. You reply from your normal SMS inbox.</td></tr><tr><th scope="row">What you set up</th><td>The textbee app on an Android phone (Android 7.0+) with a SIM, an API key, and the @textbee/mcp server or the REST API. Replies are read through MCP, the messages API, or a webhook.</td><td>Sign up, verify your phone, and run the one-time install command from your account.</td></tr><tr><th scope="row">Phone app needed</th><td>Yes. The textbee app on an Android phone does the sending. iPhone is not supported.</td><td>None. Texts arrive in your normal SMS inbox on any phone.</td></tr><tr><th scope="row">Pricing model (as observed)</th><td>Free: 300 messages a month, 50 a day, one device, no card. Pro: $14.99 a month or $99.99 a year for 5,000 messages and up to 5 devices. No per-message fee; your carrier plan carries the SMS.</td><td>40 free messages after phone verification, no card required. Then $8 a month for 500 messages, or one-time packs from $5 for 200. Each text sent or received counts as one message.</td></tr><tr><th scope="row">Best for</th><td>Sending from your own number, open source or self-hosting, and higher-volume texts to other people.</td><td>A hosted two-way exchange with the agent you already run, with no device to manage.</td></tr></tbody></table></div>
+    <nav class="article-contents" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#same-direction">The same direction, different plumbing</a></li><li><a href="#choose-textbee">Choose textbee if…</a></li><li><a href="#choose-campfire">Choose Campfire SMS if…</a></li><li><a href="#limits">What Campfire SMS does not do</a></li><li><a href="#try-it">Try a text and a reply</a></li><li><a href="#questions">Common questions</a></li></ol></nav>
+    <section aria-labelledby="same-direction"><h2 id="same-direction">The same direction, different plumbing</h2>
+<p>textbee's <a href="https://textbee.dev/use-cases/ai-agent-notifications">AI agent notifications page</a> (published September 5, 2026) describes the same moment Campfire SMS is built for: "Agents run for minutes or hours and then need a human: a result to read, an approval to give, a question to answer." Its answer is to send that text from an Android phone holding your SIM. Claude Code, Claude Desktop, Cursor, and other MCP clients connect through the official @textbee/mcp server, and the agent can read replies received after its question.</p>
+<p>Campfire SMS handles the same exchange as a hosted service. Your agent sends through the connector you installed, the text reaches your phone, and your reply goes back to the agent. You don't need a dedicated Android phone, a SIM, or a gateway app.</p>
+</section>
+<section aria-labelledby="choose-textbee"><h2 id="choose-textbee">Choose textbee if…</h2>
+<ul>
+<li><strong>You want texts to come from your own number.</strong> textbee sends from the SIM in your phone, so recipients see your number.</li>
+<li><strong>You want open source.</strong> textbee is MIT licensed and self-hostable, so you can audit and run the whole stack.</li>
+<li><strong>You have a spare Android phone</strong> and are happy to keep it powered on with the textbee app running.</li>
+<li><strong>Your agent texts other people.</strong> Task owners, customers, or a team, at a flat monthly price with no per-message fee.</li>
+<li><strong>You want to skip number registration.</strong> textbee says there is no number to rent and no 10DLC brand or campaign registration, because it uses your own SIM. Consent rules still apply.</li>
+<li><strong>You use n8n or Zapier.</strong> textbee documents an n8n setup with an HTTP Request node to send and a Webhook node to receive.</li>
+</ul>
+<p>textbee's own honest-limits note is worth reading: one phone sends roughly 10 to 15 messages a minute, and carriers can filter bulk patterns on consumer SIMs.</p>
+</section>
+<section aria-labelledby="choose-campfire"><h2 id="choose-campfire">Choose Campfire SMS if…</h2>
+<ul>
+<li>You want the agent you already run (Codex, Claude Code, Grok Bot, OpenCode, or Grok Build) to text <em>you</em> when it needs an answer or has a result.</li>
+<li>You want to reply from your normal SMS inbox, on an iPhone or an Android phone, with no app to install.</li>
+<li>You don't want to rent a number, host a webhook, or keep a gateway device running.</li>
+<li>You don't have, or don't want to dedicate, an Android phone and SIM to sending. Campfire SMS works with an iPhone or an Android phone because you only receive and reply.</li>
+</ul>
+<p>Setup is three steps: <a href="https://api.campfiresms.com/join">sign up at campfiresms.com</a>, verify your phone (40 free texts, no card), and run the one-time install command from your account. Then send a test text and reply. See the <a href="/install.html">setup guide</a> for each agent.</p></section>
+<section aria-labelledby="limits"><h2 id="limits">What Campfire SMS does not do</h2>
+<p>Campfire SMS is not open source or self-hosted, and texts don't come from your personal number.</p>
+<ul>
+<li><strong>Local agents need a live session.</strong> Codex, Claude Code, OpenCode, Grok Build, and other local agents need the computer awake and online and the session running. Campfire SMS does not wake a stopped local session. Grok Bot is the exception: an <a href="/guides/grok-bot-sms-routine.html">active webhook routine</a> can start it in the cloud when you text.</li>
+<li><strong>Replies don't grant new permissions.</strong> A text can steer the task, but the agent keeps the permissions it already had. <a href="/approve-coding-agent-from-phone/">Native approvals</a> stay in the agent's own interface.</li>
+<li><strong>SMS isn't end-to-end encrypted.</strong> Don't text secrets, and keep sensitive detail on the computer.</li>
+</ul>
+</section>
+<section aria-labelledby="try-it"><h2 id="try-it">Try a text and a reply</h2>
+<p>Campfire SMS starts with 40 free messages after phone verification. No card required. The monthly plan is $8 for 500 messages, and one-time packs are available. See <a href="/#pricing">current pricing and message counting</a>. Your agent's own costs are separate.</p>
+<p>Start with a harmless exchange: ask your agent to text you a short status, reply with a question, and check that it reads your exact reply and answers.</p>
+<p class="source-note">textbee details checked October 9, 2026 against its <a href="https://textbee.dev/use-cases/ai-agent-notifications">AI agent notifications page</a>, <a href="https://textbee.dev/">homepage</a>, and <a href="https://textbee.dev/pricing">pricing page</a>. Prices and plans are as of October 2026 and can change; check the linked pages before you decide. Product names belong to their owners. Campfire SMS is independent of these companies.</p></section>
+    <section aria-labelledby="questions"><h2 id="questions">Common questions</h2><details><summary>Is Campfire SMS a textbee alternative?</summary><p>For an agent texting you and reading your reply, yes. textbee sends from your own Android phone and SIM and is open source. Campfire SMS is hosted and needs no phone app or gateway device.</p></details><details><summary>Does textbee work with an iPhone?</summary><p>Not as the sending device. As of October 2026, textbee says it works only on Android 7.0 or later. Campfire SMS has no app; you receive and reply in your normal SMS inbox on any phone.</p></details><details><summary>Can my agent read my reply with textbee?</summary><p>Yes. textbee says its MCP server exposes message reading, and its API offers a messages endpoint and webhooks. Campfire SMS returns your reply to the connected agent through its own connector.</p></details><details><summary>What does textbee cost?</summary><p>As of October 2026, textbee has a free tier of 300 messages a month (50 a day) with no card, and Pro at $14.99 a month for 5,000 messages. Your carrier plan carries the SMS.</p></details></section>
+    <aside class="related-guides" aria-labelledby="related"><h2 id="related">Related guides</h2><ul><li><a href="/agent-needs-input/">Answer your agent's question from your phone</a></li><li><a href="/mcp-sms-notifications/">MCP SMS notifications you can reply to</a></li><li><a href="/build-complete-sms/">Get a text when your build finishes</a></li><li><a href="/twilio-coding-agent-sms/">Twilio SMS for Codex and Claude Code</a></li></ul></aside>
+    <div class="guide-actions"><a class="button" href="https://api.campfiresms.com/join">Start free setup</a><a href="/install.html#local-agents">Installation guide</a><a href="/#pricing">Pricing and free messages</a></div>
+  </article>
+</main>
+<footer>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <p>SMS bridge for AI agents.</p>
+  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:support@campfiresms.com">Contact</a></div>
+  <small>© 2026 Campfire SMS</small>
+</footer>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Google tag (gtag.js) - GA4 G-VWDPRPD2SK -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWDPRPD2SK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VWDPRPD2SK');
+    // sign_up_start: signup happens on api.campfiresms.com/join, so count clicks on any link to it. No PII in params.
+    document.addEventListener('click', function (e) {
+      try {
+        var a = e.target && e.target.closest && e.target.closest('a[href^="https://api.campfiresms.com/join"]');
+        if (!a || typeof window.gtag !== 'function') return;
+        var where = a.closest('header') ? 'header' : (a.closest('footer') ? 'footer' : 'content');
+        window.gtag('event', 'sign_up_start', { method: 'join_link', link_location: where, transport_type: 'beacon' });
+      } catch (err) {}
+    }, true);
+  </script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AgentPhone vs Campfire SMS: agent&#x27;s own number vs your agent texts you | Campfire SMS</title>
+  <meta name="description" content="AgentPhone gives your AI agent its own phone number. Campfire SMS lets the agent you already run text you, and you reply by SMS. Compared as of October 2026.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://campfiresms.com/agentphone-vs-campfiresms/">
+  <link rel="sitemap" type="application/xml" href="https://campfiresms.com/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AgentPhone vs Campfire SMS: agent&#x27;s own number vs your agent texts you | Campfire SMS">
+  <meta property="og:description" content="AgentPhone gives your AI agent its own phone number. Campfire SMS lets the agent you already run text you, and you reply by SMS. Compared as of October 2026.">
+  <meta property="og:url" content="https://campfiresms.com/agentphone-vs-campfiresms/">
+  <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Campfire SMS: a two-way SMS exchange with your existing agent.">
+  <meta property="article:published_time" content="2026-10-09">
+  <meta property="article:modified_time" content="2026-10-09">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AgentPhone vs Campfire SMS: agent&#x27;s own number vs your agent texts you | Campfire SMS">
+  <meta name="twitter:description" content="AgentPhone gives your AI agent its own phone number. Campfire SMS lets the agent you already run text you, and you reply by SMS. Compared as of October 2026.">
+  <meta name="twitter:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/icon.css">
+  <link rel="stylesheet" href="/pages.css">
+  <link rel="stylesheet" href="/agent-guides.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://campfiresms.com/agentphone-vs-campfiresms/#article",
+      "headline": "AgentPhone vs Campfire SMS",
+      "description": "AgentPhone gives your AI agent its own phone number. Campfire SMS lets the agent you already run text you, and you reply by SMS. Compared as of October 2026.",
+      "mainEntityOfPage": "https://campfiresms.com/agentphone-vs-campfiresms/",
+      "url": "https://campfiresms.com/agentphone-vs-campfiresms/",
+      "inLanguage": "en-US",
+      "datePublished": "2026-10-09",
+      "dateModified": "2026-10-09",
+      "image": "https://campfiresms.com/assets/campfiresms-social-card-v3.png",
+      "articleSection": "Messaging comparison",
+      "author": {
+        "@type": "Organization",
+        "name": "Campfire SMS",
+        "url": "https://campfiresms.com/about.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Campfire SMS",
+        "url": "https://campfiresms.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://campfiresms.com/assets/campfire-icon-512.png"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://campfiresms.com/agentphone-vs-campfiresms/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Campfire SMS",
+          "item": "https://campfiresms.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://campfiresms.com/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AgentPhone vs Campfire SMS",
+          "item": "https://campfiresms.com/agentphone-vs-campfiresms/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://campfiresms.com/agentphone-vs-campfiresms/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Campfire SMS an AgentPhone alternative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only for one job: getting texts from the agent you already run and replying by SMS. If your agent needs its own phone number for calls, customers, or verification codes, AgentPhone serves that need and Campfire SMS does not."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Campfire SMS give my agent a phone number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Your agent texts you through Campfire SMS and you reply from your normal inbox. There is no number to rent and no webhook to host."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use AgentPhone and Campfire SMS together?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. They solve different problems. An agent could use AgentPhone to talk to customers and Campfire SMS to ask you a question about the work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does AgentPhone cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As of October 2026, AgentPhone lists usage-based pricing with a $5 starting credit, $3 per number per month, SMS at 2 cents per segment in either direction, and voice from 13 cents a minute. Check its pricing page for current rates."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body class="agent-guide-site">
+<a class="skip-link" href="#content">Skip to content</a>
+<header>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <nav aria-label="Primary navigation">
+    <a href="/install.html">Setup</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a>
+    <a href="https://api.campfiresms.com/login">Log in</a><a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a>
+  </nav>
+</header>
+<main class="legal" id="content">
+  <div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/guides/">Guides</a><span aria-hidden="true">/</span><span>Messaging comparison</span></div>
+  <section class="legalhead"><p class="kicker">Messaging comparison</p><h1>AgentPhone vs Campfire SMS</h1><p>One gives your agent a phone number. The other lets your agent text you.</p><p class="byline">By Campfire SMS · Published <time datetime="2026-10-09">October 9, 2026</time></p></section>
+  <article>
+    <p class="quick-answer">AgentPhone gives your AI agent its own phone number, so people and services can call or text it and it can reach them. Campfire SMS works in the other direction: the agent you already run texts you when it needs an answer or has a result, and you reply from your normal SMS inbox. Pick by who needs to reach whom.</p>
+    <div class="comparison-scroll" role="region" aria-label="Who texts whom: AgentPhone and Campfire SMS" tabindex="0"><table><caption>Who texts whom. AgentPhone details as observed on its public pages, October 2026.</caption><thead><tr><th scope="col">Decision</th><th scope="col">AgentPhone</th><th scope="col">Campfire SMS</th></tr></thead><tbody><tr><th scope="row">Who texts whom</th><td>Your agent gets its own US or Canadian number. Other people and services call or text that number, and the agent can call or text out.</td><td>Your existing agent texts you. You reply from your normal SMS inbox.</td></tr><tr><th scope="row">What you set up</th><td>An account and API key, a number, and an integration through the Python or Node.js SDK, REST API, or MCP server. Calls and messages arrive at one webhook.</td><td>Sign up, verify your phone, and run the one-time install command from your account. No number to rent, no webhook to host.</td></tr><tr><th scope="row">Phone app needed</th><td>None. It is an API and MCP service.</td><td>None. Texts arrive in your normal SMS inbox.</td></tr><tr><th scope="row">Pricing model (as observed)</th><td>Usage-based: $5 starting credit, $3 per number per month, SMS 2¢ per segment in or out, voice 13¢ a minute with your own agent over webhook. iMessage lines from $150 a month. No monthly minimum.</td><td>40 free messages after phone verification, no card required. Then $8 a month for 500 messages, or one-time packs from $5 for 200. Each text sent or received counts as one message.</td></tr><tr><th scope="row">Best for</th><td>Agents that need a phone identity: receptionists, calls, verification codes, and texting people outside your team.</td><td>Getting questions and results from the agent you already run, and answering from your phone.</td></tr></tbody></table></div>
+    <nav class="article-contents" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#two-directions">Two different directions</a></li><li><a href="#choose-agentphone">Choose AgentPhone if…</a></li><li><a href="#choose-campfire">Choose Campfire SMS if…</a></li><li><a href="#limits">What Campfire SMS does not do</a></li><li><a href="#try-it">Try a text and a reply</a></li><li><a href="#questions">Common questions</a></li></ol></nav>
+    <section aria-labelledby="two-directions"><h2 id="two-directions">Two different directions</h2>
+<p>AgentPhone describes itself as phone numbers for AI agents: "AgentPhone gives your AI its own phone number." You provision a number through the API, and voice calls and messages reach your agent through one webhook. Incoming calls are transcribed in real time, and AgentPhone handles the speech when your agent replies with text. <a href="https://agentphone.ai/">See AgentPhone's homepage</a>.</p>
+<p>Campfire SMS is a hosted two-way SMS bridge between you and your agent. It doesn't give the agent a number for other people to reach. It lets Codex, Claude Code, or another connected agent send you a question or a result, and it returns your reply to that agent.</p>
+</section>
+<section aria-labelledby="choose-agentphone"><h2 id="choose-agentphone">Choose AgentPhone if…</h2>
+<ul>
+<li><strong>Customers or other people need to reach your agent.</strong> A receptionist, a sales follow-up line, or any agent that needs a number people can call or text.</li>
+<li><strong>You need voice.</strong> AgentPhone handles inbound and outbound calls, with real-time transcription and text-to-speech.</li>
+<li><strong>Your agent needs a verification inbox.</strong> AgentPhone pitches a "2FA and verification inbox for autonomous agents" so an agent can receive codes on its own number.</li>
+<li><strong>You're building for your own customers.</strong> Its pricing page lists sub-accounts with their own numbers and usage on one bill.</li>
+<li><strong>You want more channels.</strong> It offers iMessage lines, with WhatsApp and RCS listed as beta.</li>
+</ul>
+<p>AgentPhone's FAQ also lists on-call engineering flows and coding agents among its use cases. If you want a coding agent with its own reachable number, it is a reasonable fit.</p>
+</section>
+<section aria-labelledby="choose-campfire"><h2 id="choose-campfire">Choose Campfire SMS if…</h2>
+<ul>
+<li>You want the agent you already run (Codex, Claude Code, Grok Bot, OpenCode, or Grok Build) to text <em>you</em> when it needs an answer or has a result.</li>
+<li>You want to reply from your normal SMS inbox, on an iPhone or an Android phone, with no app to install.</li>
+<li>You don't want to rent a number, host a webhook, or keep a gateway device running.</li>
+<li>You are the only person the agent needs to reach. Campfire SMS keeps the exchange between you and your agent.</li>
+</ul>
+<p>Setup is three steps: <a href="https://api.campfiresms.com/join">sign up at campfiresms.com</a>, verify your phone (40 free texts, no card), and run the one-time install command from your account. Then send a test text and reply. See the <a href="/install.html">setup guide</a> for each agent.</p><p>One practical difference: AgentPhone's pricing FAQ notes that US numbers that send texts have to be registered with the carriers, which you file from its dashboard. With Campfire SMS there is no number of your own to register.</p>
+</section>
+<section aria-labelledby="limits"><h2 id="limits">What Campfire SMS does not do</h2>
+<p>Campfire SMS does not take calls, receive verification codes for your agent, or give it a number that customers can text.</p>
+<ul>
+<li><strong>Local agents need a live session.</strong> Codex, Claude Code, OpenCode, Grok Build, and other local agents need the computer awake and online and the session running. Campfire SMS does not wake a stopped local session. Grok Bot is the exception: an <a href="/guides/grok-bot-sms-routine.html">active webhook routine</a> can start it in the cloud when you text.</li>
+<li><strong>Replies don't grant new permissions.</strong> A text can steer the task, but the agent keeps the permissions it already had. <a href="/approve-coding-agent-from-phone/">Native approvals</a> stay in the agent's own interface.</li>
+<li><strong>SMS isn't end-to-end encrypted.</strong> Don't text secrets, and keep sensitive detail on the computer.</li>
+</ul>
+</section>
+<section aria-labelledby="try-it"><h2 id="try-it">Try a text and a reply</h2>
+<p>Campfire SMS starts with 40 free messages after phone verification. No card required. The monthly plan is $8 for 500 messages, and one-time packs are available. See <a href="/#pricing">current pricing and message counting</a>. Your agent's own costs are separate.</p>
+<p>Start with a harmless exchange: ask your agent to text you a short status, reply with a question, and check that it reads your exact reply and answers.</p>
+<p class="source-note">AgentPhone details checked October 9, 2026 against <a href="https://agentphone.ai/">agentphone.ai</a> and <a href="https://agentphone.ai/pricing">agentphone.ai/pricing</a>. Prices and plans are as of October 2026 and can change; check the linked pages before you decide. Product names belong to their owners. Campfire SMS is independent of these companies.</p></section>
+    <section aria-labelledby="questions"><h2 id="questions">Common questions</h2><details><summary>Is Campfire SMS an AgentPhone alternative?</summary><p>Only for one job: getting texts from the agent you already run and replying by SMS. If your agent needs its own phone number for calls, customers, or verification codes, AgentPhone serves that need and Campfire SMS does not.</p></details><details><summary>Does Campfire SMS give my agent a phone number?</summary><p>No. Your agent texts you through Campfire SMS and you reply from your normal inbox. There is no number to rent and no webhook to host.</p></details><details><summary>Can I use AgentPhone and Campfire SMS together?</summary><p>Yes. They solve different problems. An agent could use AgentPhone to talk to customers and Campfire SMS to ask you a question about the work.</p></details><details><summary>What does AgentPhone cost?</summary><p>As of October 2026, AgentPhone lists usage-based pricing with a $5 starting credit, $3 per number per month, SMS at 2 cents per segment in either direction, and voice from 13 cents a minute. Check its pricing page for current rates.</p></details></section>
+    <aside class="related-guides" aria-labelledby="related"><h2 id="related">Related guides</h2><ul><li><a href="/agentcall-vs-campfiresms/">AgentCall vs Campfire SMS</a></li><li><a href="/twilio-coding-agent-sms/">Twilio SMS for Codex and Claude Code</a></li><li><a href="/codex-sms/">Text OpenAI Codex from your phone</a></li><li><a href="/claude-code-sms/">Use Claude Code by SMS</a></li></ul></aside>
+    <div class="guide-actions"><a class="button" href="https://api.campfiresms.com/join">Start free setup</a><a href="/install.html#local-agents">Installation guide</a><a href="/#pricing">Pricing and free messages</a></div>
+  </article>
+</main>
+<footer>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <p>SMS bridge for AI agents.</p>
+  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:support@campfiresms.com">Contact</a></div>
+  <small>© 2026 Campfire SMS</small>
+</footer>
+</body>
+</html>
