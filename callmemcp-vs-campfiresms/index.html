@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Google tag (gtag.js) - GA4 G-VWDPRPD2SK -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWDPRPD2SK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VWDPRPD2SK');
+    // sign_up_start: signup happens on api.campfiresms.com/join, so count clicks on any link to it. No PII in params.
+    document.addEventListener('click', function (e) {
+      try {
+        var a = e.target && e.target.closest && e.target.closest('a[href^="https://api.campfiresms.com/join"]');
+        if (!a || typeof window.gtag !== 'function') return;
+        var where = a.closest('header') ? 'header' : (a.closest('footer') ? 'footer' : 'content');
+        window.gtag('event', 'sign_up_start', { method: 'join_link', link_location: where, transport_type: 'beacon' });
+      } catch (err) {}
+    }, true);
+  </script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CallMeMCP (/call-me) vs Campfire SMS: your agent calls your iPhone or texts you | Campfire SMS</title>
+  <meta name="description" content="/call-me (callmemcp.com) rings your iPhone through its app, using an in-app number. Campfire SMS sends real texts to your own number, no app. October 2026.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://campfiresms.com/callmemcp-vs-campfiresms/">
+  <link rel="sitemap" type="application/xml" href="https://campfiresms.com/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="CallMeMCP (/call-me) vs Campfire SMS: your agent calls your iPhone or texts you | Campfire SMS">
+  <meta property="og:description" content="/call-me (callmemcp.com) rings your iPhone through its app, using an in-app number. Campfire SMS sends real texts to your own number, no app. October 2026.">
+  <meta property="og:url" content="https://campfiresms.com/callmemcp-vs-campfiresms/">
+  <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Campfire SMS: a two-way SMS exchange with your existing agent.">
+  <meta property="article:published_time" content="2026-10-12">
+  <meta property="article:modified_time" content="2026-10-12">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CallMeMCP (/call-me) vs Campfire SMS: your agent calls your iPhone or texts you | Campfire SMS">
+  <meta name="twitter:description" content="/call-me (callmemcp.com) rings your iPhone through its app, using an in-app number. Campfire SMS sends real texts to your own number, no app. October 2026.">
+  <meta name="twitter:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/icon.css">
+  <link rel="stylesheet" href="/pages.css">
+  <link rel="stylesheet" href="/agent-guides.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://campfiresms.com/callmemcp-vs-campfiresms/#article",
+      "headline": "CallMeMCP vs Campfire SMS",
+      "description": "/call-me (callmemcp.com) rings your iPhone through its app, using an in-app number. Campfire SMS sends real texts to your own number, no app. October 2026.",
+      "mainEntityOfPage": "https://campfiresms.com/callmemcp-vs-campfiresms/",
+      "url": "https://campfiresms.com/callmemcp-vs-campfiresms/",
+      "inLanguage": "en-US",
+      "datePublished": "2026-10-12",
+      "dateModified": "2026-10-12",
+      "image": "https://campfiresms.com/assets/campfiresms-social-card-v3.png",
+      "articleSection": "Messaging comparison",
+      "author": {
+        "@type": "Organization",
+        "name": "Campfire SMS",
+        "url": "https://campfiresms.com/about.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Campfire SMS",
+        "url": "https://campfiresms.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://campfiresms.com/assets/campfire-icon-512.png"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://campfiresms.com/callmemcp-vs-campfiresms/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Campfire SMS",
+          "item": "https://campfiresms.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://campfiresms.com/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CallMeMCP vs Campfire SMS",
+          "item": "https://campfiresms.com/callmemcp-vs-campfiresms/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://campfiresms.com/callmemcp-vs-campfiresms/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is CallMeMCP the same as /call-me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. callmemcp.com is the website for /call-me, an iPhone app that lets AI agents call you. Its hosted MCP server is at https://callmemcp.com/mcp. It is a different project from the open-source CallMe plugin for Claude Code."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the /call-me number a real phone number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Its FAQ says the number exists only inside the /call-me app, and calls travel over Wi-Fi or mobile data with no SIM or carrier involved. Campfire SMS sends real text messages to your own mobile number over the carrier network."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Campfire SMS call my phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Campfire SMS sends and receives text messages only. It does not place calls or read messages aloud. If you want your agent to ring you and hear a spoken answer, /call-me is built for that."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does /call-me work on Android?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As of October 2026, the /call-me FAQ says there is no Android version right now and the app needs an iPhone with iOS 17 or later. Campfire SMS needs no app, so replies work from the normal messages app on an iPhone or an Android phone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need an app or a webhook for Campfire SMS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Sign up, verify your phone, and run the one-time install command. A local agent does need its computer awake and its session running."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does /call-me cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "/call-me is a free download, and a subscription is required. As of October 2026, its App Store listing shows /call-me Weekly at $4.99, with a 3-day free trial for new subscribers, and /call-me Yearly at $24.99. It publishes no call or message limits. Check the App Store for current pricing."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body class="agent-guide-site">
+<a class="skip-link" href="#content">Skip to content</a>
+<header>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <nav aria-label="Primary navigation">
+    <a href="/install.html">Setup</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a>
+    <a href="https://api.campfiresms.com/login">Log in</a><a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a>
+  </nav>
+</header>
+<main class="legal" id="content">
+  <div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/guides/">Guides</a><span aria-hidden="true">/</span><span>Messaging comparison</span></div>
+  <section class="legalhead"><p class="kicker">Messaging comparison</p><h1>CallMeMCP vs Campfire SMS</h1><p>An iPhone app your agent can ring, compared with SMS to the phone you already have.</p><p class="byline">By Campfire SMS · Published <time datetime="2026-10-12">October 12, 2026</time></p></section>
+  <article>
+    <p class="quick-answer">/call-me, the app at callmemcp.com, lets your AI agent ring your iPhone when it needs a decision. The call screen comes from the /call-me app, and its 10-digit number isn't a real phone number: it exists only inside the app and works over Wi-Fi or mobile data. Campfire SMS sends real text messages to your own phone number, over the carrier network, to any iPhone or Android phone with no app to install. You reply in plain words and the agent reads it. Pick /call-me if you want a ringing call and use an iPhone. Pick Campfire SMS if you want real texts in your normal inbox.</p>
+    <div class="comparison-scroll" role="region" aria-label="How your agent reaches you: /call-me and Campfire SMS" tabindex="0"><table><caption>How your agent reaches you. /call-me details as observed on callmemcp.com and its App Store listing, October 2026.</caption><thead><tr><th scope="col">Decision</th><th scope="col">/call-me (CallMeMCP)</th><th scope="col">Campfire SMS</th></tr></thead><tbody><tr><th scope="row">How it reaches you</th><td>A call on your iPhone's native call screen that reads the agent's message aloud. Agents can also send texts into the /call-me app, with one thread per agent session.</td><td>A text message in your normal SMS inbox, next to your other conversations.</td></tr><tr><th scope="row">How you answer</th><td>Speak. Your voice is transcribed live and returned to the agent as text. You can also type a reply in the app, including after a missed call.</td><td>Reply to the text in plain words. The agent reads your reply the next time it checks.</td></tr><tr><th scope="row">Phone and app</th><td>An iPhone with iOS 17 or later and the /call-me app. Its FAQ says there is no Android version right now.</td><td>No app. Works with the normal messages app on an iPhone or an Android phone.</td></tr><tr><th scope="row">Your number</th><td>A random 10-digit /call-me number that exists only inside the app. It isn't a real phone number. Its FAQ says anyone you give it to can reach you, and you can switch to a new number in the app.</td><td>Your own mobile number, verified at signup. Texts come from the Campfire SMS number.</td></tr><tr><th scope="row">Network</th><td>Calls and texts travel over the internet, on Wi-Fi or mobile data. No SIM or carrier is involved.</td><td>Standard carrier SMS. Your phone needs cell service, not a data connection. Message and data rates may apply.</td></tr><tr><th scope="row">Agents it connects to</th><td>Any MCP client through its hosted server. Its site names Claude Code, Codex, Cursor, ChatGPT, claude.ai, Gemini CLI, Grok, opencode, and Cline. There is also a Claude Code plugin and a command-line tool.</td><td>Codex, Claude Code, Cursor, OpenCode, and Grok Build through the local connector. Grok Bot through hosted MCP, where a text can start its cloud routine. Other compatible MCP or HTTP API hosts.</td></tr><tr><th scope="row">What you set up</th><td>Install the app (no email or password), add its MCP URL to your agent, and give the agent your /call-me number.</td><td>Sign up, verify your phone, and run the one-time install command from your account.</td></tr><tr><th scope="row">Pricing model (as observed)</th><td>Free download; a subscription is required. The App Store lists /call-me Weekly at $4.99 (with a 3-day free trial for new subscribers) and /call-me Yearly at $24.99. No call or message limits are published.</td><td>40 free messages after phone verification, no card required. Then $8 a month for 500 messages, or one-time packs from $5 for 200. Each text sent or received counts as one message.</td></tr><tr><th scope="row">Best for</th><td>Urgent decisions you'd miss as a notification, and answering hands-free by voice on an iPhone.</td><td>Questions and results you can answer when it suits you, from any phone, kept in your normal text inbox.</td></tr></tbody></table></div>
+    <nav class="article-contents" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#what-callme-does">What /call-me (CallMeMCP) does</a></li><li><a href="#call-or-text">A call or a text: which interruption fits</a></li><li><a href="#choose-callme">Choose /call-me if…</a></li><li><a href="#choose-campfire">Choose Campfire SMS if…</a></li><li><a href="#not-callme-plugin">Not the open-source CallMe plugin</a></li><li><a href="#limits">What Campfire SMS does not do</a></li><li><a href="#try-it">Try a text and a reply</a></li><li><a href="#questions">Common questions</a></li></ol></nav>
+    <section aria-labelledby="what-callme-does"><h2 id="what-callme-does">What /call-me (CallMeMCP) does</h2>
+<p>/call-me is an iPhone app from an independent developer in Norway. Its site, callmemcp.com, opens with "Your AI agent can call you." You install the app, it assigns you a private /call-me number, and you connect your agent to its hosted MCP server at <code>https://callmemcp.com/mcp</code>. When the agent calls, your iPhone rings on the native call screen, so you can answer from the lock screen or with AirPods. The app reads the message aloud (up to 2,000 characters, about two minutes of speech), transcribes your answer, and returns it to the agent as text. <a href="https://callmemcp.com/">See the /call-me homepage</a>.</p>
+<p>It isn't call-only. Agents can also send progress texts into the app, each agent session gets its own named thread, and you can type a reply there. Those texts are app notifications, not SMS: the /call-me number works only inside the app, and calls and texts travel over Wi-Fi or mobile data. Per its <a href="https://callmemcp.com/privacy">privacy policy</a>, call audio is transcribed live and not stored, while message text and transcripts are kept until you delete your number.</p>
+<p>The <a href="https://github.com/radres/call-me">radres/call-me</a> repository on GitHub holds the agent-side pieces: a Claude Code plugin, an agent skill, and a <code>callme</code> command-line tool for Codex, scripts, and cron jobs.</p>
+</section>
+<section aria-labelledby="call-or-text"><h2 id="call-or-text">A call or a text: which interruption fits</h2>
+<p>Both products solve the same problem: your agent is working while you're away, and it needs to reach you. The difference is how hard it interrupts you.</p>
+<ul>
+<li><strong>A call is hard to miss and expects an answer now.</strong> It suits a blocking decision, such as "Should I promote this build to production?", when you'd rather be interrupted than find the agent idle an hour later. The /call-me README says its command-line call waits until you answer, by design.</li>
+<li><strong>A text can wait.</strong> It suits status updates, results, and questions you can answer between other things. Your reply sits in the same thread as the agent's question, in the inbox you already check, and you can scroll back through it later.</li>
+<li><strong>Voice is hands-free. Text is exact.</strong> Speaking works while you drive or cook. Typing is better for branch names, file paths, numbers, and short commands like "yes, ship it".</li>
+</ul>
+<p>Whichever you pick, tell the agent when to reach you. A short rule works well: "Text me when the build finishes or when you need a decision. Don't text for routine progress." See <a href="/agent-needs-input/">agent questions you can answer by SMS</a> for examples.</p>
+</section>
+<section aria-labelledby="choose-callme"><h2 id="choose-callme">Choose /call-me if…</h2>
+<ul>
+<li><strong>You want a ringing call.</strong> A native iPhone call is harder to sleep through or ignore than a notification.</li>
+<li><strong>You'd rather talk than type.</strong> Your spoken answer is transcribed and sent to the agent, and AirPods work.</li>
+<li><strong>You use an iPhone</strong> with iOS 17 or later and don't mind installing an app and starting a subscription.</li>
+<li><strong>You want to connect by pasting one URL.</strong> Its hosted MCP server needs nothing installed on your computer, and its site lists chat apps like ChatGPT and claude.ai alongside coding agents.</li>
+<li><strong>The briefing is long.</strong> A call can read out up to 2,000 characters.</li>
+</ul>
+</section>
+<section aria-labelledby="choose-campfire"><h2 id="choose-campfire">Choose Campfire SMS if…</h2>
+<ul>
+<li>You want the agent you already run (Codex, Claude Code, Cursor, Grok Bot, OpenCode, or Grok Build) to text <em>you</em> when it needs an answer or has a result.</li>
+<li>You use an Android phone, or you don't want another app on your iPhone. Texts arrive in your normal SMS inbox.</li>
+<li>You want real SMS to your own number, delivered over cell service, rather than app notifications that need Wi-Fi or mobile data.</li>
+<li>You'd rather answer when it suits you than take a call, and you want a written record of what you told the agent.</li>
+<li>You use Grok Bot and want a text to start its cloud routine while your PC is off.</li>
+<li>You'd rather pay per message than start a subscription. The first 40 messages are free, and one-time packs never expire.</li>
+</ul>
+<p>Setup is three steps: <a href="https://api.campfiresms.com/join">sign up at campfiresms.com</a>, verify your phone (40 free texts, no card), and run the one-time install command from your account. Then send a test text and reply. See the <a href="/install.html">setup guide</a> for each agent.</p></section>
+<section aria-labelledby="not-callme-plugin"><h2 id="not-callme-plugin">Not the open-source CallMe plugin</h2>
+<p>/call-me is a different project from <a href="https://github.com/ZeframLou/call-me">CallMe</a>, an MIT-licensed plugin that lets Claude Code call you on the phone. That plugin rings your real phone number through a telephony account you bring (Telnyx or Twilio), uses an OpenAI API key for speech-to-text, and uses ngrok to tunnel the provider's webhooks to your computer. You pay those providers directly, per minute.</p>
+<p>If you were looking at that plugin because you don't want to manage a telephony account, webhooks, or a tunnel, Campfire SMS removes that work for texts. See <a href="/twilio-coding-agent-sms/">Twilio for Codex and Claude Code: DIY vs hosted SMS</a>.</p>
+</section>
+<section aria-labelledby="limits"><h2 id="limits">What Campfire SMS does not do</h2>
+<p>Campfire SMS does not place calls, read messages aloud, or transcribe voice replies. If your phone has no cell service, texts wait until it does.</p>
+<ul>
+<li><strong>Local agents need a live session.</strong> Codex, Claude Code, Cursor, OpenCode, Grok Build, and other local agents need the computer awake and online and the session running. Campfire SMS does not wake a stopped local session. Grok Bot is the exception: an <a href="/guides/grok-bot-sms-routine.html">active webhook routine</a> can start it in the cloud when you text.</li>
+<li><strong>Replies don't grant new permissions.</strong> A text can steer the task, but the agent keeps the permissions it already had. <a href="/approve-coding-agent-from-phone/">Native approvals</a> stay in the agent's own interface.</li>
+<li><strong>SMS isn't end-to-end encrypted.</strong> Don't text secrets, and keep sensitive detail on the computer.</li>
+</ul>
+</section>
+<section aria-labelledby="try-it"><h2 id="try-it">Try a text and a reply</h2>
+<p>Campfire SMS starts with 40 free messages after phone verification. No card required. The monthly plan is $8 for 500 messages, and one-time packs are available. See <a href="/#pricing">current pricing and message counting</a>. Your agent's own costs are separate.</p>
+<p>Start with a harmless exchange: ask your agent to text you a short status, reply with a question, and check that it reads your exact reply and answers.</p>
+<p class="source-note">/call-me details checked October 12, 2026 against <a href="https://callmemcp.com/">callmemcp.com</a> (features, setup, and FAQ), its <a href="https://callmemcp.com/privacy">privacy policy</a> (effective October 7, 2026), its <a href="https://apps.apple.com/us/app/call-me/id6789575165">App Store listing</a> (in-app purchase prices and compatibility), and the <a href="https://github.com/radres/call-me">radres/call-me</a> README. CallMe plugin details checked against <a href="https://github.com/ZeframLou/call-me">ZeframLou/call-me</a>. Prices and plans are as of October 2026 and can change; check the linked pages before you decide. Product names belong to their owners. Campfire SMS is independent of these developers.</p></section>
+    <section aria-labelledby="questions"><h2 id="questions">Common questions</h2><details><summary>Is CallMeMCP the same as /call-me?</summary><p>Yes. callmemcp.com is the website for /call-me, an iPhone app that lets AI agents call you. Its hosted MCP server is at https://callmemcp.com/mcp. It is a different project from the open-source CallMe plugin for Claude Code.</p></details><details><summary>Is the /call-me number a real phone number?</summary><p>No. Its FAQ says the number exists only inside the /call-me app, and calls travel over Wi-Fi or mobile data with no SIM or carrier involved. Campfire SMS sends real text messages to your own mobile number over the carrier network.</p></details><details><summary>Does Campfire SMS call my phone?</summary><p>No. Campfire SMS sends and receives text messages only. It does not place calls or read messages aloud. If you want your agent to ring you and hear a spoken answer, /call-me is built for that.</p></details><details><summary>Does /call-me work on Android?</summary><p>As of October 2026, the /call-me FAQ says there is no Android version right now and the app needs an iPhone with iOS 17 or later. Campfire SMS needs no app, so replies work from the normal messages app on an iPhone or an Android phone.</p></details><details><summary>Do I need an app or a webhook for Campfire SMS?</summary><p>No. Sign up, verify your phone, and run the one-time install command. A local agent does need its computer awake and its session running.</p></details><details><summary>What does /call-me cost?</summary><p>/call-me is a free download, and a subscription is required. As of October 2026, its App Store listing shows /call-me Weekly at $4.99, with a 3-day free trial for new subscribers, and /call-me Yearly at $24.99. It publishes no call or message limits. Check the App Store for current pricing.</p></details></section>
+    <aside class="related-guides" aria-labelledby="related"><h2 id="related">Related guides</h2><ul><li><a href="/coding-agent-pager/">Coding-agent alerts, SMS replies, and wake</a></li><li><a href="/claude-code-phone-notifications/">Claude Code phone notifications</a></li><li><a href="/agentcall-vs-campfiresms/">AgentCall vs Campfire SMS</a></li><li><a href="/mcp-sms-notifications/">MCP SMS notifications you can reply to</a></li></ul></aside>
+    <div class="guide-actions"><a class="button" href="https://api.campfiresms.com/join">Start free setup</a><a href="/install.html#local-agents">Installation guide</a><a href="/#pricing">Pricing and free messages</a></div>
+  </article>
+</main>
+<footer>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <p>SMS bridge for AI agents.</p>
+  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:support@campfiresms.com">Contact</a></div>
+  <small>© 2026 Campfire SMS</small>
+</footer>
+</body>
+</html>
