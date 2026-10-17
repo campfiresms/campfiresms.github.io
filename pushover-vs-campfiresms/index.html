@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Google tag (gtag.js) - GA4 G-VWDPRPD2SK -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWDPRPD2SK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VWDPRPD2SK');
+    // sign_up_start: signup happens on api.campfiresms.com/join, so count clicks on any link to it. No PII in params.
+    document.addEventListener('click', function (e) {
+      try {
+        var a = e.target && e.target.closest && e.target.closest('a[href^="https://api.campfiresms.com/join"]');
+        if (!a || typeof window.gtag !== 'function') return;
+        var where = a.closest('header') ? 'header' : (a.closest('footer') ? 'footer' : 'content');
+        window.gtag('event', 'sign_up_start', { method: 'join_link', link_location: where, transport_type: 'beacon' });
+      } catch (err) {}
+    }, true);
+  </script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pushover vs Campfire SMS: coding-agent alerts vs two-way texts | Campfire SMS</title>
+  <meta name="description" content="Pushover sends dependable one-way alerts for $4.99 once per platform. Campfire SMS lets your agent text you and read your reply, no app. Checked October 2026.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://campfiresms.com/pushover-vs-campfiresms/">
+  <link rel="sitemap" type="application/xml" href="https://campfiresms.com/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Pushover vs Campfire SMS: coding-agent alerts vs two-way texts | Campfire SMS">
+  <meta property="og:description" content="Pushover sends dependable one-way alerts for $4.99 once per platform. Campfire SMS lets your agent text you and read your reply, no app. Checked October 2026.">
+  <meta property="og:url" content="https://campfiresms.com/pushover-vs-campfiresms/">
+  <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Campfire SMS: a two-way SMS exchange with your existing agent.">
+  <meta property="article:published_time" content="2026-10-16">
+  <meta property="article:modified_time" content="2026-10-16">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pushover vs Campfire SMS: coding-agent alerts vs two-way texts | Campfire SMS">
+  <meta name="twitter:description" content="Pushover sends dependable one-way alerts for $4.99 once per platform. Campfire SMS lets your agent text you and read your reply, no app. Checked October 2026.">
+  <meta name="twitter:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/icon.css">
+  <link rel="stylesheet" href="/pages.css">
+  <link rel="stylesheet" href="/agent-guides.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://campfiresms.com/pushover-vs-campfiresms/#article",
+      "headline": "Pushover vs Campfire SMS",
+      "description": "Pushover sends dependable one-way alerts for $4.99 once per platform. Campfire SMS lets your agent text you and read your reply, no app. Checked October 2026.",
+      "mainEntityOfPage": "https://campfiresms.com/pushover-vs-campfiresms/",
+      "url": "https://campfiresms.com/pushover-vs-campfiresms/",
+      "inLanguage": "en-US",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "image": "https://campfiresms.com/assets/campfiresms-social-card-v3.png",
+      "articleSection": "Messaging comparison",
+      "author": {
+        "@type": "Organization",
+        "name": "Campfire SMS",
+        "url": "https://campfiresms.com/about.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Campfire SMS",
+        "url": "https://campfiresms.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://campfiresms.com/assets/campfire-icon-512.png"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://campfiresms.com/pushover-vs-campfiresms/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Campfire SMS",
+          "item": "https://campfiresms.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://campfiresms.com/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pushover vs Campfire SMS",
+          "item": "https://campfiresms.com/pushover-vs-campfiresms/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://campfiresms.com/pushover-vs-campfiresms/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I get a Pushover alert when Claude Code finishes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Add a Claude Code hook, for example on the Stop or Notification event, that sends a request to Pushover's message API with your application token and user key. You write and maintain the hook yourself."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I answer my coding agent from Pushover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Pushover delivers one-way notifications. Emergency-priority alerts repeat until you acknowledge them and can notify a callback URL you host, but that only says you saw the alert. Campfire SMS returns your text reply to the agent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Pushover a subscription?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not for individuals. As of October 2026, it is a $4.99 one-time purchase on each platform you use (iPhone and iPad, Android, desktop) after a 30-day free trial. Pushover for Teams is $5 per user per month."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many messages can I send with Pushover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each user account can send 10,000 messages a month for free, shared across all of that user's applications. Teams can send 25,000 a month."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need an app for Campfire SMS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Texts arrive in your phone's normal messages app, on an iPhone or an Android phone. Pushover needs its app on each platform where you want alerts."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body class="agent-guide-site">
+<a class="skip-link" href="#content">Skip to content</a>
+<header>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <nav aria-label="Primary navigation">
+    <a href="/install.html">Setup</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a>
+    <a href="https://api.campfiresms.com/login">Log in</a><a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a>
+  </nav>
+</header>
+<main class="legal" id="content">
+  <div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/guides/">Guides</a><span aria-hidden="true">/</span><span>Messaging comparison</span></div>
+  <section class="legalhead"><p class="kicker">Messaging comparison</p><h1>Pushover vs Campfire SMS</h1><p>One-time-purchase push alerts compared with two-way texts between you and your agent.</p><p class="byline">By Campfire SMS · Published <time datetime="2026-10-16">October 16, 2026</time></p></section>
+  <article>
+    <p class="quick-answer">Pushover is a long-running push notification app that you pay for once per platform. It is a popular way to send yourself "task finished" alerts from a Claude Code hook. It delivers alerts one way: you can't answer your agent through it. Campfire SMS lets the agent you already run text your phone number and read your reply, with no app and no hook to write. Pick Pushover for cheap, dependable alerts. Pick Campfire SMS when the agent needs an answer from you.</p>
+    <div class="comparison-scroll" role="region" aria-label="Pushover and Campfire SMS compared" tabindex="0"><table><caption>Alerts or answers. Pushover details as observed on pushover.net, October 2026.</caption><thead><tr><th scope="col">Decision</th><th scope="col">Pushover</th><th scope="col">Campfire SMS</th></tr></thead><tbody><tr><th scope="row">How it reaches you</th><td>A push notification in the Pushover app on iPhone and iPad, Android, or desktop.</td><td>A text message in your normal SMS inbox.</td></tr><tr><th scope="row">Answering your agent</th><td>Not supported. Emergency-priority alerts repeat until you acknowledge them and can notify a callback URL you host.</td><td>Reply to the text in plain words. The agent retrieves your reply the next time it checks.</td></tr><tr><th scope="row">Connecting your agent</th><td>You wire it up, for example with a hook that posts to its message API with your application token and user key.</td><td>Sign up, verify your phone, and run the one-time install command from your account.</td></tr><tr><th scope="row">Phone app</th><td>The Pushover app on each platform.</td><td>None.</td></tr><tr><th scope="row">Pricing model (as observed)</th><td>$4.99 one-time per platform after a 30-day free trial. Each user account can send 10,000 messages a month free, shared across its applications. Teams: $5 per user per month, with 25,000 messages a month.</td><td>40 free messages after phone verification, no card required. Then $8 a month for 500 messages, or one-time packs from $5 for 200. Each text sent or received counts as one message.</td></tr><tr><th scope="row">Best for</th><td>Dependable "done" or "stuck" alerts, without a subscription.</td><td>Questions and results your agent sends you, answered from your phone.</td></tr></tbody></table></div>
+    <nav class="article-contents" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#what-pushover-does">What Pushover does</a></li><li><a href="#acknowledge-vs-answer">Acknowledging is not answering</a></li><li><a href="#choose-pushover">Choose Pushover if…</a></li><li><a href="#choose-campfire">Choose Campfire SMS if…</a></li><li><a href="#limits">What Campfire SMS does not do</a></li><li><a href="#try-it">Try a text and a reply</a></li><li><a href="#questions">Common questions</a></li></ol></nav>
+    <section aria-labelledby="what-pushover-does"><h2 id="what-pushover-does">What Pushover does</h2>
+<p>Pushover delivers notifications from your own scripts, servers, and services to its app. You register an application to get a token, and anything that can make an HTTPS request can send a message to your user key. Individuals pay once: "a $4.99 USD one-time purchase on each platform," with a 30-day free trial. <a href="https://pushover.net/pricing">See Pushover's pricing</a>.</p>
+<p>Messages can carry a priority, a sound, and a link. For coding agents, the usual setup is a hook that sends an alert when the agent stops or needs attention.</p>
+</section>
+<section aria-labelledby="acknowledge-vs-answer"><h2 id="acknowledge-vs-answer">Acknowledging is not answering</h2>
+<p>Pushover's emergency priority keeps repeating an alert until you acknowledge it. Its <a href="https://pushover.net/api">API</a> can then send a request to a callback URL you host. That tells your system you saw the alert. It doesn't carry an answer such as "use the staging database" or "skip the flaky test," and you still host the endpoint and connect it to the agent.</p>
+<p>Campfire SMS is built for the answer. Your agent texts the question, you reply in plain words, and the agent retrieves your exact reply through the connector you installed. If you only ever need to know that something finished, Pushover is enough. If the agent regularly stops to ask you something, the reply is what saves the trip back to your desk.</p>
+</section>
+<section aria-labelledby="choose-pushover"><h2 id="choose-pushover">Choose Pushover if…</h2>
+<ul>
+<li><strong>You only need to know when the agent is done or stuck</strong>, and you'll respond at your computer.</li>
+<li><strong>You prefer a one-time purchase</strong> to a monthly plan.</li>
+<li><strong>You want alerts from other systems too</strong>, such as servers and scripts, in the same app.</li>
+<li><strong>You're comfortable writing a hook</strong> and keeping your keys in it.</li>
+</ul>
+</section>
+<section aria-labelledby="choose-campfire"><h2 id="choose-campfire">Choose Campfire SMS if…</h2>
+<ul>
+<li>You want the agent you already run (Codex, Claude Code, Cursor, Grok Bot, OpenCode, or Grok Build) to ask you a question and read your answer.</li>
+<li>You want to give the next step from wherever you are, without going back to your desk.</li>
+<li>You'd rather get real texts in your normal inbox than install another app.</li>
+<li>You don't want to write hooks or manage API keys for notifications.</li>
+</ul>
+<p>Setup is three steps: <a href="https://api.campfiresms.com/join">sign up at campfiresms.com</a>, verify your phone (40 free texts, no card), and run the one-time install command from your account. Then send a test text and reply. See the <a href="/install.html">setup guide</a> for each agent.</p></section>
+<section aria-labelledby="limits"><h2 id="limits">What Campfire SMS does not do</h2>
+<p>Campfire SMS is not a general notification service. It doesn't take alerts from servers or scripts outside your connected agent, and it has no emergency mode that repeats until acknowledged.</p>
+<ul>
+<li><strong>Local agents need a live session.</strong> Codex, Claude Code, Cursor, OpenCode, Grok Build, and other local agents need the computer awake and online and the session running. Campfire SMS does not wake a stopped local session. Grok Bot is the exception: an <a href="/guides/grok-bot-sms-routine.html">active webhook routine</a> can start it in the cloud when you text.</li>
+<li><strong>Replies don't grant new permissions.</strong> A text can steer the task, but the agent keeps the permissions it already had. <a href="/approve-coding-agent-from-phone/">Native approvals</a> stay in the agent's own interface.</li>
+<li><strong>SMS isn't end-to-end encrypted.</strong> Don't text secrets, and keep sensitive detail on the computer.</li>
+</ul>
+</section>
+<section aria-labelledby="try-it"><h2 id="try-it">Try a text and a reply</h2>
+<p>Campfire SMS starts with 40 free messages after phone verification. No card required. The monthly plan is $8 for 500 messages, and one-time packs never expire. See <a href="/#pricing">current pricing and message counting</a>. Your agent's own costs are separate.</p>
+<p>Start with a harmless exchange: ask your agent to text you a short status, reply with a question, and check that it reads your exact reply and answers.</p>
+<p class="source-note">Pushover details checked October 16, 2026 against <a href="https://pushover.net/pricing">pushover.net/pricing</a> (prices, trial, Teams, and message quotas) and the <a href="https://pushover.net/api">Pushover API docs</a> (limits and emergency priority). Prices and plans are as of October 2026 and can change; check the linked pages before you decide. Product names belong to their owners. Campfire SMS is independent of Pushover.</p></section>
+    <section aria-labelledby="questions"><h2 id="questions">Common questions</h2><details><summary>How do I get a Pushover alert when Claude Code finishes?</summary><p>Add a Claude Code hook, for example on the Stop or Notification event, that sends a request to Pushover's message API with your application token and user key. You write and maintain the hook yourself.</p></details><details><summary>Can I answer my coding agent from Pushover?</summary><p>No. Pushover delivers one-way notifications. Emergency-priority alerts repeat until you acknowledge them and can notify a callback URL you host, but that only says you saw the alert. Campfire SMS returns your text reply to the agent.</p></details><details><summary>Is Pushover a subscription?</summary><p>Not for individuals. As of October 2026, it is a $4.99 one-time purchase on each platform you use (iPhone and iPad, Android, desktop) after a 30-day free trial. Pushover for Teams is $5 per user per month.</p></details><details><summary>How many messages can I send with Pushover?</summary><p>Each user account can send 10,000 messages a month for free, shared across all of that user's applications. Teams can send 25,000 a month.</p></details><details><summary>Do I need an app for Campfire SMS?</summary><p>No. Texts arrive in your phone's normal messages app, on an iPhone or an Android phone. Pushover needs its app on each platform where you want alerts.</p></details></section>
+    <aside class="related-guides" aria-labelledby="related"><h2 id="related">Related guides</h2><ul><li><a href="/coding-agent-notification-options/">Ways to hear from your AI coding agent</a></li><li><a href="/ntfy-vs-campfiresms/">ntfy vs Campfire SMS</a></li><li><a href="/build-complete-sms/">Get a text when your build finishes</a></li><li><a href="/claude-code-phone-notifications/">Claude Code phone notifications by SMS</a></li></ul></aside>
+    <div class="guide-actions"><a class="button" href="https://api.campfiresms.com/join">Start free setup</a><a href="/install.html#local-agents">Installation guide</a><a href="/#pricing">Pricing and free messages</a></div>
+  </article>
+</main>
+<footer>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <p>SMS bridge for AI agents.</p>
+  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:support@campfiresms.com">Contact</a></div>
+  <small>© 2026 Campfire SMS</small>
+</footer>
+</body>
+</html>

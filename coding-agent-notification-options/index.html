@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Google tag (gtag.js) - GA4 G-VWDPRPD2SK -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWDPRPD2SK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VWDPRPD2SK');
+    // sign_up_start: signup happens on api.campfiresms.com/join, so count clicks on any link to it. No PII in params.
+    document.addEventListener('click', function (e) {
+      try {
+        var a = e.target && e.target.closest && e.target.closest('a[href^="https://api.campfiresms.com/join"]');
+        if (!a || typeof window.gtag !== 'function') return;
+        var where = a.closest('header') ? 'header' : (a.closest('footer') ? 'footer' : 'content');
+        window.gtag('event', 'sign_up_start', { method: 'join_link', link_location: where, transport_type: 'beacon' });
+      } catch (err) {}
+    }, true);
+  </script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ways to get phone alerts and replies from your AI coding agent (2026) | Campfire SMS</title>
+  <meta name="description" content="Campfire SMS, /call-me, Claude Code&#x27;s Telegram plugin, ntfy, Pushover, and DIY Twilio compared: who can answer, which agents, setup, and price. October 2026.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://campfiresms.com/coding-agent-notification-options/">
+  <link rel="sitemap" type="application/xml" href="https://campfiresms.com/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Ways to get phone alerts and replies from your AI coding agent (2026) | Campfire SMS">
+  <meta property="og:description" content="Campfire SMS, /call-me, Claude Code&#x27;s Telegram plugin, ntfy, Pushover, and DIY Twilio compared: who can answer, which agents, setup, and price. October 2026.">
+  <meta property="og:url" content="https://campfiresms.com/coding-agent-notification-options/">
+  <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Campfire SMS: a two-way SMS exchange with your existing agent.">
+  <meta property="article:published_time" content="2026-10-16">
+  <meta property="article:modified_time" content="2026-10-16">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ways to get phone alerts and replies from your AI coding agent (2026) | Campfire SMS">
+  <meta name="twitter:description" content="Campfire SMS, /call-me, Claude Code&#x27;s Telegram plugin, ntfy, Pushover, and DIY Twilio compared: who can answer, which agents, setup, and price. October 2026.">
+  <meta name="twitter:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/icon.css">
+  <link rel="stylesheet" href="/pages.css">
+  <link rel="stylesheet" href="/agent-guides.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://campfiresms.com/coding-agent-notification-options/#article",
+      "headline": "Ways to hear from your AI coding agent on your phone",
+      "description": "Campfire SMS, /call-me, Claude Code's Telegram plugin, ntfy, Pushover, and DIY Twilio compared: who can answer, which agents, setup, and price. October 2026.",
+      "mainEntityOfPage": "https://campfiresms.com/coding-agent-notification-options/",
+      "url": "https://campfiresms.com/coding-agent-notification-options/",
+      "inLanguage": "en-US",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "image": "https://campfiresms.com/assets/campfiresms-social-card-v3.png",
+      "articleSection": "Messaging comparison",
+      "author": {
+        "@type": "Organization",
+        "name": "Campfire SMS",
+        "url": "https://campfiresms.com/about.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Campfire SMS",
+        "url": "https://campfiresms.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://campfiresms.com/assets/campfire-icon-512.png"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://campfiresms.com/coding-agent-notification-options/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Campfire SMS",
+          "item": "https://campfiresms.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://campfiresms.com/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ways to hear from your AI coding agent on your phone",
+          "item": "https://campfiresms.com/coding-agent-notification-options/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://campfiresms.com/coding-agent-notification-options/#options",
+      "name": "Ways to hear from your AI coding agent on your phone",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Campfire SMS",
+          "url": "https://campfiresms.com/install.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "/call-me (CallMeMCP)",
+          "url": "https://campfiresms.com/callmemcp-vs-campfiresms/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code Telegram plugin",
+          "url": "https://campfiresms.com/telegram-vs-campfiresms/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "ntfy",
+          "url": "https://campfiresms.com/ntfy-vs-campfiresms/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Pushover",
+          "url": "https://campfiresms.com/pushover-vs-campfiresms/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "DIY Twilio SMS",
+          "url": "https://campfiresms.com/twilio-coding-agent-sms/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://campfiresms.com/coding-agent-notification-options/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What's the easiest way to have Claude Code text me when it's done?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Campfire SMS: sign up, verify your phone, run one install command, and ask Claude Code to text you when the task finishes. If you only want a push alert and don't mind writing a hook, ntfy or Pushover also work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I answer my coding agent from my phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with Campfire SMS (text reply), /call-me (spoken or typed reply on an iPhone), or Claude Code's Telegram plugin (chat reply). ntfy and Pushover deliver alerts; answering through them means building your own endpoint."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I approve Claude Code permission prompts from my phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Claude Code's official Telegram channel plugin can relay tool-use approvals in current versions, and Claude Code Remote Control lets you drive the session from the Claude app. Campfire SMS replies steer the task but don't answer native permission prompts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a free option?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ntfy and the Claude Code Telegram plugin are free, and ntfy can be self-hosted. Pushover is a $4.99 one-time purchase per platform after a 30-day trial. Campfire SMS includes 40 free messages to try it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do any of these work while my computer is off?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not for a local agent. Every option here needs the agent's session running to act on your reply. Campfire SMS can start Grok Bot's cloud routine when you text, because Grok Bot runs in Grok's cloud."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body class="agent-guide-site">
+<a class="skip-link" href="#content">Skip to content</a>
+<header>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <nav aria-label="Primary navigation">
+    <a href="/install.html">Setup</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a>
+    <a href="https://api.campfiresms.com/login">Log in</a><a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a>
+  </nav>
+</header>
+<main class="legal" id="content">
+  <div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/guides/">Guides</a><span aria-hidden="true">/</span><span>Messaging comparison</span></div>
+  <section class="legalhead"><p class="kicker">Messaging comparison</p><h1>Ways to hear from your AI coding agent on your phone</h1><p>Six ways to get alerts, questions, and approvals from Claude Code, Codex, or Cursor while you&#x27;re away from your desk.</p><p class="byline">By Campfire SMS · Published <time datetime="2026-10-16">October 16, 2026</time></p></section>
+  <article>
+    <p class="quick-answer">If your agent only needs to tell you something finished, a free push service like ntfy or a one-time purchase like Pushover is enough. If it needs an answer from you, pick something with a return path: Campfire SMS (texts to your own number, from several agents), /call-me (a call on your iPhone), or Claude Code's Telegram plugin (a chat bot, Claude Code only). Building it yourself on Twilio gives full control but leaves the reply routing to you.</p>
+    <div class="comparison-scroll" role="region" aria-label="Phone alert options for coding agents" tabindex="0"><table><caption>Six options at a glance. Third-party details as observed on each product's own pages, October 2026.</caption><thead><tr><th scope="col">Option</th><th scope="col">Reaches you by</th><th scope="col">Can you answer the agent?</th><th scope="col">Agents</th><th scope="col">What you need</th><th scope="col">Price (as observed)</th></tr></thead><tbody><tr><th scope="row"><a href="/install.html">Campfire SMS</a></th><td>Text message to your own number</td><td>Yes, by text</td><td>Codex, Claude Code, Cursor, OpenCode, Grok Build, Grok Bot</td><td>No app. A Campfire SMS account and a one-time install</td><td>40 free messages, then $8 a month for 500 or packs from $5</td></tr><tr><th scope="row"><a href="/callmemcp-vs-campfiresms/">/call-me</a></th><td>A call in its iPhone app, plus in-app texts</td><td>Yes, by voice or typing</td><td>Any MCP client, per its site</td><td>An iPhone (iOS 17+) and its app</td><td>$4.99 a week or $24.99 a year</td></tr><tr><th scope="row"><a href="/telegram-vs-campfiresms/">Claude Code Telegram plugin</a></th><td>Telegram message from your bot</td><td>Yes, by chat, plus tool approvals</td><td>Claude Code only</td><td>Telegram, a bot token, Bun, and an open session</td><td>Free</td></tr><tr><th scope="row"><a href="/ntfy-vs-campfiresms/">ntfy</a></th><td>Push notification in its app</td><td>No chat reply. Buttons can call a URL you host</td><td>Anything that can send HTTP, through a hook you write</td><td>The ntfy app</td><td>Free, or self-host. Paid plans from $5 to $6 a month</td></tr><tr><th scope="row"><a href="/pushover-vs-campfiresms/">Pushover</a></th><td>Push notification in its app</td><td>No</td><td>Anything that can call its API, through a hook you write</td><td>The Pushover app</td><td>$4.99 one-time per platform</td></tr><tr><th scope="row"><a href="/twilio-coding-agent-sms/">DIY Twilio</a></th><td>Text message from a number you rent</td><td>Only if you build the inbound path</td><td>Whatever you connect</td><td>A Twilio account, a number, and your own code</td><td>Twilio's usage rates</td></tr></tbody></table></div>
+    <p class="source-note">Campfire SMS publishes this page, so our product is listed first. Each option links to a fuller comparison with sources and dates.</p>
+    <nav class="article-contents" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#how-to-choose">How to choose</a></li><li><a href="#campfire-sms">Campfire SMS</a></li><li><a href="#call-me">/call-me (CallMeMCP)</a></li><li><a href="#telegram">Claude Code Telegram plugin</a></li><li><a href="#ntfy">ntfy</a></li><li><a href="#pushover">Pushover</a></li><li><a href="#diy-twilio">DIY Twilio SMS</a></li><li><a href="#remote-control">What about Remote Control?</a></li><li><a href="#questions">Common questions</a></li></ol></nav>
+    <section aria-labelledby="how-to-choose"><h2 id="how-to-choose">How to choose</h2>
+<p>Three questions narrow it down quickly.</p>
+<ol>
+<li><strong>Does the agent need an answer, or just to tell you something?</strong> For "done" and "failed" alerts, ntfy and Pushover are cheap and dependable. For "which option should I take?", you need a way back to the agent: Campfire SMS, /call-me, or Telegram.</li>
+<li><strong>Which agents do you use?</strong> The Telegram plugin is Claude Code only. Campfire SMS covers Codex, Claude Code, Cursor, OpenCode, Grok Build, and Grok Bot. /call-me lists any MCP client.</li>
+<li><strong>Which phone, and do you want another app?</strong> /call-me needs an iPhone. ntfy, Pushover, and Telegram need their apps. Campfire SMS and DIY Twilio use your normal text inbox on any iPhone or Android phone.</li>
+</ol>
+<p>Whatever you pick, a local agent still needs its computer awake and its session running to act on your reply.</p>
+</section>
+<section aria-labelledby="campfire-sms"><h2 id="campfire-sms">1. Campfire SMS: real texts you can answer</h2>
+<p>Your agent texts your own phone number, and you reply in plain words. The agent retrieves your reply through the connector you installed, so there's no app, bot, or webhook to run. It works with Codex, Claude Code, Cursor, OpenCode, and Grok Build on your computer, and with Grok Bot in Grok's cloud, where a text can start its routine while your PC is off. Replies steer the task; they don't answer the agent's native permission prompts.</p>
+<p><strong>Best for:</strong> answering the agent you already run from your normal texts, without building anything. <a href="/install.html">See setup</a>.</p>
+</section>
+<section aria-labelledby="call-me"><h2 id="call-me">2. /call-me (CallMeMCP): your agent rings your iPhone</h2>
+<p>The /call-me app lets an agent ring your iPhone on the native call screen, read its question aloud, and send back your spoken answer as text. Agents can also send texts into the app. Its number isn't a real phone number; it exists only inside the app. It needs iOS 17 or later.</p>
+<p><strong>Best for:</strong> urgent decisions and hands-free answers on an iPhone. <a href="/callmemcp-vs-campfiresms/">Compare /call-me and Campfire SMS</a>.</p>
+</section>
+<section aria-labelledby="telegram"><h2 id="telegram">3. Claude Code Telegram plugin: free chat and approvals</h2>
+<p>Claude Code's official Telegram channel plugin pushes your messages into a running session, and current versions relay tool-permission prompts with Allow and Deny buttons. It's free, but you create a bot, install Bun, start Claude Code with the channel turned on, and keep the session open. It's a research preview and works only with Claude Code.</p>
+<p><strong>Best for:</strong> Claude Code users who already use Telegram. <a href="/telegram-vs-campfiresms/">Compare the Telegram plugin and Campfire SMS</a>.</p>
+</section>
+<section aria-labelledby="ntfy"><h2 id="ntfy">4. ntfy: free, open-source push alerts</h2>
+<p>A hook sends an HTTP request to your ntfy topic, and the alert appears in the ntfy app. It's free without sign-up, and you can self-host the server. There's no chat reply, though action buttons can call a URL you host.</p>
+<p><strong>Best for:</strong> free "it's done" alerts for people who like to wire things up. <a href="/ntfy-vs-campfiresms/">Compare ntfy and Campfire SMS</a>.</p>
+</section>
+<section aria-labelledby="pushover"><h2 id="pushover">5. Pushover: pay once, dependable alerts</h2>
+<p>A $4.99 one-time purchase per platform, with 10,000 free messages a month per account. A hook calls its API when the agent stops or needs attention. It's one-way: emergency alerts can be acknowledged, but you can't answer the agent.</p>
+<p><strong>Best for:</strong> dependable alerts with no subscription. <a href="/pushover-vs-campfiresms/">Compare Pushover and Campfire SMS</a>.</p>
+</section>
+<section aria-labelledby="diy-twilio"><h2 id="diy-twilio">6. DIY Twilio SMS: full control</h2>
+<p>Sending a text through Twilio is one API call. Getting your reply back to the right agent session takes an inbound webhook, authentication, and routing that you build and keep running, plus a rented number and Twilio's usage rates.</p>
+<p><strong>Best for:</strong> people who already run Twilio and want to own every piece. <a href="/twilio-coding-agent-sms/">Compare DIY Twilio and Campfire SMS</a>.</p>
+</section>
+<section aria-labelledby="remote-control"><h2 id="remote-control">What about Remote Control?</h2>
+<p>Claude Code's Remote Control isn't a notification service: it lets you drive a local Claude Code session from the Claude app or a browser. It's worth a look if you want the full session on your phone. See <a href="/remote-control-claude-code/">Claude Code Remote Control vs SMS</a>.</p>
+<p class="source-note">Third-party details checked October 16, 2026 on each product's own pages: <a href="https://callmemcp.com/">callmemcp.com</a> and its <a href="https://apps.apple.com/us/app/call-me/id6789575165">App Store listing</a>, Claude Code's <a href="https://code.claude.com/docs/en/channels">channels guide</a> and the <a href="https://github.com/anthropics/claude-plugins-official/blob/main/external_plugins/telegram/README.md">Telegram plugin</a>, <a href="https://ntfy.sh/">ntfy.sh</a>, and <a href="https://pushover.net/pricing">pushover.net</a>. Prices and plans are as of October 2026 and can change; check the linked pages before you decide. Product names belong to their owners. Campfire SMS is independent of these companies.</p>
+</section>
+    <section aria-labelledby="questions"><h2 id="questions">Common questions</h2><details><summary>What's the easiest way to have Claude Code text me when it's done?</summary><p>Campfire SMS: sign up, verify your phone, run one install command, and ask Claude Code to text you when the task finishes. If you only want a push alert and don't mind writing a hook, ntfy or Pushover also work.</p></details><details><summary>Can I answer my coding agent from my phone?</summary><p>Yes, with Campfire SMS (text reply), /call-me (spoken or typed reply on an iPhone), or Claude Code's Telegram plugin (chat reply). ntfy and Pushover deliver alerts; answering through them means building your own endpoint.</p></details><details><summary>Can I approve Claude Code permission prompts from my phone?</summary><p>Claude Code's official Telegram channel plugin can relay tool-use approvals in current versions, and Claude Code Remote Control lets you drive the session from the Claude app. Campfire SMS replies steer the task but don't answer native permission prompts.</p></details><details><summary>Is there a free option?</summary><p>ntfy and the Claude Code Telegram plugin are free, and ntfy can be self-hosted. Pushover is a $4.99 one-time purchase per platform after a 30-day trial. Campfire SMS includes 40 free messages to try it.</p></details><details><summary>Do any of these work while my computer is off?</summary><p>Not for a local agent. Every option here needs the agent's session running to act on your reply. Campfire SMS can start Grok Bot's cloud routine when you text, because Grok Bot runs in Grok's cloud.</p></details></section>
+    <aside class="related-guides" aria-labelledby="related"><h2 id="related">Related guides</h2><ul><li><a href="/coding-agent-pager/">Coding-agent alerts, SMS replies, and wake</a></li><li><a href="/claude-code-phone-notifications/">Claude Code phone notifications by SMS</a></li><li><a href="/codex-phone-notifications/">Get Codex notifications on your phone</a></li><li><a href="/agent-needs-input/">Your agent is waiting for input. Answer from your phone.</a></li></ul></aside>
+    <div class="guide-actions"><a class="button" href="https://api.campfiresms.com/join">Start free setup</a><a href="/install.html#local-agents">Installation guide</a><a href="/#pricing">Pricing and free messages</a></div>
+  </article>
+</main>
+<footer>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <p>SMS bridge for AI agents.</p>
+  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:support@campfiresms.com">Contact</a></div>
+  <small>© 2026 Campfire SMS</small>
+</footer>
+</body>
+</html>
