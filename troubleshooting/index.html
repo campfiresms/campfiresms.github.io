@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Google tag (gtag.js) - GA4 G-VWDPRPD2SK -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWDPRPD2SK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VWDPRPD2SK');
+    // sign_up_start: signup happens on api.campfiresms.com/join, so count clicks on any link to it. No PII in params.
+    document.addEventListener('click', function (e) {
+      try {
+        var a = e.target && e.target.closest && e.target.closest('a[href^="https://api.campfiresms.com/join"]');
+        if (!a || typeof window.gtag !== 'function') return;
+        var where = a.closest('header') ? 'header' : (a.closest('footer') ? 'footer' : 'content');
+        window.gtag('event', 'sign_up_start', { method: 'join_link', link_location: where, transport_type: 'beacon' });
+      } catch (err) {}
+    }, true);
+  </script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Troubleshooting and FAQ | Campfire SMS</title>
+  <meta name="description" content="Fixes for common Campfire SMS problems: iPhone replies that show Not Delivered, “No agent bridge is connected,” credential errors, Grok Bot wake, and message limits.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://campfiresms.com/troubleshooting/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Troubleshooting and FAQ | Campfire SMS">
+  <meta property="og:description" content="Fixes for common Campfire SMS problems: iPhone replies that show Not Delivered, “No agent bridge is connected,” credential errors, Grok Bot wake, and message limits.">
+  <meta property="og:url" content="https://campfiresms.com/troubleshooting/">
+  <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Campfire SMS: a two-way SMS exchange with your existing agent.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Troubleshooting and FAQ | Campfire SMS">
+  <meta name="twitter:description" content="Fixes for common Campfire SMS problems: replies that show Not Delivered, credential errors, Grok Bot wake, and message limits.">
+  <meta name="twitter:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/icon.css">
+  <link rel="stylesheet" href="/pages.css">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://campfiresms.com/troubleshooting/#webpage",
+      "url": "https://campfiresms.com/troubleshooting/",
+      "name": "Troubleshooting and FAQ",
+      "description": "Fixes for common Campfire SMS problems.",
+      "inLanguage": "en-US",
+      "dateModified": "2026-10-17",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Campfire SMS",
+        "url": "https://campfiresms.com/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Campfire SMS",
+          "item": "https://campfiresms.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Troubleshooting and FAQ",
+          "item": "https://campfiresms.com/troubleshooting/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://campfiresms.com/troubleshooting/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "My replies show “Not Delivered” on my iPhone",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If texts from Campfire SMS reach you but your replies fail with a red exclamation mark, your phone or carrier is stopping them before they reach us. Try these in order: Save the Campfire SMS number, (608) 422-4987, as a contact. Then send “Test” again. Open Settings → Screen Time → Communication Limits. If it’s set to anything other than Everyone, texts to numbers outside your contacts can fail. Open Settings → General → VPN & Device Management. A profile listed there means an employer or school manages the phone, and it may restrict texting. Turn off Wi‑Fi Calling and send over cellular. Check your carrier account for message blocking or content filters. Still failing? Email support with your carrier’s name and roughly when you sent the replies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I got “No agent bridge is connected”",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your text reached Campfire SMS, but no agent was listening for it. A local agent gets your texts only while it’s running and has a bridge open. Ask it to open a bridge or text you first, then reply to that text. For Grok Bot, check that Grok Bot 24/7 wake is turned on in your account for the same installation the Bot uses. Your text and the automatic reply each count as a message."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My agent never got my reply",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check these, most common first: The reply was too long. A reply has to fit in one text: 160 characters, or 70 if it has an emoji or other special characters. Longer replies don’t reach your agent. Send shorter texts instead. Your messages ran out. When your included messages and credits are used up, texts you send get no reply and don’t reach your agent. Sign in to check your balance. The agent hasn’t checked yet. A local agent reads replies only when it checks for messages, and only while it’s running. Another agent has the bridge. Your phone can have one open bridge at a time, and whichever agent opened it gets your replies. Ask that agent to close its bridge, or text !bridge off. You texted from a different phone. Only the phone number verified on your account reaches your agent. You opted out earlier. If you texted STOP, text START to turn texts back on."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long can texts be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your replies can be one text long: 160 characters, or 70 if they include an emoji or other special characters. Your agent’s texts can be up to three texts long. Longer agent messages are shortened."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I got “To opt in for recurring AI replies, text START”",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your phone isn’t opted in to texts yet, or it was opted out. Text START. You’ll get a confirmation, and after that your texts go through."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I stop or restart texts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Text STOP to stop all texts from Campfire SMS. That also closes any open bridge. Text START to turn texts back on, or HELP for support information. To close the current bridge without opting out, text !bridge off. Your agent can open a new bridge later."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My install command expired or was already used",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Install commands work once and expire after 10 minutes. Sign in, go to Add computers, and create a new one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Setup worked, but I get invalid_bridge_credential (HTTP 401)",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your agent is sending a credential Campfire SMS doesn’t recognize, usually an old one from an earlier install. If CAMPFIRE_CREDENTIAL is set in your environment or in your agent’s MCP settings, the local connector uses it instead of the credential setup saved. Remove it. If you use the hosted connection (Grok Bot, or Cursor’s Add to Cursor button with CAMPFIRE_TOKEN), replace the value with your current credential. Create a new install command and run it with @latest, so you get the current installer: npx -y @campfiresms/setup@latest YOUR_INSTALLATION_CODE Quit your agent completely and reopen it. Check the connection with python -m campfire_mcp.cli status (use python3 on macOS and Linux)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I get bridge_credential_revoked or bridge_credential_expired",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That installation was revoked in your account, or its credential is more than a year old. Create a new installation under Add computers and run its install command. The update command won’t fix this, because it reuses the saved credential."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I can’t add another computer (installation_limit)",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each account can have up to five active installations. Sign in, open Manage installation on one you no longer use, and choose Revoke access. Then create the new one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cursor shows a second Campfire SMS server with an error, or a sign-in page keeps opening",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That’s a hosted Campfire SMS entry, such as the one Cursor Directory’s Add to Cursor button adds. If you set up with the install command, you don’t need it. Turn it off or delete it in your app’s MCP settings, and keep the server named campfire."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Setup can’t find Python, or pip fails on Linux",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The local connector needs Python 3.12 or newer and Node.js 18 or newer. On Linux or a VM, create a virtual environment first, as described in Installing on Linux or a VM. Don’t use sudo pip or --break-system-packages. Grok Bot and Cursor’s Add to Cursor button don’t need Python."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My agent stops texting when I step away",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A local agent can text you and read your replies only while it’s running and your computer is awake and online. Campfire SMS can’t start a stopped session. Keep the computer from sleeping, or use Grok Bot, which runs in the cloud and can answer while your PC is off."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I text Grok Bot but it never replies",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No webhook run shows up in Grok. Make sure the routine is active and that the webhook URL and key saved in your Campfire SMS account match the routine’s current ones. The run starts but finds no message. The Bot’s hosted connection must use the credential of the installation that owns wake, and no other agent can have the bridge open. It reads your message but doesn’t reply. Check the run for tool errors, your message balance, and your Grok account limits. A successful webhook test only shows that Grok accepted a run. The Grok Bot walkthrough covers the full test."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens when I run out of messages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Messaging pauses. Your agent can’t send texts, and texts you send get no reply. There are no overage charges. Sign in to check your balance, subscribe, or buy a pack. Purchased credits never expire. See pricing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What counts as a message?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each text sent or received counts as one message. That includes your replies and automatic texts like “No agent bridge is connected” and “Setup complete.” New accounts start with 40 free messages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it safe to text passwords or other sensitive information?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. SMS isn’t end-to-end encrypted. Carriers, Twilio, and the AI service you connect all handle your messages, and anyone with access to your phone can read them. Keep passwords, API keys, verification codes, and payment details out of texts. See the privacy policy."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body class="manual-site">
+<a class="skip-link" href="#content">Skip to content</a>
+<header>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <nav aria-label="Primary navigation">
+    <a href="/install.html">Setup</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/guides/">Guides</a>
+    <a href="https://api.campfiresms.com/login">Log in</a>
+    <a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a>
+  </nav>
+</header>
+<main class="legal setup-guide" id="content">
+  <section class="legalhead">
+    <span class="kicker">Help</span>
+    <h1>Troubleshooting and FAQ</h1>
+    <p>Most problems come from one of three places: your phone, the connection between your agent and Campfire SMS, or your message balance. Find what you’re seeing below. Still stuck? Email <a href="mailto:support@campfiresms.com">support@campfiresms.com</a>.</p>
+    <p><strong>Jump to:</strong> <a href="#texts">Texts and replies</a> · <a href="#setup">Setup and connection</a> · <a href="#grok-bot">Grok Bot</a> · <a href="#messages">Messages and billing</a> · <a href="#privacy">Privacy</a> · <a href="#contact">Contact support</a></p>
+  </section>
+  <article>
+    <h2 id="texts">Texts and replies</h2>
+
+    <details id="not-delivered" class="faq"><summary>My replies show “Not Delivered” on my iPhone</summary>
+      <p>If texts from Campfire SMS reach you but your replies fail with a red exclamation mark, your phone or carrier is stopping them before they reach us. Try these in order:</p>
+      <ol>
+        <li>Save the Campfire SMS number, (608) 422-4987, as a contact. Then send “Test” again.</li>
+        <li>Open <strong>Settings → Screen Time → Communication Limits</strong>. If it’s set to anything other than <strong>Everyone</strong>, texts to numbers outside your contacts can fail.</li>
+        <li>Open <strong>Settings → General → VPN &amp; Device Management</strong>. A profile listed there means an employer or school manages the phone, and it may restrict texting.</li>
+        <li>Turn off Wi‑Fi Calling and send over cellular.</li>
+        <li>Check your carrier account for message blocking or content filters.</li>
+      </ol>
+      <p>Still failing? Email support with your carrier’s name and roughly when you sent the replies.</p>
+    </details>
+
+    <details id="no-bridge" class="faq"><summary>I got “No agent bridge is connected”</summary>
+      <p>Your text reached Campfire SMS, but no agent was listening for it. A local agent gets your texts only while it’s running and has a bridge open. Ask it to open a bridge or text you first, then reply to that text.</p>
+      <p>For Grok Bot, check that <strong>Grok Bot 24/7 wake</strong> is turned on in your account for the same installation the Bot uses. Your text and the automatic reply each count as a message.</p>
+    </details>
+
+    <details id="reply-missing" class="faq"><summary>My agent never got my reply</summary>
+      <p>Check these, most common first:</p>
+      <ul>
+        <li><strong>The reply was too long.</strong> A reply has to fit in one text: 160 characters, or 70 if it has an emoji or other special characters. Longer replies don’t reach your agent. Send shorter texts instead.</li>
+        <li><strong>Your messages ran out.</strong> When your included messages and credits are used up, texts you send get no reply and don’t reach your agent. Sign in to check your balance.</li>
+        <li><strong>The agent hasn’t checked yet.</strong> A local agent reads replies only when it checks for messages, and only while it’s running.</li>
+        <li><strong>Another agent has the bridge.</strong> Your phone can have one open bridge at a time, and whichever agent opened it gets your replies. Ask that agent to close its bridge, or text <code>!bridge off</code>.</li>
+        <li><strong>You texted from a different phone.</strong> Only the phone number verified on your account reaches your agent.</li>
+        <li><strong>You opted out earlier.</strong> If you texted STOP, text START to turn texts back on.</li>
+      </ul>
+    </details>
+
+    <details id="length" class="faq"><summary>How long can texts be?</summary>
+      <p>Your replies can be one text long: 160 characters, or 70 if they include an emoji or other special characters. Your agent’s texts can be up to three texts long. Longer agent messages are shortened.</p>
+    </details>
+
+    <details id="opt-in" class="faq"><summary>I got “To opt in for recurring AI replies, text START”</summary>
+      <p>Your phone isn’t opted in to texts yet, or it was opted out. Text <strong>START</strong>. You’ll get a confirmation, and after that your texts go through.</p>
+    </details>
+
+    <details id="stop" class="faq"><summary>How do I stop or restart texts?</summary>
+      <p>Text <strong>STOP</strong> to stop all texts from Campfire SMS. That also closes any open bridge. Text <strong>START</strong> to turn texts back on, or <strong>HELP</strong> for support information.</p>
+      <p>To close the current bridge without opting out, text <code>!bridge off</code>. Your agent can open a new bridge later.</p>
+    </details>
+
+    <h2 id="setup">Setup and connection</h2>
+
+    <details id="install-expired" class="faq"><summary>My install command expired or was already used</summary>
+      <p>Install commands work once and expire after 10 minutes. Sign in, go to <strong>Add computers</strong>, and create a new one.</p>
+    </details>
+
+    <details id="invalid-credential" class="faq"><summary>Setup worked, but I get <code>invalid_bridge_credential</code> (HTTP 401)</summary>
+      <p>Your agent is sending a credential Campfire SMS doesn’t recognize, usually an old one from an earlier install.</p>
+      <ol>
+        <li>If <code>CAMPFIRE_CREDENTIAL</code> is set in your environment or in your agent’s MCP settings, the local connector uses it instead of the credential setup saved. Remove it. If you use the hosted connection (Grok Bot, or Cursor’s Add to Cursor button with <code>CAMPFIRE_TOKEN</code>), replace the value with your current credential.</li>
+        <li>Create a new install command and run it with <code>@latest</code>, so you get the current installer:
+          <pre><code>npx -y @campfiresms/setup@latest YOUR_INSTALLATION_CODE</code></pre></li>
+        <li>Quit your agent completely and reopen it.</li>
+        <li>Check the connection with <code>python -m campfire_mcp.cli status</code> (use <code>python3</code> on macOS and Linux).</li>
+      </ol>
+    </details>
+
+    <details id="revoked" class="faq"><summary>I get <code>bridge_credential_revoked</code> or <code>bridge_credential_expired</code></summary>
+      <p>That installation was revoked in your account, or its credential is more than a year old. Create a new installation under <strong>Add computers</strong> and run its install command. The <code>update</code> command won’t fix this, because it reuses the saved credential.</p>
+    </details>
+
+    <details id="installation-limit" class="faq"><summary>I can’t add another computer (<code>installation_limit</code>)</summary>
+      <p>Each account can have up to five active installations. Sign in, open <strong>Manage installation</strong> on one you no longer use, and choose <strong>Revoke access</strong>. Then create the new one.</p>
+    </details>
+
+    <details id="duplicate-server" class="faq"><summary>Cursor shows a second Campfire SMS server with an error, or a sign-in page keeps opening</summary>
+      <p>That’s a hosted Campfire SMS entry, such as the one Cursor Directory’s Add to Cursor button adds. If you set up with the install command, you don’t need it. Turn it off or delete it in your app’s MCP settings, and keep the server named <code>campfire</code>.</p>
+    </details>
+
+    <details id="python" class="faq"><summary>Setup can’t find Python, or pip fails on Linux</summary>
+      <p>The local connector needs Python 3.12 or newer and Node.js 18 or newer. On Linux or a VM, create a virtual environment first, as described in <a href="/install.html#linux-vm">Installing on Linux or a VM</a>. Don’t use <code>sudo pip</code> or <code>--break-system-packages</code>. Grok Bot and Cursor’s Add to Cursor button don’t need Python.</p>
+    </details>
+
+    <details id="computer-off" class="faq"><summary>My agent stops texting when I step away</summary>
+      <p>A local agent can text you and read your replies only while it’s running and your computer is awake and online. Campfire SMS can’t start a stopped session. Keep the computer from sleeping, or use <a href="/guides/grok-bot-sms-routine.html">Grok Bot</a>, which runs in the cloud and can answer while your PC is off.</p>
+    </details>
+
+    <h2 id="grok-bot">Grok Bot</h2>
+
+    <details id="grok-no-reply" class="faq"><summary>I text Grok Bot but it never replies</summary>
+      <ul>
+        <li><strong>No webhook run shows up in Grok.</strong> Make sure the routine is active and that the webhook URL and key saved in your Campfire SMS account match the routine’s current ones.</li>
+        <li><strong>The run starts but finds no message.</strong> The Bot’s hosted connection must use the credential of the installation that owns wake, and no other agent can have the bridge open.</li>
+        <li><strong>It reads your message but doesn’t reply.</strong> Check the run for tool errors, your message balance, and your Grok account limits.</li>
+      </ul>
+      <p>A successful webhook test only shows that Grok accepted a run. The <a href="/guides/grok-bot-sms-routine.html">Grok Bot walkthrough</a> covers the full test.</p>
+    </details>
+
+    <h2 id="messages">Messages and billing</h2>
+
+    <details id="out-of-messages" class="faq"><summary>What happens when I run out of messages?</summary>
+      <p>Messaging pauses. Your agent can’t send texts, and texts you send get no reply. There are no overage charges. Sign in to check your balance, subscribe, or buy a pack. Purchased credits never expire. See <a href="/#pricing">pricing</a>.</p>
+    </details>
+
+    <details id="what-counts" class="faq"><summary>What counts as a message?</summary>
+      <p>Each text sent or received counts as one message. That includes your replies and automatic texts like “No agent bridge is connected” and “Setup complete.” New accounts start with 40 free messages.</p>
+    </details>
+
+    <h2 id="privacy">Privacy</h2>
+
+    <details id="sensitive" class="faq"><summary>Is it safe to text passwords or other sensitive information?</summary>
+      <p>No. SMS isn’t end-to-end encrypted. Carriers, Twilio, and the AI service you connect all handle your messages, and anyone with access to your phone can read them. Keep passwords, API keys, verification codes, and payment details out of texts. See the <a href="/privacy.html">privacy policy</a>.</p>
+    </details>
+
+    <h2 id="contact">Still stuck?</h2>
+    <p>Email <a href="mailto:support@campfiresms.com">support@campfiresms.com</a> with:</p>
+    <ul>
+      <li>What you’re connecting (Grok Bot, Codex, Claude Code, Cursor, Grok Build, OpenCode, or something else) and your operating system</li>
+      <li>The exact error message, and roughly when it happened</li>
+      <li>Your phone carrier, if the problem is with texts</li>
+    </ul>
+    <p>Never include your installation credential (it starts with <code>cfi_</code>), your PIN, or a verification code.</p>
+    <p>For setup steps, see the <a href="/install.html">setup guide</a>.</p>
+  </article>
+</main>
+<footer>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <p>SMS bridge for AI agents.</p>
+  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/troubleshooting/">Help</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:support@campfiresms.com">Contact</a></div>
+  <small>© 2026 Campfire SMS</small>
+</footer>
+</body>
+</html>

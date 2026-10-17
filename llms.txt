@@ -35,6 +35,7 @@ See [local setup](https://campfiresms.com/install.html#local-agents) and [Linux/
 - [Home](https://campfiresms.com/): Grok webhook wake, one SMS example, and current pricing and message counting.
 - [Grok Bot webhook setup](https://campfiresms.com/guides/grok-bot-sms-routine.html): Hosted MCP, webhook routine, secure wake configuration, and a real text-and-reply test.
 - [Setup](https://campfiresms.com/install.html): Grok Bot first; local-agent installation, recovery, and removal second.
+- [Troubleshooting and FAQ](https://campfiresms.com/troubleshooting/): iPhone replies marked Not Delivered, missing replies, “No agent bridge is connected,” credential errors, Grok Bot wake, and message limits.
 - [Guides](https://campfiresms.com/guides/): Grok wake setup and supporting local-agent workflows.
 - [NudgeBell vs Campfire SMS](https://campfiresms.com/nudgebell-vs-campfiresms/): Scheduled reminders and escalation versus two-way agent SMS, with sources and runtime requirements.
 - [AgentPhone vs Campfire SMS](https://campfiresms.com/agentphone-vs-campfiresms/): Phone numbers, voice, and verification codes for agents, compared with your existing agent texting you. Checked with dated pricing.
