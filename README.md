@@ -8,6 +8,10 @@ The static `guides/` section contains the Grok Bot webhook-wake walkthrough, loc
 
 Preview locally with `python -m http.server 8000 --bind 127.0.0.1` and open `http://localhost:8000/`.
 
+## Help page
+
+`troubleshooting/` is the support FAQ. Keep its answers aligned with backend behavior (auto-replies, error codes, limits). Its FAQPage JSON-LD mirrors the visible questions, so update both together.
+
 ## Coding-agent search pages
 
 The root directories `codex-sms/`, `claude-code-sms/`, `codex-phone-notifications/`, `claude-code-phone-notifications/`, `remote-control-codex/`, `remote-control-claude-code/`, `approve-coding-agent-from-phone/`, `photon-vs-campfiresms/`, `agentphone-vs-campfiresms/`, `agentcall-vs-campfiresms/`, `textbee-vs-campfiresms/`, `sendblue-vs-campfiresms/`, `callmemcp-vs-campfiresms/`, `ntfy-vs-campfiresms/`, `pushover-vs-campfiresms/`, `telegram-vs-campfiresms/`, `coding-agent-notification-options/`, `imessage-vs-sms-coding-agents/`, and `twilio-coding-agent-sms/` contain distinct static articles. They share `agent-guides.css`, include examples and related links, and are listed in the guides hub, sitemap, and `llms.txt`.
