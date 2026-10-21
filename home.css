@@ -6,7 +6,6 @@
 .compatibility-line { margin: 16px 0 0; color: var(--muted); font-size: 15px; }
 .signal-line { margin: 18px 0 0; color: var(--muted); font-size: 14px; }
 .exchange-demo { min-width: 0; margin: 0; }
-.exchange-caption { margin-bottom: 18px; color: var(--muted); font-size: 13px; }
 .exchange-screens { display: grid; grid-template-columns: minmax(0, 1fr) 34px minmax(0, .88fr); align-items: center; gap: 14px; }
 .agent-terminal { min-width: 0; overflow: hidden; border: 1px solid #333e38; border-radius: 12px; background: #202924; color: #e8eee9; box-shadow: 0 12px 30px #24231f10; }
 .terminal-bar { display: flex; align-items: center; gap: 10px; padding: 14px 12px; border-bottom: 1px solid #ffffff13; font-size: 12px; }

@@ -20,12 +20,12 @@
     }, true);
   </script>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Text Grok Bot with webhook wake | Campfire SMS</title>
-  <meta name="description" content="Text Grok Bot and get an SMS reply, even while your PC is off. Connect Campfire SMS, set up a webhook routine, and test the round trip.">
+  <title>Text Grok Bot about any task, even with your PC off | Campfire SMS</title>
+  <meta name="description" content="Text Grok Bot about any task and get an SMS reply, even while your PC is off. Connect Campfire SMS, set up a webhook routine, and test the round trip.">
   <link rel="canonical" href="https://campfiresms.com/guides/grok-bot-sms-routine.html">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Text Grok Bot with webhook wake | Campfire SMS">
-  <meta property="og:description" content="Text Grok Bot and get an SMS reply, even while your PC is off. Connect Campfire SMS, set up a webhook routine, and test the round trip.">
+  <meta property="og:title" content="Text Grok Bot about any task, even with your PC off | Campfire SMS">
+  <meta property="og:description" content="Text Grok Bot about any task and get an SMS reply, even while your PC is off. Connect Campfire SMS, set up a webhook routine, and test the round trip.">
   <meta property="og:url" content="https://campfiresms.com/guides/grok-bot-sms-routine.html">
   <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="../icon.css">
   <link rel="stylesheet" href="../pages.css">
   <link rel="stylesheet" href="../guides.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Text Grok Bot with webhook wake", "description": "Text Grok Bot and get an SMS reply, even while your PC is off. Connect Campfire SMS, set up a webhook routine, and test the round trip.", "mainEntityOfPage": "https://campfiresms.com/guides/grok-bot-sms-routine.html", "author": {"@type": "Organization", "name": "Campfire SMS", "url": "https://campfiresms.com/"}, "publisher": {"@type": "Organization", "name": "Campfire SMS", "url": "https://campfiresms.com/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Text Grok Bot about any task, even with your PC off", "description": "Text Grok Bot about any task and get an SMS reply, even while your PC is off. Connect Campfire SMS, set up a webhook routine, and test the round trip.", "dateModified": "2026-10-21", "mainEntityOfPage": "https://campfiresms.com/guides/grok-bot-sms-routine.html", "author": {"@type": "Organization", "name": "Campfire SMS", "url": "https://campfiresms.com/"}, "publisher": {"@type": "Organization", "name": "Campfire SMS", "url": "https://campfiresms.com/"}}</script>
 </head>
 <body class="manual-site guides-site">
 <a class="skip-link" href="#content">Skip to content</a>
@@ -51,11 +51,12 @@
 <main class="legal" id="content">
   <section class="legalhead">
     <span class="kicker"><a href="./">Guides</a> / Grok Bot</span>
-    <h1>Text Grok Bot with webhook wake</h1>
-    <p>Connect hosted MCP, set up a webhook routine, then send a text that starts work and gets an SMS reply—even while your PC is off.</p>
+    <h1>Text Grok Bot about any task, even with your PC off</h1>
+    <p>Text Grok Bot the way you would message it in chat: ask about a customer, an invoice, a reminder, or a coding task. Your text starts a cloud routine, and the Bot texts you back—even while your PC is off.</p>
     <p class="byline">By Campfire SMS</p>
   </section>
   <article>
+    <p>Grok Bot handles a text with the tools and access you have already given it, so it can do by SMS what it can do in Grok, and no more. Setup takes four steps: connect hosted MCP, create a webhook routine, save the wake connection, then test a real text and reply.</p>
     <p>Campfire SMS queues your incoming SMS and sends a wake event to Grok Bot. The routine retrieves the message through authenticated MCP tools, handles it, and can text you back. Grok’s <a href="https://cursor.com/help/grok-bot/routines">routine documentation</a> confirms that routines run in the cloud while your laptop is closed.</p>
     <h2 id="hosted-mcp">1. Connect the hosted MCP</h2>
     <p>Verify your phone through the setup link in the navigation, then create an installation for the Bot in your Campfire SMS account. Give it a recognizable label. Use the one-time installation command supplied by your account with <code>--credential-only</code>:</p>
