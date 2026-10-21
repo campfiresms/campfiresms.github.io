@@ -33,7 +33,7 @@ See [local setup](https://campfiresms.com/install.html#local-agents) and [Linux/
 ## Primary pages
 
 - [Home](https://campfiresms.com/): Grok webhook wake, one SMS example, and current pricing and message counting.
-- [Grok Bot webhook setup](https://campfiresms.com/guides/grok-bot-sms-routine.html): Hosted MCP, webhook routine, secure wake configuration, and a real text-and-reply test.
+- [Text Grok Bot about any task, even with your PC off](https://campfiresms.com/guides/grok-bot-sms-routine.html): Everyday and coding tasks by SMS. Hosted MCP, webhook routine, secure wake configuration, and a real text-and-reply test.
 - [Setup](https://campfiresms.com/install.html): Grok Bot first; local-agent installation, recovery, and removal second.
 - [Troubleshooting and FAQ](https://campfiresms.com/troubleshooting/): iPhone replies marked Not Delivered, missing replies, “No agent bridge is connected,” credential errors, Grok Bot wake, and message limits.
 - [Guides](https://campfiresms.com/guides/): Grok wake setup and supporting local-agent workflows.
