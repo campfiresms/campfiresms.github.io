@@ -80,3 +80,11 @@ See [local setup](https://campfiresms.com/install.html#local-agents) and [Linux/
 ## Skills
 
 - [campfiresms](https://campfiresms.com/.well-known/agent-skills/campfiresms/SKILL.md): Handle Grok webhook wake and use SMS with active local-agent tasks.
+
+## Contact and social
+
+- Support: support@campfiresms.com
+- [X](https://x.com/campfiresms): Message Campfire SMS here.
+- [Instagram](https://www.instagram.com/campfiresms/)
+- [YouTube](https://www.youtube.com/@CampfireSMS)
+- [Facebook](https://www.facebook.com/profile.php?id=61594268769076)
