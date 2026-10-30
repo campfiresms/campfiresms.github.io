@@ -51,7 +51,7 @@
       "name": "Troubleshooting and FAQ",
       "description": "Fixes for common Campfire SMS problems.",
       "inLanguage": "en-US",
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-10-30",
       "isPartOf": {
         "@type": "WebSite",
         "name": "Campfire SMS",
@@ -129,6 +129,14 @@
         },
         {
           "@type": "Question",
+          "name": "Which countries does Campfire SMS work in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The US and Canada, for now. You need a US or Canadian mobile number to sign up and to text with your agent. If you’re somewhere else, email support@campfiresms.com and we’ll let you know when that changes."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "My install command expired or was already used",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -193,10 +201,26 @@
         },
         {
           "@type": "Question",
+          "name": "I replied by text, but ChatGPT didn’t continue",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In an ordinary ChatGPT chat, that’s expected. ChatGPT reads your reply the next time it checks, usually when you come back and send a message such as “Check my texts.” Only a Work chat that has subscribed to your SMS replies continues on its own. If a Work task didn’t continue, check that it said it subscribed, that the subscription hasn’t expired (it lasts up to seven days), and that no approval prompt is waiting in ChatGPT."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ChatGPT says a Campfire SMS bridge is already active",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your phone can have one open bridge, and another agent, such as Grok Bot or Claude Code, has it. Ask that agent to close its bridge, or text !bridge off. Then ask ChatGPT to open the bridge again."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "What happens when I run out of messages?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Messaging pauses. Your agent can’t send texts, and texts you send get no reply. There are no overage charges. Sign in to check your balance, subscribe, or buy a pack. Purchased credits never expire. See pricing."
+            "text": "Messaging pauses. Your agent can’t send texts, and texts you send get no reply. Campfire SMS sends you one free heads-up text when you’re down to 5 messages, and no second text at zero. There are no overage charges. Sign in to check your balance, subscribe, or buy a pack. Purchased credits never expire. See pricing."
           }
         },
         {
@@ -204,7 +228,7 @@
           "name": "What counts as a message?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Each text sent or received counts as one message. That includes your replies and automatic texts like “No agent bridge is connected” and “Setup complete.” New accounts start with 40 free messages."
+            "text": "Each text sent or received counts as one message. That includes your replies and automatic texts like “No agent bridge is connected” and “Setup complete.” New accounts start with 20 free messages."
           }
         },
         {
@@ -237,7 +261,7 @@
     <span class="kicker">Help</span>
     <h1>Troubleshooting and FAQ</h1>
     <p>Most problems come from one of three places: your phone, the connection between your agent and Campfire SMS, or your message balance. Find what you’re seeing below. Still stuck? Email <a href="mailto:support@campfiresms.com">support@campfiresms.com</a> or message us on <a href="https://x.com/campfiresms" rel="me">X</a>.</p>
-    <p><strong>Jump to:</strong> <a href="#texts">Texts and replies</a> · <a href="#setup">Setup and connection</a> · <a href="#grok-bot">Grok Bot</a> · <a href="#messages">Messages and billing</a> · <a href="#privacy">Privacy</a> · <a href="#contact">Contact support</a></p>
+    <p><strong>Jump to:</strong> <a href="#texts">Texts and replies</a> · <a href="#setup">Setup and connection</a> · <a href="#grok-bot">Grok Bot</a> · <a href="#chatgpt">ChatGPT</a> · <a href="#messages">Messages and billing</a> · <a href="#privacy">Privacy</a> · <a href="#contact">Contact support</a></p>
   </section>
   <article>
     <h2 id="texts">Texts and replies</h2>
@@ -286,6 +310,10 @@
 
     <h2 id="setup">Setup and connection</h2>
 
+    <details id="countries" class="faq"><summary>Which countries does Campfire SMS work in?</summary>
+      <p>The US and Canada, for now. You need a US or Canadian mobile number to sign up and to text with your agent. If you’re somewhere else, email <a href="mailto:support@campfiresms.com">support@campfiresms.com</a> and we’ll let you know when that changes.</p>
+    </details>
+
     <details id="install-expired" class="faq"><summary>My install command expired or was already used</summary>
       <p>Install commands work once and expire after 10 minutes. Sign in, go to <strong>Add computers</strong>, and create a new one.</p>
     </details>
@@ -332,14 +360,25 @@
       <p>A successful webhook test only shows that Grok accepted a run. The <a href="/guides/grok-bot-sms-routine.html">Grok Bot walkthrough</a> covers the full test.</p>
     </details>
 
+    <h2 id="chatgpt">ChatGPT</h2>
+
+    <details id="chatgpt-no-continue" class="faq"><summary>I replied by text, but ChatGPT didn’t continue</summary>
+      <p>In an ordinary ChatGPT chat, that’s expected. ChatGPT reads your reply the next time it checks, usually when you come back and send a message such as “Check my texts.” Only a Work chat that has subscribed to your SMS replies continues on its own.</p>
+      <p>If a Work task didn’t continue, check that it said it subscribed, that the subscription hasn’t expired (it lasts up to seven days), and that no approval prompt is waiting in ChatGPT. The <a href="/guides/chatgpt-sms-plugin.html#work-wake">ChatGPT setup guide</a> covers the Work steps.</p>
+    </details>
+
+    <details id="chatgpt-bridge-active" class="faq"><summary>ChatGPT says a Campfire SMS bridge is already active</summary>
+      <p>Your phone can have one open bridge, and another agent, such as Grok Bot or Claude Code, has it. Ask that agent to close its bridge, or text <code>!bridge off</code>. Then ask ChatGPT to open the bridge again.</p>
+    </details>
+
     <h2 id="messages">Messages and billing</h2>
 
     <details id="out-of-messages" class="faq"><summary>What happens when I run out of messages?</summary>
-      <p>Messaging pauses. Your agent can’t send texts, and texts you send get no reply. There are no overage charges. Sign in to check your balance, subscribe, or buy a pack. Purchased credits never expire. See <a href="/#pricing">pricing</a>.</p>
+      <p>Messaging pauses. Your agent can’t send texts, and texts you send get no reply. Campfire SMS sends you one free heads-up text when you’re down to 5 messages, and no second text at zero. There are no overage charges. Sign in to check your balance, subscribe, or buy a pack. Purchased credits never expire. See <a href="/#pricing">pricing</a>.</p>
     </details>
 
     <details id="what-counts" class="faq"><summary>What counts as a message?</summary>
-      <p>Each text sent or received counts as one message. That includes your replies and automatic texts like “No agent bridge is connected” and “Setup complete.” New accounts start with 40 free messages.</p>
+      <p>Each text sent or received counts as one message. That includes your replies and automatic texts like “No agent bridge is connected” and “Setup complete.” New accounts start with 20 free messages.</p>
     </details>
 
     <h2 id="privacy">Privacy</h2>
@@ -351,7 +390,7 @@
     <h2 id="contact">Still stuck?</h2>
     <p>Email <a href="mailto:support@campfiresms.com">support@campfiresms.com</a> with:</p>
     <ul>
-      <li>What you’re connecting (Grok Bot, Codex, Claude Code, Cursor, Grok Build, OpenCode, or something else) and your operating system</li>
+      <li>What you’re connecting (ChatGPT, Grok Bot, Codex, Claude Code, Cursor, Grok Build, OpenCode, or something else) and your operating system</li>
       <li>The exact error message, and roughly when it happened</li>
       <li>Your phone carrier, if the problem is with texts</li>
     </ul>

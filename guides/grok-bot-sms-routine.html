@@ -34,7 +34,11 @@
   <link rel="stylesheet" href="../icon.css">
   <link rel="stylesheet" href="../pages.css">
   <link rel="stylesheet" href="../guides.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Text Grok Bot about any task, even with your PC off", "description": "Text Grok Bot about any task and get an SMS reply, even while your PC is off. Connect Campfire SMS, set up a webhook routine, and test the round trip.", "dateModified": "2026-10-21", "mainEntityOfPage": "https://campfiresms.com/guides/grok-bot-sms-routine.html", "author": {"@type": "Organization", "name": "Campfire SMS", "url": "https://campfiresms.com/"}, "publisher": {"@type": "Organization", "name": "Campfire SMS", "url": "https://campfiresms.com/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Text Grok Bot about any task, even with your PC off", "description": "Text Grok Bot about any task and get an SMS reply, even while your PC is off. Connect Campfire SMS, set up a webhook routine, and test the round trip.", "dateModified": "2026-10-30", "mainEntityOfPage": "https://campfiresms.com/guides/grok-bot-sms-routine.html", "author": {"@type": "Organization", "name": "Campfire SMS", "url": "https://campfiresms.com/"}, "publisher": {"@type": "Organization", "name": "Campfire SMS", "url": "https://campfiresms.com/"}}</script>
+  <script src="../assets/video.js" defer></script>
+  <!-- When the setup video is live: replace VIDEO_ID (twice), set uploadDate and duration, then remove the comment markers around this block.
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "Grok Bot webhook wake setup: text Grok with your PC off", "description": "Connect Campfire SMS hosted MCP to Grok Bot, create a webhook routine, save the wake connection, and test a real text and reply.", "thumbnailUrl": "https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg", "uploadDate": "2026-11-01", "duration": "PT8M", "embedUrl": "https://www.youtube-nocookie.com/embed/VIDEO_ID", "publisher": {"@type": "Organization", "name": "Campfire SMS", "url": "https://campfiresms.com/"}}</script>
+  -->
 </head>
 <body class="manual-site guides-site">
 <a class="skip-link" href="#content">Skip to content</a>
@@ -58,6 +62,8 @@
   <article>
     <p>Grok Bot handles a text with the tools and access you have already given it, so it can do by SMS what it can do in Grok, and no more. Setup takes four steps: connect hosted MCP, create a webhook routine, save the wake connection, then test a real text and reply.</p>
     <p>Campfire SMS queues your incoming SMS and sends a wake event to Grok Bot. The routine retrieves the message through authenticated MCP tools, handles it, and can text you back. Grok’s <a href="https://cursor.com/help/grok-bot/routines">routine documentation</a> confirms that routines run in the cloud while your laptop is closed.</p>
+    <!-- Setup video: paste the YouTube video ID (the 11 characters after watch?v=) into data-video-id below. While it is empty this section stays hidden. Then enable the VideoObject block in <head>. -->
+    <section class="video-slot" data-video-id="" data-video-title="Grok Bot webhook wake setup" hidden aria-labelledby="video"><h2 id="video">Watch the setup</h2><div class="video-frame"><button class="video-play" type="button" aria-label="Play video: Grok Bot webhook wake setup"><span aria-hidden="true">▶</span></button></div><p class="video-note">The video loads from YouTube when you press play.</p></section>
     <h2 id="hosted-mcp">1. Connect the hosted MCP</h2>
     <p>Verify your phone through the setup link in the navigation, then create an installation for the Bot in your Campfire SMS account. Give it a recognizable label. Use the one-time installation command supplied by your account with <code>--credential-only</code>:</p>
     <pre><code>npx -y @campfiresms/setup YOUR_INSTALLATION_CODE --credential-only</code></pre>

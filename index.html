@@ -100,39 +100,39 @@
             "name": "Free start",
             "price": "0",
             "priceCurrency": "USD",
-            "description": "40 messages after phone verification. No card required."
+            "description": "20 messages after phone verification. No card required."
           },
           {
             "@type": "Offer",
             "name": "Monthly plan",
             "price": "8",
             "priceCurrency": "USD",
-            "description": "500 messages per month. Unused monthly messages do not roll over."
+            "description": "400 messages per month. Unused monthly messages do not roll over."
           },
           {
             "@type": "Offer",
-            "name": "200 messages",
+            "name": "150 messages",
             "price": "5",
             "priceCurrency": "USD",
             "description": "One-time pack. Credits do not expire."
           },
           {
             "@type": "Offer",
-            "name": "450 messages",
+            "name": "350 messages",
             "price": "10",
             "priceCurrency": "USD",
             "description": "One-time pack. Credits do not expire."
           },
           {
             "@type": "Offer",
-            "name": "1200 messages",
+            "name": "800 messages",
             "price": "20",
             "priceCurrency": "USD",
             "description": "One-time pack. Credits do not expire."
           },
           {
             "@type": "Offer",
-            "name": "2500 messages",
+            "name": "2200 messages",
             "price": "40",
             "priceCurrency": "USD",
             "description": "One-time pack. Credits do not expire."
@@ -208,15 +208,15 @@
   <section class="manual-section" id="setup">
     <div class="section-copy">
       <h2>Connect the agent you already use.</h2>
-      <p class="section-intro">Grok Bot, Codex, Grok Build, Claude Code, OpenCode, and other compatible MCP or HTTP API hosts. Grok Bot runs in Grok’s cloud, so a text can start it while your PC is off. Grok Build is Grok’s coding agent on your computer, and it works like Codex or Claude Code.</p>
+      <p class="section-intro">ChatGPT, Grok Bot, Codex, Grok Build, Claude Code, OpenCode, and other compatible MCP or HTTP API hosts. Grok Bot runs in Grok’s cloud, so a text can start it while your PC is off. Grok Build is Grok’s coding agent on your computer, and it works like Codex or Claude Code.</p>
       <ol class="procedure">
         <li>
           <h3>Verify your phone</h3>
-          <p>Create your Campfire SMS account and verify your number. You get 40 free messages to try it.</p>
+          <p>Create your Campfire SMS account and verify your US or Canadian mobile number. You get 20 free messages to try it.</p>
         </li>
         <li>
           <h3>Connect your agent</h3>
-          <p>Use hosted MCP and webhook wake for Grok Bot, or install the local connector for an agent on your computer.</p>
+          <p>Add the Campfire SMS plugin in ChatGPT, use hosted MCP and webhook wake for Grok Bot, or install the local connector for an agent on your computer.</p>
         </li>
         <li>
           <h3>Send a text. Get a reply.</h3>
@@ -226,25 +226,26 @@
       <details class="connection-details" id="local-agents">
         <summary>What your connection needs</summary>
         <div>
+          <p><strong>ChatGPT:</strong> Install the Campfire SMS plugin and sign in with your phone and PIN. Ordinary chats read your replies when they next check; a Work chat can subscribe so your reply resumes the task. <a href="guides/chatgpt-sms-plugin.html">ChatGPT setup guide</a>.</p>
           <p><strong>Grok Bot:</strong> Configure hosted MCP and an active webhook routine. Incoming texts can start the cloud routine while your PC is off. <a href="guides/grok-bot-sms-routine.html">Grok Bot walkthrough</a>.</p>
           <p><strong>Local agents:</strong> Keep your computer awake and online with the agent running and checking for replies. Setup needs Node.js 18+ and Python 3.12+. The connector does not wake a stopped session. <a href="install.html#local-agents">Local-agent setup</a>.</p>
         </div>
       </details>
       <p class="how-note">Your agent uses its existing tools and permissions. SMS replies can steer that work; native permission approvals stay in the agent.</p>
       <p class="setup-guide-link"><a class="quiet-link" href="install.html">Full setup instructions <span aria-hidden="true">→</span></a></p>
-      <p class="setup-guide-link">Keep your existing workspace: <a href="/guides/grok-bot-sms-routine.html">Grok Bot by SMS, even with your PC off</a> · <a href="/codex-sms/">Codex by SMS</a> · <a href="/claude-code-sms/">Claude Code by SMS</a> · <a href="/photon-vs-campfiresms/">Photon vs Campfire SMS</a> · <a href="/nudgebell-vs-campfiresms/">NudgeBell vs Campfire SMS</a> · <a href="/agentphone-vs-campfiresms/">AgentPhone vs Campfire SMS</a> · <a href="/agentcall-vs-campfiresms/">AgentCall vs Campfire SMS</a> · <a href="/textbee-vs-campfiresms/">textbee vs Campfire SMS</a> · <a href="/sendblue-vs-campfiresms/">Sendblue vs Campfire SMS</a> · <a href="/callmemcp-vs-campfiresms/">CallMeMCP vs Campfire SMS</a> · <a href="/ntfy-vs-campfiresms/">ntfy vs Campfire SMS</a> · <a href="/pushover-vs-campfiresms/">Pushover vs Campfire SMS</a> · <a href="/telegram-vs-campfiresms/">Claude Code Telegram plugin vs Campfire SMS</a>.</p>
+      <p class="setup-guide-link">Keep your existing workspace: <a href="/guides/grok-bot-sms-routine.html">Grok Bot by SMS, even with your PC off</a> · <a href="/chatgpt-sms/">ChatGPT SMS plugin</a> · <a href="/codex-sms/">Codex by SMS</a> · <a href="/claude-code-sms/">Claude Code by SMS</a> · <a href="/photon-vs-campfiresms/">Photon vs Campfire SMS</a> · <a href="/nudgebell-vs-campfiresms/">NudgeBell vs Campfire SMS</a> · <a href="/agentphone-vs-campfiresms/">AgentPhone vs Campfire SMS</a> · <a href="/agentcall-vs-campfiresms/">AgentCall vs Campfire SMS</a> · <a href="/textbee-vs-campfiresms/">textbee vs Campfire SMS</a> · <a href="/sendblue-vs-campfiresms/">Sendblue vs Campfire SMS</a> · <a href="/callmemcp-vs-campfiresms/">CallMeMCP vs Campfire SMS</a> · <a href="/ntfy-vs-campfiresms/">ntfy vs Campfire SMS</a> · <a href="/pushover-vs-campfiresms/">Pushover vs Campfire SMS</a> · <a href="/telegram-vs-campfiresms/">Claude Code Telegram plugin vs Campfire SMS</a>.</p>
       <p class="setup-guide-link">While you're away: <a href="/build-complete-sms/">Build completion texts</a> · <a href="/pull-request-sms-notifications/">PR notifications</a> · <a href="/agent-needs-input/">Agent questions you can answer by SMS</a> · <a href="/coding-agent-notification-options/">All the ways to hear from your agent</a>.</p>
     </div>
   </section>
   <section class="manual-section" id="pricing">
     <div class="section-copy">
       <h2>Pricing</h2>
-      <p class="section-intro">Start with 40 free messages after phone verification. No card required. Then subscribe, buy a pack, or use both.</p>
+      <p class="section-intro">Start with 20 free messages after phone verification. No card required. Then subscribe, buy a pack, or use both.</p>
       <div class="pricing-options">
         <div class="monthly-plan">
           <h3>Monthly plan</h3>
           <p class="price">$8 <span>/ month</span></p>
-          <p><strong>500 messages per month.</strong><br>Renews automatically. No daily cap.</p>
+          <p><strong>400 messages per month.</strong><br>Renews automatically. No daily cap.</p>
           <p>Monthly messages are used before purchased credits. Unused monthly messages do not roll over.</p>
         </div>
         <div class="credit-packs">
@@ -254,15 +255,15 @@
             <caption class="sr-only">One-time message pack prices in US dollars</caption>
             <thead><tr><th scope="col">Messages</th><th scope="col">One-time price</th></tr></thead>
             <tbody>
-              <tr><th scope="row">200</th><td>$5</td></tr>
-              <tr><th scope="row">450</th><td>$10</td></tr>
-              <tr><th scope="row">1,200</th><td>$20</td></tr>
-              <tr><th scope="row">2,500</th><td>$40</td></tr>
+              <tr><th scope="row">150</th><td>$5</td></tr>
+              <tr><th scope="row">350</th><td>$10</td></tr>
+              <tr><th scope="row">800</th><td>$20</td></tr>
+              <tr><th scope="row">2,200</th><td>$40</td></tr>
             </tbody>
           </table>
         </div>
       </div>
-      <p class="pricing-note">Each text sent or received counts as one message. No automatic overage charges: messaging pauses when your included messages and purchased credits run out. Prices are in USD; carrier message and data rates may apply.</p>
+      <p class="pricing-note">Each text sent or received counts as one message. No automatic overage charges: messaging pauses when your included messages and purchased credits run out. Prices are in USD; carrier message and data rates may apply. Campfire SMS works with US and Canadian mobile numbers for now.</p>
     </div>
   </section>
 </main>

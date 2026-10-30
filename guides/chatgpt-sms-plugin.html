@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Google tag (gtag.js) - GA4 G-VWDPRPD2SK -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWDPRPD2SK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VWDPRPD2SK');
+    // sign_up_start: signup happens on api.campfiresms.com/join, so count clicks on any link to it. No PII in params.
+    document.addEventListener('click', function (e) {
+      try {
+        var a = e.target && e.target.closest && e.target.closest('a[href^="https://api.campfiresms.com/join"]');
+        if (!a || typeof window.gtag !== 'function') return;
+        var where = a.closest('header') ? 'header' : (a.closest('footer') ? 'footer' : 'content');
+        window.gtag('event', 'sign_up_start', { method: 'join_link', link_location: where, transport_type: 'beacon' });
+      } catch (err) {}
+    }, true);
+  </script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Set up the ChatGPT SMS plugin, step by step | Campfire SMS</title>
+  <meta name="description" content="Install Campfire SMS in ChatGPT, connect your phone, approve the first text, and reply. Then set up a Work task that picks back up when you text.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://campfiresms.com/guides/chatgpt-sms-plugin.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Set up the ChatGPT SMS plugin, step by step | Campfire SMS">
+  <meta property="og:description" content="Install Campfire SMS in ChatGPT, connect your phone, approve the first text, and reply. Then set up a Work task that picks back up when you text.">
+  <meta property="og:url" content="https://campfiresms.com/guides/chatgpt-sms-plugin.html">
+  <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Set up the ChatGPT SMS plugin, step by step | Campfire SMS">
+  <meta name="twitter:description" content="Install Campfire SMS in ChatGPT, connect your phone, approve the first text, and reply. Then set up a Work task that picks back up when you text.">
+  <meta name="twitter:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <link rel="icon" type="image/png" href="../assets/favicon-32.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../icon.css">
+  <link rel="stylesheet" href="../pages.css">
+  <link rel="stylesheet" href="../guides.css">
+  <script src="../assets/video.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Set up Campfire SMS in ChatGPT, step by step", "description": "Install Campfire SMS in ChatGPT, connect your phone, approve the first text, and reply. Then set up a Work task that picks back up when you text.", "datePublished": "2026-10-30", "dateModified": "2026-10-30", "image": "https://campfiresms.com/assets/chatgpt-bridge-active.webp", "mainEntityOfPage": "https://campfiresms.com/guides/chatgpt-sms-plugin.html", "author": {"@type": "Organization", "name": "Campfire SMS", "url": "https://campfiresms.com/"}, "publisher": {"@type": "Organization", "name": "Campfire SMS", "url": "https://campfiresms.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Campfire SMS", "item": "https://campfiresms.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://campfiresms.com/guides/"}, {"@type": "ListItem", "position": 3, "name": "ChatGPT setup", "item": "https://campfiresms.com/guides/chatgpt-sms-plugin.html"}]}]}</script>
+  <!-- When the setup video is live: replace VIDEO_ID (twice), set uploadDate and duration, then remove the comment markers around this block.
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "Text ChatGPT from your phone: Campfire SMS plugin setup", "description": "Install the Campfire SMS plugin in ChatGPT, connect your phone, approve the first text, reply, and set up a Work task that resumes when you reply.", "thumbnailUrl": "https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg", "uploadDate": "2026-11-01", "duration": "PT6M", "embedUrl": "https://www.youtube-nocookie.com/embed/VIDEO_ID", "publisher": {"@type": "Organization", "name": "Campfire SMS", "url": "https://campfiresms.com/"}}</script>
+  -->
+</head>
+<body class="manual-site guides-site">
+<a class="skip-link" href="#content">Skip to content</a>
+<header>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <nav aria-label="Primary navigation">
+    <a href="/install.html">Setup</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/guides/">Guides</a>
+    <a href="https://api.campfiresms.com/login">Log in</a>
+    <a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a>
+  </nav>
+</header>
+<main class="legal" id="content">
+  <section class="legalhead">
+    <span class="kicker"><a href="./">Guides</a> / ChatGPT</span>
+    <h1>Set up Campfire SMS in ChatGPT, step by step</h1>
+    <p>About ten minutes. When you’re done, ChatGPT can text you and read your replies, and a Work task can pick back up when you text.</p>
+    <p class="byline">By Campfire SMS · Published <time datetime="2026-10-30">October 30, 2026</time></p>
+  </section>
+  <article>
+    <p>Campfire SMS is a ChatGPT plugin. It works in ordinary chats and in Work chats. Both can text you and read your replies. Only Work can subscribe to your replies, so that a text you send resumes the task while you’re away. Steps 1 to 5 work everywhere. Step 6 is for Work. For an overview first, see <a href="/chatgpt-sms/">ChatGPT SMS</a>.</p>
+    <!-- Setup video: paste the YouTube video ID (the 11 characters after watch?v=) into data-video-id below. While it is empty this section stays hidden. Then enable the VideoObject block in <head>. -->
+    <section class="video-slot" data-video-id="" data-video-title="Campfire SMS ChatGPT plugin setup" hidden aria-labelledby="video"><h2 id="video">Watch the setup</h2><div class="video-frame"><button class="video-play" type="button" aria-label="Play video: Campfire SMS ChatGPT plugin setup"><span aria-hidden="true">▶</span></button></div><p class="video-note">The video loads from YouTube when you press play.</p></section>
+    <h2 id="before">Before you start</h2>
+    <ul>
+      <li>A US or Canadian mobile number that can send and receive texts.</li>
+      <li>A ChatGPT account where you can open <strong>Plugins</strong> (or <strong>Apps</strong>). Availability depends on your plan, workspace, and region, and a workspace admin may need to allow Campfire SMS.</li>
+      <li>For reply wake: a Work chat on chatgpt.com, or in the ChatGPT desktop app with <strong>Cloud</strong> selected.</li>
+      <li>Nothing to install on your computer. The ChatGPT plugin needs no install command, Node.js, or Python.</li>
+    </ul>
+    <h2 id="account">1. Create your Campfire SMS account</h2>
+    <ol>
+      <li>Open <a href="https://api.campfiresms.com/join">Start free setup</a>.</li>
+      <li>Enter your mobile number, check the consent box, and choose <strong>Send verification code</strong>.</li>
+      <li>Type the code from the text and choose <strong>Verify</strong>.</li>
+      <li>Choose a six-digit PIN, confirm it, and choose <strong>Save PIN and continue</strong>. You’ll use your phone number and this PIN to connect ChatGPT.</li>
+    </ol>
+    <p>The next screen shows an install command for agents on a computer. ChatGPT doesn’t need it, so you can close that page. Your account starts with 20 free messages.</p>
+    <h2 id="install">2. Install Campfire SMS in ChatGPT</h2>
+    <ol>
+      <li>Open the <a href="https://chatgpt.com/plugins/plugin_asdk_app_6ad15caa12d08191b5663247ed3d583a">Campfire SMS plugin page in ChatGPT</a>. Sign in to ChatGPT if it asks.</li>
+      <li>If that link doesn’t open for you, open <strong>Plugins</strong> in ChatGPT (some accounts show <strong>Apps</strong> instead) and search for <strong>Campfire SMS</strong>.</li>
+      <li>Choose <strong>Install plugin</strong> if it’s shown, then <strong>Connect</strong>.</li>
+    </ol>
+    <p>OpenAI’s <a href="https://help.openai.com/en/articles/20001256-plugins-in-chatgpt">Plugins in ChatGPT</a> help article shows where these menus are on each surface.</p>
+    <h2 id="connect">3. Sign in and connect your phone</h2>
+    <p>ChatGPT opens a Campfire SMS page called <strong>Connect Campfire SMS</strong>.</p>
+    <ol>
+      <li>Enter your phone number and PIN, then choose <strong>Sign in</strong>. If you just created your account in this browser, you’ll go straight to the next screen.</li>
+      <li>Check that the phone ending shown is yours, then choose <strong>Connect</strong>.</li>
+      <li>You’re sent back to ChatGPT.</li>
+    </ol>
+    <p>Forgot your PIN? Use <strong>Recover your PIN</strong> on that page. Connecting adds an installation named “ChatGPT / Codex” to your Campfire SMS account. An account can have five active installations. If you’re at five, the connection fails with <code>installation_limit</code>: sign in, open <strong>Manage installation</strong> on one you don’t use, choose <strong>Revoke access</strong>, and connect again. Disconnecting and reconnecting ChatGPT can add a new installation, so revoke old ones you no longer need.</p>
+    <h2 id="first-text">4. Open the bridge and send a test text</h2>
+    <p>Start a new chat. Type <strong>@</strong> and choose <strong>Campfire SMS</strong> (or open <strong>+</strong>, then <strong>More</strong>), then send:</p>
+    <blockquote><p>Use Campfire SMS for updates and replies while I am away.</p></blockquote>
+    <p>ChatGPT opens a bridge to your phone and confirms it:</p>
+    <figure class="guide-figure"><img src="../assets/chatgpt-bridge-active.webp" width="1000" height="617" loading="lazy" alt="A ChatGPT reply labeled “Campfire bridge active” that says the CampfireSMS bridge is open, lists what it can do (send updates, check replies, continue the task, send a completion message), and notes that automatic SMS wake-and-resume needs a ChatGPT Work task."><figcaption>An ordinary chat after opening the bridge. ChatGPT notes that automatic wake needs Work.</figcaption></figure>
+    <p>Then ask:</p>
+    <blockquote><p>Text me a short message confirming the bridge is open.</p></blockquote>
+    <p>ChatGPT asks before it sends:</p>
+    <figure class="guide-figure"><img src="../assets/chatgpt-allow-prompt.webp" width="1000" height="376" loading="lazy" alt="ChatGPT prompt reading “Allow ChatGPT to use Campfire SMS? Send a concise SMS to the account’s own verified phone,” with Always allow, Deny, and Allow once buttons."><figcaption>ChatGPT asks before Campfire SMS sends a text, because a sent text can’t be taken back.</figcaption></figure>
+    <p>Choose <strong>Always allow</strong> if you’ll use Campfire SMS while you’re away, so a later text doesn’t wait on a click. Choose <strong>Allow once</strong> to approve each text yourself. ChatGPT decides how long that choice lasts.</p>
+    <p>The text arrives from (608) 422-4987 and starts with “Campfire SMS:”. Save that number as a contact. On iPhones with Communication Limits turned on, that keeps your replies from failing.</p>
+    <h2 id="reply">5. Reply by text</h2>
+    <ol>
+      <li>Reply to the text from your phone, for example: “Got it. Keep updates to one line.”</li>
+      <li>In the chat, ask: “Check my texts.”</li>
+      <li>ChatGPT retrieves your reply, uses it, and marks it handled so it won’t come back.</li>
+    </ol>
+    <p>That’s how replies work in an ordinary chat: ChatGPT reads them when it checks, usually when you come back and send a message. It doesn’t jump back into the chat by itself when your text arrives. For that, use Work.</p>
+    <p>Keep each reply to one text: 160 characters, or 70 if it includes an emoji. Longer replies don’t reach ChatGPT.</p>
+    <h2 id="work-wake">6. Let a text reply resume a Work task</h2>
+    <p>A Work chat can subscribe to your SMS replies. When you text back, ChatGPT gets an event, retrieves your reply, and continues the task. OpenAI documents these <a href="https://developers.openai.com/plugins/build/mcp-events">MCP events</a> for Work chats on ChatGPT web and in the desktop app with Cloud selected.</p>
+    <ol>
+      <li>Open a Work chat on chatgpt.com, or in the desktop app with <strong>Cloud</strong> selected.</li>
+      <li>Describe the task, and add:
+        <blockquote><p>Use Campfire SMS. Text me when you need a decision or when you’re done. When I reply by SMS, retrieve my reply and continue this task.</p></blockquote></li>
+      <li>Wait for ChatGPT to confirm that it opened the bridge and subscribed to your SMS replies. If it says it can’t subscribe, events aren’t available in that chat or on your account yet. The texting tools still work.</li>
+      <li>Before you leave, have it send one test text and approve it with <strong>Always allow</strong>.</li>
+      <li>When its next question arrives, reply from your phone. Check back later to see the task pick up your answer.</li>
+    </ol>
+    <p>Good to know:</p>
+    <ul>
+      <li><strong>One task at a time.</strong> Your phone has one open bridge, and one task can subscribe to it. Another chat that tries gets an “already subscribed” error.</li>
+      <li><strong>A subscription lasts up to seven days.</strong> For longer work, start a fresh task or ask the task to subscribe again.</li>
+      <li><strong>The event carries IDs only.</strong> ChatGPT fetches your reply text through its signed-in connection. It never sees your phone number.</li>
+      <li><strong>Replies wait until they’re handled.</strong> If an event is missed, your reply stays in the queue and the task gets it the next time it checks.</li>
+    </ul>
+    <h2 id="stop">7. Finish, pause, or disconnect</h2>
+    <ul>
+      <li><strong>Done with a task:</strong> ask ChatGPT to close the Campfire SMS bridge. Closing it also stops reply events.</li>
+      <li><strong>From your phone:</strong> text <code>!bridge off</code> to close the open bridge without opting out.</li>
+      <li><strong>Stop all texts:</strong> text <strong>STOP</strong>. Text <strong>START</strong> to turn them back on.</li>
+      <li><strong>Disconnect ChatGPT:</strong> sign in to Campfire SMS, open <strong>Manage installation</strong> on the ChatGPT installation, and choose <strong>Revoke access</strong>. That closes its bridge and stops events.</li>
+    </ul>
+    <h2 id="troubleshooting">If something isn’t working</h2>
+    <ul>
+      <li><strong>Campfire SMS isn’t in Plugins:</strong> use the <a href="https://chatgpt.com/plugins/plugin_asdk_app_6ad15caa12d08191b5663247ed3d583a">direct plugin link</a>, or look under Apps instead. In a business workspace, an admin may need to allow it in <strong>Admin → Plugins</strong>. Availability also varies by plan and region.</li>
+      <li><strong><code>installation_limit</code> when connecting:</strong> an account can have five active installations. Revoke one you don’t use, then connect again.</li>
+      <li><strong>ChatGPT says a bridge is already active:</strong> another agent, such as Grok Bot or Claude Code, has your phone’s bridge open. Ask it to close the bridge, or text <code>!bridge off</code>, then ask ChatGPT to open it again.</li>
+      <li><strong>You got “No agent bridge is connected”:</strong> ChatGPT’s bridge is closed. Ask ChatGPT to open it, then reply to its next text.</li>
+      <li><strong>Your reply didn’t continue the task:</strong> in an ordinary chat, ask “Check my texts.” In Work, confirm the task subscribed, the subscription hasn’t expired, and no approval prompt is waiting in ChatGPT.</li>
+      <li><strong>Replies show “Not Delivered” on your iPhone:</strong> see the <a href="/troubleshooting/#not-delivered">Not Delivered fixes</a>.</li>
+      <li><strong>Texts stopped:</strong> you may be out of messages. Sign in to check your balance, or see <a href="/#pricing">pricing</a>.</li>
+    </ul>
+    <p>More fixes are in <a href="/troubleshooting/">Troubleshooting and FAQ</a>, or email <a href="mailto:support@campfiresms.com">support@campfiresms.com</a>. Never send your PIN or a verification code.</p>
+    <p>Your SMS replies steer work ChatGPT is already doing. They don’t grant new permissions or answer ChatGPT’s own approval prompts. SMS isn’t end-to-end encrypted, so keep passwords and codes out of texts.</p>
+    <p>Want a text to start work while your PC is off, with no chat open? That’s <a href="grok-bot-sms-routine.html">Grok Bot with webhook wake</a>.</p>
+  </article>
+</main>
+<footer>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <p>SMS bridge for AI agents.</p>
+  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/troubleshooting/">Help</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:support@campfiresms.com">Contact</a><a href="https://x.com/campfiresms" rel="me">Message on X</a><a href="https://www.instagram.com/campfiresms/" rel="me">Instagram</a><a href="https://www.youtube.com/@CampfireSMS" rel="me">YouTube</a><a href="https://www.facebook.com/profile.php?id=61594268769076" rel="me">Facebook</a></div>
+  <small>© 2026 Campfire SMS</small>
+</footer>
+</body>
+</html>

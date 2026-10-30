@@ -20,9 +20,9 @@
     }, true);
   </script>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Text your coding agent from your phone. Set up Grok Bot to answer texts while your PC is off, or connect Codex, Claude Code, Cursor, Grok Build, or OpenCode on your computer.">
+  <meta name="description" content="Text your AI agent from your phone. Add the Campfire SMS plugin to ChatGPT, set up Grok Bot to answer texts while your PC is off, or connect Codex, Claude Code, Cursor, Grok Build, or OpenCode.">
   <link rel="canonical" href="https://campfiresms.com/install.html">
-  <title>Set up Campfire SMS with Grok Bot or local agents | Campfire SMS</title>
+  <title>Set up Campfire SMS with ChatGPT, Grok Bot, or local agents | Campfire SMS</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
@@ -45,11 +45,21 @@
   <section class="legalhead">
     <span class="kicker">Setup</span>
     <h1>Connect your phone to your agents</h1>
-    <p>First, create your Campfire SMS account and verify your phone. Then connect Grok Bot to wake when you text, or an active local coding agent for updates and replies.</p>
-    <p><strong>Which path is for me?</strong> Want texts answered while your PC is off? → <a href="#grok-bot">Grok Bot</a>. Working in Codex, Claude Code, Grok Build, or OpenCode on your computer? → <a href="#local-agents">Local agents</a>. Using Cursor? → <a href="#cursor">Cursor</a>. Something not working? → <a href="/troubleshooting/">Troubleshooting and FAQ</a>.</p>
+    <p>First, create your Campfire SMS account and verify your phone. Then connect ChatGPT, Grok Bot to wake when you text, or an active local coding agent for updates and replies.</p>
+    <p>Campfire SMS works with US and Canadian mobile numbers for now.</p>
+    <p><strong>Which path is for me?</strong> Using ChatGPT? → <a href="#chatgpt">ChatGPT plugin</a>. Want texts answered while your PC is off? → <a href="#grok-bot">Grok Bot</a>. Working in Codex, Claude Code, Grok Build, or OpenCode on your computer? → <a href="#local-agents">Local agents</a>. Using Cursor? → <a href="#cursor">Cursor</a>. Something not working? → <a href="/troubleshooting/">Troubleshooting and FAQ</a>.</p>
     <div class="guide-actions"><a class="button" href="https://api.campfiresms.com/join">Start free setup <span aria-hidden="true">→</span></a></div>
   </section>
   <article>
+    <h2 id="chatgpt">ChatGPT: the Campfire SMS plugin</h2>
+    <p>ChatGPT can text you and read your replies. In a Work chat, it can also subscribe to your replies so a text picks the task back up. Nothing to install on your computer.</p>
+    <ol>
+      <li><a href="https://api.campfiresms.com/join">Create your account and verify your phone</a>, then choose your PIN. Skip the install command on the last screen.</li>
+      <li>Open <a href="https://chatgpt.com/plugins/plugin_asdk_app_6ad15caa12d08191b5663247ed3d583a">Campfire SMS in ChatGPT</a> (or find it under <strong>Plugins</strong> or <strong>Apps</strong>), install it, and choose <strong>Connect</strong>.</li>
+      <li>Sign in with your phone number and PIN, and choose <strong>Connect</strong>.</li>
+      <li>In a chat, type <strong>@Campfire SMS</strong>, ask it to text you a test, and reply.</li>
+    </ol>
+    <p>The <a href="guides/chatgpt-sms-plugin.html">ChatGPT setup guide</a> covers the approval prompt, Work wake, and common fixes.</p>
     <h2 id="grok-bot">Grok Bot: hosted MCP and webhook wake</h2>
     <p>A text can trigger Grok’s cloud routine even while your PC is off. The Bot reads the message through Campfire SMS’s hosted MCP and can reply by SMS.</p>
     <ol>

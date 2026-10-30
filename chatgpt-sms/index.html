@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Google tag (gtag.js) - GA4 G-VWDPRPD2SK -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWDPRPD2SK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VWDPRPD2SK');
+    // sign_up_start: signup happens on api.campfiresms.com/join, so count clicks on any link to it. No PII in params.
+    document.addEventListener('click', function (e) {
+      try {
+        var a = e.target && e.target.closest && e.target.closest('a[href^="https://api.campfiresms.com/join"]');
+        if (!a || typeof window.gtag !== 'function') return;
+        var where = a.closest('header') ? 'header' : (a.closest('footer') ? 'footer' : 'content');
+        window.gtag('event', 'sign_up_start', { method: 'join_link', link_location: where, transport_type: 'beacon' });
+      } catch (err) {}
+    }, true);
+  </script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ChatGPT SMS plugin: get texts from ChatGPT and reply | Campfire SMS</title>
+  <meta name="description" content="Campfire SMS is a ChatGPT plugin that texts your phone with updates and questions from a task. Reply by text. In ChatGPT Work, a reply can resume the task.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://campfiresms.com/chatgpt-sms/">
+  <link rel="sitemap" type="application/xml" href="https://campfiresms.com/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ChatGPT SMS plugin: get texts from ChatGPT and reply | Campfire SMS">
+  <meta property="og:description" content="Campfire SMS is a ChatGPT plugin that texts your phone with updates and questions from a task. Reply by text. In ChatGPT Work, a reply can resume the task.">
+  <meta property="og:url" content="https://campfiresms.com/chatgpt-sms/">
+  <meta property="og:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Campfire SMS: a two-way SMS exchange with your existing agent.">
+  <meta property="article:published_time" content="2026-10-30">
+  <meta property="article:modified_time" content="2026-10-30">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT SMS plugin: get texts from ChatGPT and reply | Campfire SMS">
+  <meta name="twitter:description" content="Campfire SMS is a ChatGPT plugin that texts your phone with updates and questions from a task. Reply by text. In ChatGPT Work, a reply can resume the task.">
+  <meta name="twitter:image" content="https://campfiresms.com/assets/campfiresms-social-card-v3.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/icon.css">
+  <link rel="stylesheet" href="/pages.css">
+  <link rel="stylesheet" href="/agent-guides.css">
+  <script src="/assets/video.js" defer></script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://campfiresms.com/chatgpt-sms/#article",
+      "headline": "ChatGPT SMS: get texts from ChatGPT and reply from your phone",
+      "description": "Campfire SMS is a ChatGPT plugin that texts your phone with updates and questions from a task. Reply by text. In ChatGPT Work, a reply can resume the task.",
+      "mainEntityOfPage": "https://campfiresms.com/chatgpt-sms/",
+      "url": "https://campfiresms.com/chatgpt-sms/",
+      "inLanguage": "en-US",
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30",
+      "image": "https://campfiresms.com/assets/campfiresms-social-card-v3.png",
+      "articleSection": "ChatGPT plugin",
+      "about": ["ChatGPT", "SMS", "ChatGPT plugins"],
+      "author": {
+        "@type": "Organization",
+        "name": "Campfire SMS",
+        "url": "https://campfiresms.com/about.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Campfire SMS",
+        "url": "https://campfiresms.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://campfiresms.com/assets/campfire-icon-512.png"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://campfiresms.com/chatgpt-sms/#breadcrumbs",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Campfire SMS", "item": "https://campfiresms.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://campfiresms.com/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "ChatGPT SMS", "item": "https://campfiresms.com/chatgpt-sms/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://campfiresms.com/chatgpt-sms/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can ChatGPT text me?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, with the Campfire SMS plugin. ChatGPT sends the text through Campfire SMS to the phone number you verified. It can only text that one number, which is yours." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I text ChatGPT to start a new chat?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. ChatGPT has to open the bridge from a chat or Work task first. A text sent while no bridge is open gets an automatic “No agent bridge is connected” reply. If you want a text to start work from scratch, Grok Bot with webhook wake does that." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I have to keep ChatGPT open to get my reply?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In an ordinary chat, ChatGPT reads your reply when it next checks, usually after you come back and send it a message. In a Work chat that has subscribed to your SMS replies, your text arrives as an event and the task continues without you reopening it." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which ChatGPT plans can use the Campfire SMS plugin?",
+          "acceptedAnswer": { "@type": "Answer", "text": "OpenAI says plugin availability depends on your plan, workspace, role, region, and the surface you use, and the same goes for Work. If the Campfire SMS plugin page opens in your ChatGPT account and lets you install it, you can use the texting tools. Reply wake needs a Work chat." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a text reply approve something in ChatGPT?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. A reply can steer the task: pick an option, add a detail, or say stop. ChatGPT’s own approval prompts still need you in ChatGPT." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Campfire SMS work outside the US and Canada?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not yet. Campfire SMS works with US and Canadian mobile numbers. Email support@campfiresms.com to hear when that changes." }
+        }
+      ]
+    }
+  ]
+}</script>
+  <!-- When the setup video is live: replace VIDEO_ID (twice), set uploadDate and duration, then remove the comment markers around this block.
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Text ChatGPT from your phone: Campfire SMS plugin setup",
+  "description": "Install the Campfire SMS plugin in ChatGPT, connect your phone, approve the first text, reply, and set up a Work task that resumes when you reply.",
+  "thumbnailUrl": "https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg",
+  "uploadDate": "2026-11-01",
+  "duration": "PT6M",
+  "embedUrl": "https://www.youtube-nocookie.com/embed/VIDEO_ID",
+  "publisher": { "@type": "Organization", "name": "Campfire SMS", "url": "https://campfiresms.com/" }
+}</script>
+  -->
+</head>
+<body class="agent-guide-site">
+<a class="skip-link" href="#content">Skip to content</a>
+<header>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <nav aria-label="Primary navigation">
+    <a href="/install.html">Setup</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a>
+    <a href="https://api.campfiresms.com/login">Log in</a><a class="nav-cta" href="https://api.campfiresms.com/join">Start free setup</a>
+  </nav>
+</header>
+<main class="legal" id="content">
+  <div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/guides/">Guides</a><span aria-hidden="true">/</span><span>ChatGPT SMS</span></div>
+  <section class="legalhead"><p class="kicker">ChatGPT plugin</p><h1>ChatGPT SMS: get texts from ChatGPT and reply from your phone</h1><p>Campfire SMS is a plugin for ChatGPT. Ask ChatGPT to text you when a task needs a decision or is done, then answer from your normal text inbox.</p><div class="guide-actions"><a class="button" href="https://chatgpt.com/plugins/plugin_asdk_app_6ad15caa12d08191b5663247ed3d583a">Open Campfire SMS in ChatGPT</a><a href="/guides/chatgpt-sms-plugin.html">Setup guide</a></div><p class="byline">By Campfire SMS · Published <time datetime="2026-10-30">October 30, 2026</time></p></section>
+  <article>
+    <p class="quick-answer">Install the Campfire SMS plugin in ChatGPT and connect it to your verified phone. ChatGPT can then text you short updates and questions, and read your text replies. In an ordinary chat, ChatGPT reads your reply the next time it checks. In a Work chat, it can subscribe to your replies, so a text you send picks the task back up while you’re away.</p>
+    <figure class="message-flow"><figcaption>How a text gets between ChatGPT and you</figcaption><ol><li><strong>ChatGPT</strong><span>Your chat or Work task</span></li><li><strong>Campfire SMS</strong><span>Texts out · replies back</span></li><li><strong>Your phone</strong><span>Your normal SMS inbox</span></li></ol></figure>
+    <figure class="sms-example"><figcaption>Example task exchange (illustrative)</figcaption><div class="exchange-panels"><section aria-label="ChatGPT task"><h2>ChatGPT task</h2><p><span class="event-tag">SMS OUT</span>Three quotes are in. Vendor B leaves out onboarding ($1,200). Add it to B’s total, or list it separately?</p><p><span class="event-tag">SMS IN</span>Add it to the total.</p><p><span class="event-tag">RESULT</span>Updated. With onboarding included, Vendor A is cheapest over 12 months.</p></section><section aria-label="Phone SMS conversation"><h2>Your phone</h2><p class="text-in"><strong>Campfire SMS:</strong> Three quotes are in. Vendor B leaves out onboarding ($1,200). Add it to B’s total, or list it separately?</p><p class="text-out"><strong>You:</strong> Add it to the total.</p><p class="text-in"><strong>Campfire SMS:</strong> Updated. With onboarding included, Vendor A is cheapest over 12 months. Details are in ChatGPT.</p></section></div></figure>
+    <nav class="article-contents" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#what-it-does">What the plugin does</a></li><li><a href="#chat-vs-work">Ordinary chat vs Work</a></li><li><a href="#setup">Set it up</a></li><li><a href="#approval">The “Allow ChatGPT” prompt</a></li><li><a href="#prompts">What to ask ChatGPT</a></li><li><a href="#pricing">Pricing and availability</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#questions">Common questions</a></li></ol></nav>
+    <!-- Setup video: paste the YouTube video ID (the 11 characters after watch?v=) into data-video-id below. While it is empty this section stays hidden. Then enable the VideoObject block in <head>. -->
+    <section class="video-slot" data-video-id="" data-video-title="Campfire SMS ChatGPT plugin setup" hidden aria-labelledby="video"><h2 id="video">Watch the setup</h2><div class="video-frame"><button class="video-play" type="button" aria-label="Play video: Campfire SMS ChatGPT plugin setup"><span aria-hidden="true">▶</span></button></div><p class="video-note">The video loads from YouTube when you press play.</p></section>
+    <section aria-labelledby="what-it-does"><h2 id="what-it-does">What the Campfire SMS plugin does</h2>
+      <p>ChatGPT does the work. Campfire SMS carries the texts. The plugin gives ChatGPT five tools: open a bridge to your phone, send a text, check for replies, mark a reply handled, and close the bridge. ChatGPT uses them based on what you ask.</p>
+      <ul><li><strong>Updates at milestones:</strong> “Draft is ready.” “Found 14 matches.” “Done.”</li><li><strong>Questions that need you:</strong> one decision per text, answered in plain words.</li><li><strong>Results while you’re away</strong> from the screen, in the same inbox as your other texts.</li></ul>
+      <p>Texts come from (608) 422-4987 and start with “Campfire SMS:”. No app to install on your phone.</p>
+    </section>
+    <section aria-labelledby="chat-vs-work"><h2 id="chat-vs-work">Ordinary chat vs Work</h2>
+      <p>The plugin works in both. The difference is what happens when you reply while ChatGPT isn’t working on the task.</p>
+      <div class="comparison-scroll"><table><caption>What the Campfire SMS plugin can do in each kind of ChatGPT conversation</caption><thead><tr><th scope="col"></th><th scope="col">Ordinary chat</th><th scope="col">Work chat</th></tr></thead><tbody>
+        <tr><th scope="row">ChatGPT texts you</th><td>Yes</td><td>Yes</td></tr>
+        <tr><th scope="row">ChatGPT reads your replies</th><td>When it next checks, usually after you send it a message in the chat</td><td>When it checks, and when a reply event arrives</td></tr>
+        <tr><th scope="row">Your reply resumes the task by itself</th><td>No</td><td>Yes, once the task subscribes to your SMS replies</td></tr>
+        <tr><th scope="row">Good for</th><td>Short tasks you’ll come back to</td><td>Longer tasks you want to keep moving while you’re away</td></tr>
+      </tbody></table></div>
+      <p>Reply wake uses MCP events, which OpenAI documents for <a href="https://developers.openai.com/plugins/build/mcp-events">Work chats on ChatGPT web and in the desktop app with Cloud selected</a>. Whether your account has plugins, Work, and events depends on your ChatGPT plan, workspace, and rollout.</p>
+    </section>
+    <section aria-labelledby="setup"><h2 id="setup">Set it up</h2>
+      <ol><li><a href="https://api.campfiresms.com/join">Create a free Campfire SMS account</a> with a US or Canadian mobile number, and choose a six-digit PIN.</li><li>Open <a href="https://chatgpt.com/plugins/plugin_asdk_app_6ad15caa12d08191b5663247ed3d583a">Campfire SMS in ChatGPT</a> and install it. You can also search for it under <strong>Plugins</strong> (or <strong>Apps</strong>, depending on your account).</li><li>Choose <strong>Connect</strong>, sign in with your phone number and PIN, and approve the connection.</li><li>In a chat, type <strong>@Campfire SMS</strong> and ask it to text you a test. Reply from your phone.</li></ol>
+      <p>No install command, Node.js, or Python. The <a href="/guides/chatgpt-sms-plugin.html">step-by-step ChatGPT guide</a> has screenshots, the Work setup, and fixes for common problems.</p>
+    </section>
+    <section aria-labelledby="approval"><h2 id="approval">The “Allow ChatGPT to use Campfire SMS?” prompt</h2>
+      <p>A sent text can’t be taken back, so ChatGPT asks before Campfire SMS sends one.</p>
+      <figure class="guide-figure"><img src="/assets/chatgpt-allow-prompt.webp" width="1000" height="376" loading="lazy" alt="ChatGPT prompt reading “Allow ChatGPT to use Campfire SMS? Send a concise SMS to the account’s own verified phone,” with Always allow, Deny, and Allow once buttons."><figcaption>The prompt ChatGPT shows before Campfire SMS sends a text.</figcaption></figure>
+      <p>If you plan to step away, choose <strong>Always allow</strong> so a text doesn’t wait on a click you aren’t there to make. Choose <strong>Allow once</strong> if you’d rather approve each text. ChatGPT decides how long that choice lasts, and workspace settings can also control when it asks.</p>
+      <p>Allowing a text is not the same as approving the task. Your replies steer work ChatGPT is already doing. They don’t grant new permissions or answer ChatGPT’s other approval prompts.</p>
+    </section>
+    <section aria-labelledby="prompts"><h2 id="prompts">What to ask ChatGPT</h2>
+      <blockquote><p>Use Campfire SMS. Text me when you need a decision or when you’re done. Keep texts short.</p></blockquote>
+      <blockquote><p>Use Campfire SMS. When I reply by SMS, retrieve my reply and continue this task. <em>(Work chats)</em></p></blockquote>
+      <blockquote><p>Text me the three options in one message and wait for my pick.</p></blockquote>
+      <p>Ask for one decision per text. Your reply has to fit in one text: 160 characters, or 70 if it includes an emoji.</p>
+    </section>
+    <section aria-labelledby="pricing"><h2 id="pricing">Pricing and availability</h2>
+      <p>Start with 20 free messages after you verify your phone. No card required. Each text sent or received counts as one message. After that, buy a one-time pack (150 for $5, 350 for $10, 800 for $20, or 2,200 for $40; purchased credits never expire) or use the monthly plan. See <a href="/#pricing">pricing</a>.</p>
+      <p>Campfire SMS works with US and Canadian mobile numbers for now.</p>
+      <p>Plugins and Work are ChatGPT features. Whether your account has them depends on your ChatGPT plan and workspace.</p>
+    </section>
+    <section aria-labelledby="privacy"><h2 id="privacy">Privacy</h2>
+      <p>ChatGPT never gets your phone number. When it checks for replies, Campfire SMS returns the reply text, when it arrived, and message IDs. A reply event sent to a Work task carries IDs only; the task then fetches the text through its signed-in connection.</p>
+      <p>SMS isn’t end-to-end encrypted. Keep passwords, codes, and payment details out of texts. See the <a href="/privacy.html">privacy policy</a>.</p>
+    </section>
+    <section aria-labelledby="questions"><h2 id="questions">Common questions</h2>
+      <details><summary>Can ChatGPT text me?</summary><p>Yes, with the Campfire SMS plugin. ChatGPT sends the text through Campfire SMS to the phone number you verified. It can only text that one number, which is yours.</p></details>
+      <details><summary>Can I text ChatGPT to start a new chat?</summary><p>No. ChatGPT has to open the bridge from a chat or Work task first. A text sent while no bridge is open gets an automatic “No agent bridge is connected” reply. If you want a text to start work from scratch, <a href="/guides/grok-bot-sms-routine.html">Grok Bot with webhook wake</a> does that.</p></details>
+      <details><summary>Do I have to keep ChatGPT open to get my reply?</summary><p>In an ordinary chat, ChatGPT reads your reply when it next checks, usually after you come back and send it a message. In a Work chat that has subscribed to your SMS replies, your text arrives as an event and the task continues without you reopening it.</p></details>
+      <details><summary>Which ChatGPT plans can use the Campfire SMS plugin?</summary><p>OpenAI says <a href="https://help.openai.com/en/articles/20001256-plugins-in-chatgpt">plugin availability</a> depends on your plan, workspace, role, region, and the surface you use, and the same goes for Work. If the <a href="https://chatgpt.com/plugins/plugin_asdk_app_6ad15caa12d08191b5663247ed3d583a">Campfire SMS plugin page</a> opens in your ChatGPT account and lets you install it, you can use the texting tools. Reply wake needs a Work chat.</p></details>
+      <details><summary>Can a text reply approve something in ChatGPT?</summary><p>No. A reply can steer the task: pick an option, add a detail, or say stop. ChatGPT’s own approval prompts still need you in ChatGPT.</p></details>
+      <details><summary>Does Campfire SMS work outside the US and Canada?</summary><p>Not yet. Campfire SMS works with US and Canadian mobile numbers. Email <a href="mailto:support@campfiresms.com">support@campfiresms.com</a> to hear when that changes.</p></details>
+    </section>
+    <p class="source-note">ChatGPT details checked against OpenAI’s <a href="https://help.openai.com/en/articles/20001256-plugins-in-chatgpt">Plugins in ChatGPT</a> help article and <a href="https://developers.openai.com/plugins/build/mcp-events">MCP events</a> documentation on October 30, 2026. ChatGPT menus and availability can change.</p>
+    <aside class="related-guides" aria-labelledby="related"><h2 id="related">Related guides</h2><ul><li><a href="/guides/chatgpt-sms-plugin.html">Set up Campfire SMS in ChatGPT, step by step</a></li><li><a href="/guides/grok-bot-sms-routine.html">Text Grok Bot about any task, even with your PC off</a></li><li><a href="/agent-needs-input/">Answer your agent’s question from your phone</a></li><li><a href="/troubleshooting/">Troubleshooting and FAQ</a></li></ul></aside>
+    <div class="guide-actions"><a class="button" href="/guides/chatgpt-sms-plugin.html">Follow the ChatGPT setup guide</a><a href="https://chatgpt.com/plugins/plugin_asdk_app_6ad15caa12d08191b5663247ed3d583a">Open Campfire SMS in ChatGPT</a><a href="https://api.campfiresms.com/join">Start free setup</a></div>
+  </article>
+</main>
+<footer>
+  <a class="brand" href="/"><img class="brand-icon" src="/assets/favicon-32.png" alt=""> Campfire SMS</a>
+  <p>SMS bridge for AI agents.</p>
+  <div><a href="/about.html">About</a><a href="/install.html">Setup</a><a href="/guides/">Guides</a><a href="/troubleshooting/">Help</a><a href="/sms-opt-in.html">SMS Opt-in</a><a href="/privacy.html">Privacy</a><a href="/terms.html">SMS Terms</a><a href="mailto:support@campfiresms.com">Contact</a><a href="https://x.com/campfiresms" rel="me">Message on X</a><a href="https://www.instagram.com/campfiresms/" rel="me">Instagram</a><a href="https://www.youtube.com/@CampfireSMS" rel="me">YouTube</a><a href="https://www.facebook.com/profile.php?id=61594268769076" rel="me">Facebook</a></div>
+  <small>© 2026 Campfire SMS</small>
+</footer>
+</body>
+</html>

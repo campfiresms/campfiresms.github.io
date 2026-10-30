@@ -1,12 +1,16 @@
 # Campfire SMS
 
-> Campfire SMS is a hosted two-way SMS bridge for coding agents. With Grok Bot webhook wake configured, an incoming text triggers a cloud routine that retrieves the message and can reply by SMS while the user’s PC is off. Active local-agent connections are also supported.
+> Campfire SMS is a hosted two-way SMS bridge for AI agents, available for US and Canadian mobile numbers. It is a published ChatGPT plugin. With Grok Bot webhook wake configured, an incoming text triggers a cloud routine that retrieves the message and can reply by SMS while the user’s PC is off. Active local-agent connections are also supported.
 
 ## Product facts
 
 Campfire SMS operates phone enrollment, SMS delivery, the authenticated message queue, and routing. The connected agent supplies the model, tools, project access, and task execution. The phone needs SMS service; mobile data and a separate chat app are not required for texting.
 
 The local connector adds messaging to the agent's existing workspace. It does not require a Campfire SMS coding project, repository import, or a second coding model. Account verification and connector configuration are still required.
+
+### ChatGPT plugin
+
+Campfire SMS is published as a ChatGPT plugin. The user installs it from its ChatGPT plugin page (https://chatgpt.com/plugins/plugin_asdk_app_6ad15caa12d08191b5663247ed3d583a) or by searching Plugins (or Apps) in ChatGPT, then signs in with their verified phone number and Campfire SMS PIN to connect; no local install is needed. In ordinary chats and Work chats, ChatGPT can open a bridge, text the user, check and acknowledge replies, and close the bridge. Ordinary chats read replies only when ChatGPT next checks. A Work chat (ChatGPT web, or the desktop app with Cloud selected) can subscribe to the `sms.received` MCP event so an SMS reply resumes the task; one subscription per open bridge, lasting up to seven days. Event payloads carry IDs only; ChatGPT never receives the phone number. ChatGPT asks for approval before sending a text ("Allow ChatGPT to use Campfire SMS?"); choosing Always allow avoids a send waiting while the user is away. A text cannot start a new ChatGPT chat.
 
 ### Grok Bot webhook wake
 
@@ -33,9 +37,11 @@ See [local setup](https://campfiresms.com/install.html#local-agents) and [Linux/
 ## Primary pages
 
 - [Home](https://campfiresms.com/): Grok webhook wake, one SMS example, and current pricing and message counting.
+- [ChatGPT SMS](https://campfiresms.com/chatgpt-sms/): The Campfire SMS ChatGPT plugin: texts from ChatGPT, replies, ordinary chat vs Work reply wake, the approval prompt, pricing, and privacy.
+- [Set up Campfire SMS in ChatGPT](https://campfiresms.com/guides/chatgpt-sms-plugin.html): Step-by-step plugin install, phone + PIN connection, first text, replies, Work wake subscription, disconnecting, and fixes.
 - [Text Grok Bot about any task, even with your PC off](https://campfiresms.com/guides/grok-bot-sms-routine.html): Everyday and coding tasks by SMS. Hosted MCP, webhook routine, secure wake configuration, and a real text-and-reply test.
-- [Setup](https://campfiresms.com/install.html): Grok Bot first; local-agent installation, recovery, and removal second.
-- [Troubleshooting and FAQ](https://campfiresms.com/troubleshooting/): iPhone replies marked Not Delivered, missing replies, “No agent bridge is connected,” credential errors, Grok Bot wake, and message limits.
+- [Setup](https://campfiresms.com/install.html): ChatGPT plugin, Grok Bot, then local-agent installation, recovery, and removal. US and Canadian mobile numbers only for now.
+- [Troubleshooting and FAQ](https://campfiresms.com/troubleshooting/): Supported countries (US and Canada), ChatGPT replies and bridge conflicts, iPhone replies marked Not Delivered, missing replies, “No agent bridge is connected,” credential errors, Grok Bot wake, and message limits.
 - [Guides](https://campfiresms.com/guides/): Grok wake setup and supporting local-agent workflows.
 - [NudgeBell vs Campfire SMS](https://campfiresms.com/nudgebell-vs-campfiresms/): Scheduled reminders and escalation versus two-way agent SMS, with sources and runtime requirements.
 - [AgentPhone vs Campfire SMS](https://campfiresms.com/agentphone-vs-campfiresms/): Phone numbers, voice, and verification codes for agents, compared with your existing agent texting you. Checked with dated pricing.

@@ -33,3 +33,16 @@
   .legalhead h1 { font-size: clamp(32px, 8vw, 40px); }
   .legal blockquote, .legal details, .legal pre { padding: 18px; }
 }
+/* Click-to-play YouTube slots (assets/video.js). Hidden until a video ID is set. */
+.video-slot { margin: 32px 0; }
+.video-slot[hidden] { display: none; }
+.video-slot h2 { margin-top: 0; }
+.video-frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--line); background: var(--ink); }
+.video-frame iframe, .video-play { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-play { display: grid; place-items: center; padding: 0; background: var(--ink) center / cover no-repeat; cursor: pointer; }
+.video-play span { display: grid; place-items: center; width: 72px; height: 50px; border-radius: 12px; background: rgba(20, 19, 17, .78); color: white; font-size: 22px; }
+.video-play:hover span, .video-play:focus-visible span { background: var(--orange); }
+.video-slot .video-note { margin-top: 10px; font-size: 13px; }
+.guide-figure { margin: 28px 0; }
+.guide-figure img { display: block; width: 100%; max-width: 100%; height: auto; border: 1px solid var(--line); }
+.guide-figure figcaption { margin-top: 10px; color: var(--muted); font-size: 14px; }
